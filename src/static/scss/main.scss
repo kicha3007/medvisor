@@ -1,0 +1,199 @@
+@import '__vars';
+@import '__mixins';
+@import "smart-grid";
+@import "base";
+
+@include font-face(LucidaGrande, "../fonts/LucidaGrande", 400, normal, ttf);
+
+/******************* medvisor *******************/
+
+@import 'medvisor/articles';
+@import 'medvisor/city';
+@import 'medvisor/clinics';
+@import 'medvisor/doctors';
+@import 'medvisor/footer';
+@import 'medvisor/header';
+@import 'medvisor/logo';
+@import 'medvisor/nav';
+@import 'medvisor/nav-main';
+@import 'medvisor/news';
+@import 'medvisor/search';
+@import 'medvisor/services';
+@import 'medvisor/themes';
+@import 'medvisor/user';
+
+
+
+/******************* it-all-style *******************/
+
+.it-container {
+   max-width: 1036px;
+   width: 100%;
+   padding: 0 15px;
+   margin: 0 auto;
+  @include tablets {
+    max-width: 654px;
+  }
+  @include phones {
+    max-width: 338px;
+  }
+ }
+
+.it-container--big {
+  max-width: 1246px;
+  @include tablets {
+    max-width: 100%;
+  }
+  @include phones {
+    max-width: 100%;
+  }
+}
+
+.it-container * {
+  box-sizing: border-box;
+}
+
+.it-all-title {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  font-size: rem(24px);
+  line-height: 1.5;
+  position: relative;
+  color: #4A4A4A;
+  margin: 0;
+  overflow: hidden;
+  font-weight: 700;
+  min-height: 2px;
+
+  @include tablets {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+  @include phones {
+    font-size: 16px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+}
+
+
+.it-all-subtitle {
+  font-size: rem(18px);
+  padding-bottom: 40px;
+  color: rgba(0, 0, 0, 0.54);
+  text-align: center;
+  @include phones {
+    padding-bottom: 20px;
+    font-size: 14px;
+  }
+}
+
+.it-main-page__wrapper {
+  background-color: rgba(249, 252, 255, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+
+}
+
+.it-main-page__content {
+  flex: 1 0 auto;
+
+  background-color: #fcfeff;
+  /* IE9, iOS 3.2+ */
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj48c3RvcCBzdG9wLWNvbG9yPSIjZjhmY2ZmIiBzdG9wLW9wYWNpdHk9IjEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI3ZzZ2cpIiAvPjwvc3ZnPg==);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%,color-stop(0, rgb(248, 252, 255)),color-stop(1, rgb(255, 255, 255)));
+  /* Android 2.3 */
+  background-image: -webkit-linear-gradient(top,rgb(248, 252, 255) 0%,rgb(255, 255, 255) 100%);
+  /* IE10+ */
+  background-image: linear-gradient(to bottom,rgb(248, 252, 255) 0%,rgb(255, 255, 255) 100%);
+  background-image: -ms-linear-gradient(top,rgb(248, 252, 255) 0%,rgb(255, 255, 255) 100%);
+}
+
+.it-btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  font-weight: 900;
+  line-height: 1.25;
+  text-align: center;
+  user-select: none;
+  border: none;
+  padding: 15px 10px;
+  font-size: rem(28px);
+  transition: all 0.2s ease-in-out;
+  background-color: $main-color;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  border-radius: 4px;
+  @include phones {
+    padding: 11px 10px;
+    font-size: 24px;
+  }
+}
+
+.it-btn:hover {
+  background: $main-color-hover;
+}
+
+.it-btn:hover,
+.it-btn:active,
+.it-btn:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.it-all--hide-mobile {
+  @include phones {
+    display: none;
+  }
+}
+
+/******************* it-form__success *******************/
+
+.it-form__success {
+  font-size: 18px;
+  text-align: center;
+  display: none;
+  line-height: 1em;
+  color: #5c5c5c;
+}
+
+.it-form--hide.success *:not(.it-form__success) {
+  display: none;
+}
+
+.it-form--hide.success .it-form__success {
+  display: block;
+}
+
+/******************* media *******************/
+
+@media (max-width: 1200px) { /*desctop*/
+
+
+}
+
+@media (max-width: 992px) { /*laptop*/
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) { /* tablets*/
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) { /*phones*/
+  html {
+    font-size: 13px;
+  }
+
+}
+

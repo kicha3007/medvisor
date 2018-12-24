@@ -1,0 +1,68 @@
+section.it-main-form
+	.it-container.it-container--big
+		a(href="#").it-icon
+			.it-icon__img-box
+				img(src="static/img/rbk/main-form/icon.png", alt='').it-icon__img
+			.it-icon__text
+				| aviasales
+	.it-container
+		.it-main-form__wrap
+			h1.it-main-form-title
+				|   Поиск дешевых авиабилетов
+			h2.it-main-form-subtitle.it-all--hide-mobile
+				|	Лучший способ купить авиабилеты дешево
+			form.it-main-form__form(action="", method="post")
+				.it-main-form__input-wrap
+					.it-main-form__half
+						input.it-main-form__input.it-main-form__input--color-1.it-main-form__input--border-desktop-1(type="text" name='city-from', maxlength='200', value='Москва', placeholder='Москва', required data-it-city-from="")
+						.it-main-form__city-change(data-it-change-city)
+							.it-main-form__city-change-text
+								|	MOW
+							.it-main-form__city-change-img-box
+								img(src="static/img/rbk/main-form/arrow.png", alt='').it-main-form__city-change-img
+					.it-main-form__half.it-main-form__half--size-basis-2
+						input.it-main-form__input.it-main-form__input--border-laptop-1(type="text" name='city-to', maxlength='200', value='Тюмень', placeholder='Город прибытия', required data-it-city-to="")
+					.it-main-form__half.it-main-form__half--size-1.it-main-form__half--size-basis-1
+						input.it-main-form__input.it-main-form__input--border-laptop-2.datepicker-here#city-to(type="text" name='time-to', maxlength='200', value='', placeholder='Туда', required)
+						label(for='city-to').it-main-form__date-change
+							.it-main-form__date-change-img-box
+								img(src="static/img/rbk/main-form/date.png", alt='').it-main-form__city-change-img
+					.it-main-form__half.it-main-form__half--size-1.it-main-form__half--size-basis-1
+						input.it-main-form__input.datepicker-here#city-from(type="text" name='time-back', maxlength='200', value='', placeholder='Обратно', required)
+						label(for='city-from').it-main-form__date-change
+							.it-main-form__date-change-img-box
+								img(src="static/img/rbk/main-form/date.png", alt='').it-main-form__city-change-img
+					.it-main-form__half.it-main-form__half--size-2
+						.it-main-form__passanger-wrap
+							.it-main-form__passanger-input-wrap(tabindex='1')
+								input#opt1.it-main-form__passanger-selectopt(name='test', type='radio', checked='')
+								label.it-main-form__passanger-label.it-main-form__passanger-label--border-desktop-1(for='opt1')
+									span.it-main-form__passanger-text
+										| 1 пассажир,
+									span.it-main-form__passanger-text.it-main-form__passanger-text--color
+										|	эконом
+								input#opt2.it-main-form__passanger-selectopt(name='test', type='radio')
+								label.it-main-form__passanger-label.it-main-form__passanger-label--border-desktop-1(for='opt2')
+									span.it-main-form__passanger-text
+										| 2 пассажира,
+									span.it-main-form__passanger-text.it-main-form__passanger-text--color
+									|    эконом
+								input#opt3.it-main-form__passanger-selectopt(name='test', type='radio')
+								label.it-main-form__passanger-label.it-main-form__passanger-label--border-desktop-1(for='opt3')
+									span.it-main-form__passanger-text
+										| 1 пассажир,
+									span.it-main-form__passanger-text.it-main-form__passanger-text--color
+									|    бизнес
+								input#opt4.it-main-form__passanger-selectopt(name='test', type='radio')
+								label.it-main-form__passanger-label.it-main-form__passanger-label--border-desktop-1(for='opt4')
+									span.it-main-form__passanger-text
+										| 2 пассажира,
+									span.it-main-form__passanger-text.it-main-form__passanger-text--color
+									|    бизнес
+				.it-main-form__buttons-wrap
+					.it-main-form__buttons
+						button.it-btn.it-main-form__btn
+							span.it-main-form__btn-text
+								|	Найти билеты
+							.it-main-form__btn-img-box
+								img(src="static/img/rbk/main-form/aero.png", alt='').it-main-form__btn-img

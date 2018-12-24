@@ -1,0 +1,606 @@
+@import "../__vars";
+@import "../__mixins";
+@import "../smart-grid";
+
+/******************* main-form *******************/
+
+.it-main-form {
+  background: linear-gradient(110deg, #00B0DE 0%, #01AEDC 3.7%, #02ABDB 7.44%, #02ABDB 11.16%, #02ABDB 11.38%, #196EBD 100%);
+  padding-top: 12px;
+  margin-bottom: 65px;
+}
+
+.it-main-form__wrap {
+  overflow: hidden;
+  padding: 19% 0 22%;
+  @include tablets {
+    padding: 12% 0 19%;
+  }
+  @include phones {
+    padding-bottom: 80px;
+  }
+}
+
+.it-main-form-title {
+  font-size: rem(40px);
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+  @include tablets {
+    font-size: rem(32px);
+  }
+  @include phones {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+}
+
+.it-main-form-subtitle {
+  font-size: rem(24px);
+  text-align: center;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-weight: 700;
+  @include tablets {
+    font-size: rem(20px);
+  }
+}
+
+.it-main-form__form {
+  box-sizing: content-box;
+}
+
+.it-main-form__input-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin: 0 -1px 45px;
+  @include tablets {
+    margin-bottom: 30px;
+  }
+  @include phones {
+    margin-bottom: 15px;
+  }
+
+}
+
+.it-main-form__half {
+  flex-grow: 1;
+  flex-basis: 120px;
+  width: 100%;
+  margin: 0 1px 2px;
+  max-width: 224px;
+  position: relative;
+  @include tablets {
+    max-width: calc(50% - 1px);
+    flex-basis: 265px;
+
+  }
+  @include phones {
+    max-width: 308px;
+    flex-basis: 265px;
+  }
+}
+
+
+
+.it-main-form__half--size-1 {
+  max-width: 180px;
+
+}
+
+.it-main-form__half--size-2 {
+  max-width: 212px;
+  @include laptop {
+    max-width: 170px;
+  }
+
+}
+
+.it-main-form__half--size-basis-1 {
+  flex-basis: 110px;
+  @include tablets {
+    max-width: calc(25% - 2px);
+    flex-basis: 138px;
+  }
+  @include phones {
+    max-width: 152px;
+    flex-basis: 90px;
+  }
+}
+
+.it-main-form__half--size-basis-2 {
+  flex-basis: 150px;
+}
+
+.it-main-form__city-change {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  margin-top: -9px;
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+  align-items: flex-start;
+}
+
+.it-main-form__city-change-text {
+  margin-right: 10px;
+  color: #A0B0B9;
+  font-size: 16px;
+  line-height: 1.2;
+  @include laptop {
+    display: none;
+  }
+  @include tablets {
+    display: block;
+  }
+}
+
+.it-main-form__city-change-img-box {
+  max-width: 16px;
+  width: 100%;
+  max-height: 18px;
+  overflow: hidden;
+}
+
+.it-main-form__city-change-img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+
+.it-main-form__date-change {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  margin-top: -10px;
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+  align-items: flex-start;
+}
+
+.it-main-form__date-change-text {
+  margin-right: 10px;
+  color: #A0B0B9;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.it-main-form__date-change-img-box {
+  max-width: 17px;
+  width: 100%;
+  max-height: 20px;
+  overflow: hidden;
+}
+
+.it-main-form__date-change-img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.it-main-form__passanger-wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+.it-main-form__passanger-input-wrap {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 56px;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  
+
+}
+
+
+.it-main-form__passanger-input-wrap:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
+.it-main-form__passanger-input-wrap:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -2px;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000000;
+  z-index: 20;
+  pointer-events: none;
+  max-width: 100%;
+}
+
+.it-main-form__passanger-label {
+  padding: 0 30px 0 10px;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+  order: 2;
+  z-index: 1;
+  transition: background .4s ease-in-out;
+  white-space: nowrap;
+  line-height: 1.42;
+  border-radius: 2px;
+  border: 1px solid #d8d7d7;
+  padding: 4px 20px;
+  color: rgba(0, 0, 0, .38);
+  font-size: 16px;
+  flex-basis: 80px;
+  @include laptop {
+    flex-wrap: wrap;
+  }
+  @include tablets {
+    flex-wrap: nowrap;
+  }
+}
+
+.it-main-form__passanger-input-wrap:focus .it-main-form__passanger-label {
+  position: relative;
+  pointer-events: all;
+}
+
+.it-main-form__passanger-selectopt {
+  opacity: 0;
+  position: absolute;
+  left: -99999px;
+  flex-basis: 90px;
+  display: flex;
+
+  flex-wrap: wrap;
+}
+
+.it-main-form__passanger-selectopt:checked + label {
+  order: 1;
+  z-index: 10;
+  position: relative;
+}
+
+.it-main-form__passanger-text + .it-main-form__passanger-text {
+  margin-left: 4px;
+}
+
+.it-main-form__passanger-text--color {
+  color: #A0B0B9;
+}
+
+.it-main-form__input::-webkit-input-placeholder {
+  color: #A0B0B9;
+}
+
+.it-main-form__input::-moz-placeholder {
+  color: #A0B0B9;
+}
+
+.it-main-form__input:-ms-input-placeholder {
+  color: #A0B0B9;
+}
+
+.it-main-form__input:-moz-placeholder {
+  color: #A0B0B9;
+}
+
+
+
+.it-main-form__input--color-1::-webkit-input-placeholder {
+  color: #4A4A4A;
+}
+
+.it-main-form__input--color-1::-moz-placeholder {
+  color: #4A4A4A;
+}
+
+.it-main-form__input--color-1:-ms-input-placeholder {
+  color: #4A4A4A;
+}
+
+.it-main-form__input--color-1:-moz-placeholder {
+  color: #4A4A4A;
+}
+
+.it-main-form__input {
+  font-size: 16px;
+  padding: 16px 17px;
+  color: #4a4a4a;
+  width: 100%;
+  line-height: 1.42;
+  border: 1px solid rgba(80, 66, 66, 0.2);
+}
+
+.it-main-form__input--color-1 {
+  color: #4A4A4A;
+}
+
+.it-main-form__input--border-desktop-1 {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  @include tablets {
+    border-bottom-left-radius: 0px;
+  }
+  @include phones {
+    border-top-right-radius: 5px;
+  }
+}
+
+.it-main-form__input--border-desktop-2 {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px
+}
+
+.it-main-form__passanger-label--border-desktop-1 {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  @include tablets {
+    border-top-right-radius: 0;
+  }
+  @include phones {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+}
+
+.it-main-form__input--border-laptop-1 {
+  @include tablets {
+    border-top-right-radius: 5px;
+  }
+  @include phones {
+    border-top-right-radius: 0;
+  }
+
+}
+
+.it-main-form__input--border-laptop-2 {
+  @include tablets {
+    border-bottom-left-radius: 5px;
+  }
+  @include phones {
+    border-bottom-left-radius: 0;
+  }
+}
+
+
+.it-main-form__buttons-wrap {
+  text-align: center;
+}
+
+
+.it-main-form__buttons {
+  display: inline-block;
+  max-width: 308px;
+  width: 100%;
+  @include phones {
+    //max-width: 250px;
+    //flex-basis: 250px;
+  }
+}
+
+.it-btn.it-main-form__btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.it-main-form__btn-text {
+  margin-right: 25px;
+}
+
+.it-main-form__btn-img-box {
+  overflow: hidden;
+  max-width: 30px;
+  width: 100%;
+  height: 32px;
+}
+
+.it-main-form__btn-text {
+  color: #ffffff;
+}
+
+
+
+/******************* checkbox *******************/
+/*
+
+.it-checkbox-wrap {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.it-checkbox {
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+
+}
+
+.it-checkbox__default {
+  width: .1px;
+  height: .1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0 !important;
+  outline: 0 !important;
+  background-color: transparent;
+}
+
+.it-checkbox__pseudo,
+.it-checkbox__pseudo:before {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+}
+
+.it-checkbox__pseudo {
+  background-color: #fff;
+  border: 1px solid rgba(80, 66, 66, .2);
+  margin-right: 20px;
+  position: relative;
+  left: 0;
+  top: 0;
+  line-height: 17px;
+
+}
+
+.it-checkbox__pseudo:before {
+  content: '\002714';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-size: 19px;
+  color: $main-color;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -ms-transform: scale(.4);
+  -webkit-transform: scale(.4);
+  transform: scale(.4);
+  -webkit-transition: all .225s ease-in-out;
+  -o-transition: all .225s ease-in-out;
+  transition: all .225s ease-in-out;
+  cursor: pointer;
+}
+
+.it-checkbox__default:checked + .it-checkbox__pseudo:before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.it-checkbox__text {
+  font-size: 16px;
+  color: #ffffff;
+  -ms-flex-preferred-size: 80px;
+  flex-basis: 75px;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  @include phones {
+    word-wrap: break-word !important;
+  }
+}
+
+.it-main-form__checkbox-wrap {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 0 5px;
+}
+
+.it-checkbox--size {
+  max-width: 400px;
+}
+
+!******************* success *******************!
+
+.it-form__success {
+  font-size: 2.25rem;
+  text-align: center;
+  display: none;
+  line-height: 1em;
+}
+
+.it-form--hide.success :not(.it-form__success ) {
+  display: none;
+}
+
+.it-form--hide.success .it-form__success {
+  display: block;
+}
+
+.it-form--hide.success .it-form__success p {
+  display: block;
+}
+
+.it-form--hide.success .it-form__success p + p {
+  margin-top: 15px;
+}
+
+.it-steps__checkbox {
+  margin-bottom: 20px;
+}
+
+.it-price-house__input-wrap {
+  margin-bottom: -20px;
+}
+
+!******************* it-main-form2 *******************!
+
+.it-main-form--color {
+  background-color: transparent;
+}
+
+.it-main-form__wrap--border {
+  border: 1px solid #34A0CD;
+}
+
+.it-main-form-title--color {
+  color: #444444;
+}
+
+.it-main-form-subtitle--color {
+  color: #666666;
+}
+
+.it-checkbox__text--color {
+  color: #666666;
+}
+
+.it-main-form__wrap--indent {
+  padding: 4% 15px;
+}
+*/

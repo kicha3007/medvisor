@@ -1,0 +1,36 @@
+@import "__vars";
+@import "__mixins";
+@import "smart-grid";
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: rem(16px);
+}
+
+body {
+  font-size: rem(16px);
+  font-family: "Roboto", "Open Sans", sans-serif;
+}
+
+body * {
+  font-family: "Roboto", "Open Sans", sans-serif;
+  color: #000000;
+  line-height: 1.42;
+  box-sizing: border-box;
+
+}
+
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
