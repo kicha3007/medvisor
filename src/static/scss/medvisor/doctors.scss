@@ -1,3 +1,143 @@
 @import "../__vars";
 @import "../__mixins";
-@import "../smart-grid";
+
+.it-doctors__item {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #C3C3C3;
+  padding: 25px;
+  overflow: hidden;
+
+}
+
+.it-doctors__top {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -12px;
+  overflow: hidden;
+
+}
+
+.it-doctors__top-half {
+  flex-grow: 1;
+  flex-basis: 50px;
+  margin: 0 12px 20px;
+}
+
+.it-doctors__img-box {
+  max-width: 155px;
+  width: 100%;
+  max-height: 155px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+}
+
+.it-doctors__title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.it-doctors__subtitle {
+  font-size: 12px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.it-doctors__price-text {
+  font-size: 10px;
+  color: #666666;
+}
+
+.it-doctors__numeric span {
+  font-size: 12px;
+  font-weight: 700;
+  color: #666666;
+}
+
+.it-doctors__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -12px -10px;
+  overflow: hidden;
+}
+
+.it-doctors__bottom-half {
+  flex-basis: 50px;
+  margin: 0 12px 10px;
+}
+
+.it-doctors__bottom-half--left {
+  flex-grow: 1;
+}
+
+.it-doctors__adress-half {
+  font-size: 12px;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.it-doctors__metro-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px -10px;
+  overflow: hidden;
+}
+
+.it-doctors__metro-item {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  align-items: flex-start;
+  margin: 0 5px 10px;
+}
+
+.it-doctors__metro-circle {
+  background-color: #0076C0;
+  margin-right: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 2px;
+
+}
+
+.it-doctors__metro-text {
+  font-size: 12px;
+  color: #000000;
+}
+
+.it-doctors__reviews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.it-doctors__reviews-text {
+  font-size: 12px;
+  color: #000000;
+  position: relative;
+}
+
+.it-doctors__reviews-number {
+  font-size: 10px;
+  color: #666666;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+
+
+
+
+
