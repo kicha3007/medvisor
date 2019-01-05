@@ -32,10 +32,10 @@
    padding: 0 15px;
    margin: 0 auto;
   @include tablets {
-    max-width: 654px;
+    max-width: 600px;
   }
   @include phones {
-    max-width: 338px;
+    max-width: 420px;
   }
  }
 
@@ -54,7 +54,6 @@
 }
 
 .it-all-title {
-  text-align: center;
   padding-top: 30px;
   padding-bottom: 50px;
   font-size: rem(24px);
@@ -75,6 +74,45 @@
     padding-top: 40px;
     padding-bottom: 20px;
   }
+}
+
+.it-all-indent {
+  margin-bottom: 50px;
+}
+
+.it-all-link {
+  display: flex;
+  align-items: center;
+}
+
+.it-all-link:active,
+.it-all-link:visited {
+	color: #2C555D;
+  text-decoration: none;
+}
+
+.it-all-link:hover {
+	color: #2C555D;
+
+}
+
+.it-all-link__text {
+  color: #2C555D;
+  font-size: 20px;
+  margin-right: 12px;
+}
+
+.it-all-link__img-box {
+  max-width: 15px;
+  max-height: 14px;
+  overflow: hidden;
+}
+
+.it-all-link__img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 
