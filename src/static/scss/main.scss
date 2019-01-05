@@ -54,9 +54,9 @@
 }
 
 .it-all-title {
-  padding-top: 30px;
-  padding-bottom: 50px;
-  font-size: rem(24px);
+  padding-top: 40px;
+  padding-bottom: 30px;
+  font-size: 26px;
   line-height: 1.5;
   position: relative;
   color: #4A4A4A;
@@ -66,14 +66,11 @@
   min-height: 2px;
 
   @include tablets {
-    padding-top: 50px;
-    padding-bottom: 30px;
-  }
-  @include phones {
-    font-size: 16px;
+    font-size: 20px;
     padding-top: 40px;
     padding-bottom: 20px;
   }
+
 }
 
 .it-all-indent {
@@ -100,6 +97,7 @@
   color: #2C555D;
   font-size: 20px;
   margin-right: 12px;
+  font-weight: 700;
 }
 
 .it-all-link__img-box {
