@@ -6,8 +6,9 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: auto;
-  grid-template-row: auto;
+  grid-template-columns:  repeat(auto-fill,  auto);
+  //grid-template-row: auto;
+  justify-items: start ;
   grid-gap: 20px;
 
 }
@@ -19,6 +20,5 @@
   padding: 15px;
   font-size: 18px;
   color: #FFFFFF;
-  justify-self: start;
 
 }

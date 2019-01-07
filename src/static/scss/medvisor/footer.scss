@@ -1,3 +1,145 @@
 @import "../__vars";
 @import "../__mixins";
 @import "../smart-grid";
+
+.it-footer {
+  padding: 40px 0 ;
+  background-color:  #F5F5F5;
+}
+
+.it-logo__img-box {
+  max-width: 147px;
+  max-height: 25px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.it-logo__img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.it-logo__text {
+  font-size: 13px;
+  color: #179CA7;
+}
+
+.it-logo__img-box + .it-logo__text {
+  margin-top: 5px;
+}
+
+.it-footer__logo {
+  margin-bottom: 10px;
+}
+
+
+.it-social__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -14px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.it-social__img-box {
+  list-style-type: none;
+  padding-left: 0;
+  max-width: 42px;
+  min-height: 34px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 14px;
+}
+
+.it-footer__top {
+  display: grid;
+  grid-template-columns: minmax(100px, 340px) 1fr;
+  margin-bottom: 25px;
+  @include phones {
+    grid-template-columns:  1fr;
+  }
+
+}
+
+.it-sub-nav__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 230px);
+  grid-template-rows: repeat(5, 20px);
+  grid-auto-flow: column;
+  margin: 0;
+  padding: 0;
+  @include laptop {
+    grid-template-rows: repeat(7, 30px);
+
+  }
+  @include phones {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+  }
+}
+
+.it-sub-nav__item {
+  list-style-type: none;
+  padding: 0 15px 10px;
+  font-size: 16px;
+  position: relative;
+
+}
+
+.it-sub-nav__item:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 100%;
+   background-color: #D2D2D2;;
+  @include phones {
+    display: none;
+  }
+}
+
+.it-sub-nav__link {
+  display: block;
+  text-decoration: none;
+  color: #2C555D;
+  transition: 0.1s;
+}
+
+.it-sub-nav__link:active,
+.it-sub-nav__link:visited {
+  color: #2C555D;
+  text-decoration: none;
+}
+
+.it-sub-nav__link:hover {
+    color: $hov;
+}
+
+.it-footer__bottom {
+}
+
+.it-footer__inner-bottom-wrap {
+  grid-column-start: 2;
+}
+
+.it-footer__copy {
+  font-size: 14px;
+  text-align: center;
+  color: #2C555D;
+  margin-bottom: 5px;
+}
+
+.it-footer__info {
+  font-size: 14px;
+  text-align: center;
+  color: #B6343C;
+}
