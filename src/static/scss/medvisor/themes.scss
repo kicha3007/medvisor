@@ -5,7 +5,7 @@
 .it-thems__list {
   margin: 0;
   padding: 0;
-  display: grid;
+  display: inline-grid;
   grid-template-columns:  repeat(auto-fill,  auto);
   //grid-template-row: auto;
   justify-items: start ;
