@@ -8,7 +8,8 @@
 }
 
 .it-clinics__wrap {
-  grid-template-columns: minmax(300px, 610px) 1fr;
+  grid-template-columns: repeat(2, 1fr) ;
+  grid-gap: 20px;
   display: grid;
   margin: 0;
   padding: 0;
@@ -58,7 +59,6 @@
 .it-clinics__img {
   display: block;
   max-width: 100%;
-  width: 100%;
   height: auto;
 }
 
@@ -67,6 +67,7 @@
   font-size: 18px;
   margin-bottom: 5px;
   color: #000000;
+  line-height: 1.2;
 
 }
 
@@ -76,10 +77,14 @@
   margin-bottom: 5px;
 }
 
+.it-clinics__adress-wrap {
+  margin-bottom: 10px;
+}
+
 .it-clinics__adress-half {
   font-size: 12px;
   color: #000000;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .it-clinics__metro {
@@ -91,7 +96,7 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -5px -10px;
+  margin: 0 -5px -5px;
   overflow: hidden;
 }
 
@@ -100,7 +105,7 @@
   padding-left: 0;
   display: flex;
   align-items: flex-start;
-  margin: 0 5px 10px;
+  margin: 0 5px 5px;
 }
 
 .it-clinics__metro-circle {
@@ -120,6 +125,7 @@
 
 .it-clinics__info {
   text-decoration: none;
+  display: block;
 }
 
 .it-clinics__info:active,
@@ -140,6 +146,7 @@
 .it-clinics__info-inner-wrap {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 9px;
 }
 
 .it-clinics__info-number {
@@ -177,13 +184,14 @@
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
+  margin: 0 -12px;
+  padding: 18px 0 0;
 }
 
 .it-clinics__links-item {
   list-style-type: none;
   padding-left: 0;
+  margin: 0 12px;
 }
 
 .it-doctors__links-list {
@@ -205,6 +213,10 @@
   position: absolute;
   right: -11px;
   top: -10px;
+}
+
+.it-clinics__stars {
+  margin-bottom: 5px;
 }
 
 

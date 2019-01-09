@@ -3,8 +3,6 @@
 @import "smart-grid";
 @import "base";
 
-@include font-face(LucidaGrande, "../fonts/LucidaGrande", 400, normal, ttf);
-
 /******************* medvisor *******************/
 
 @import 'medvisor/articles';
@@ -21,6 +19,7 @@
 @import 'medvisor/services';
 @import 'medvisor/themes';
 @import 'medvisor/user';
+@import 'medvisor/stars';
 
 
 

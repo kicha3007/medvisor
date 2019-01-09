@@ -1,0 +1,54 @@
+@import "../__vars";
+@import "../__mixins";
+@import "../smart-grid";
+
+.it-stars {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.it-stars__wrap {
+  position: relative;
+  display: block;
+  height: 19px;
+  width: 80px;
+  background-image: url("../img/medvisor/stars/stars.png");
+  background-position: 0 3px;
+  background-repeat: repeat-x;
+  margin-right: 5px;
+}
+.it-stars__on {
+  height: 17px;
+  background-image: url("../img/medvisor/stars/stars.png");
+  background-position: 0 -14px;
+  background-repeat: repeat-x;
+}
+.it-stars__live {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.it-stars__star {
+  display: block;
+  float: left;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/medvisor/stars/stars.png");
+  background-repeat: no-repeat;
+  background-position: 0 -14px;
+}
+.it-stars__live .it-stars__star:hover ~ .it-stars__star {
+  background-position: 0 2px;
+}
+.it-stars__live:hover {
+  opacity: 1;
+}
+
+.it-starst__text {
+  font-size: 12px;
+  color: #666666;
+}

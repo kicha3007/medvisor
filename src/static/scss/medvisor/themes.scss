@@ -2,14 +2,17 @@
 @import "../__mixins";
 @import "../smart-grid";
 
+.it-thems {
+  padding-bottom: 40px;
+}
+
 .it-thems__list {
   margin: 0;
   padding: 0;
-  display: inline-grid;
-  grid-template-columns:  repeat(auto-fill,  auto);
-  //grid-template-row: auto;
-  justify-items: start ;
-  grid-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px -20px;
+  overflow: hidden;
 
 }
 
@@ -20,5 +23,7 @@
   padding: 15px;
   font-size: 18px;
   color: #FFFFFF;
+  margin: 0 10px 20px;
 
 }
+
