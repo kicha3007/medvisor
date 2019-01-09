@@ -68,7 +68,18 @@
   margin-bottom: 5px;
   color: #000000;
   line-height: 1.2;
+  display: block;
+  text-decoration: none;
+}
 
+.it-clinics__title:active,
+.it-clinics__title:visited {
+	text-decoration: none;
+}
+
+.it-clinics__title:hover {
+	color: $hov-text;
+  text-decoration: none;
 }
 
 .it-clinics__subtitle {
@@ -135,18 +146,29 @@
 }
 
 .it-clinics__info:hover {
-  color: #1B94FF;
+  color: $hov-text;
 	text-decoration: none;
 }
 
-.it-clinics__info:hover .it-clinics__info-number {
+.it-clinics__info-inner-wrap:hover .it-clinics__info-number {
   text-decoration: none;
+  color: $hov-text;
 }
 
 .it-clinics__info-inner-wrap {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 9px;
+  text-decoration: none;
+}
+
+.it-clinics__info-inner-wrap:active,
+.it-clinics__info-inner-wrap:visited {
+	text-decoration: none;
+}
+
+.it-clinics__info-inner-wrap:hover {
+	text-decoration: none;
 }
 
 .it-clinics__info-number {
@@ -207,12 +229,23 @@
   display: block;
 }
 
+.it-clinics__links-link:active,
+.it-clinics__links-link:visited {
+  color: #000000;
+	text-decoration: none;
+}
+
+.it-clinics__links-link:hover {
+	color: $hov-text;
+	text-decoration: none;
+}
+
 .it-clinics__links-numeric {
   font-size: 10px;
   color: #666666;
   position: absolute;
   right: -11px;
-  top: -10px;
+  top: -5px;
 }
 
 .it-clinics__stars {
