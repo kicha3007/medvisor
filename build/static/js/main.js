@@ -140,5 +140,52 @@ $(function () {
         }
     });
 
+    /* ****************************** dropdown-menu ****************************** */
+    (function(){
+
+        var menuMobileTrigger = $('[data-trigger]');
+
+        menuMobileTrigger.on("click", function () {
+            var $this = $(this);
+
+            var menuNumber = $this.data("trigger");
+            var menuMobileNav = $('[data-it-nav=' + menuNumber + ']');
+
+            $this.toggleClass('active');
+            menuMobileNav.toggleClass('active');
+            if($this.css("display") === "none") {
+                $this.removeClass("active");
+            }
+
+        });
+
+    })();
+
+    (function () {
+
+        var logo =  $('[data-logo]');
+        function mediaTransferBlocks(mediaSizeDescktop) {
+
+            if (mediaSizeDescktop.matches) {
+                logo.prependTo($("[data-header-top-half-left]"));
+
+            } else {
+                logo.prependTo($("[data-header-bottom-size-1]"));
+            }
+        }
+
+        if(logo.length) {
+            var mediaSizeDescktop = window.matchMedia("screen and (max-width: 768px)");
+            mediaSizeDescktop.addListener(mediaTransferBlocks);
+            mediaTransferBlocks(mediaSizeDescktop);
+        }
+
+    })();
+
+
+
 
 });
+
+
+
