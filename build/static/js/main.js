@@ -183,21 +183,9 @@ $(function () {
     })();
 
 
-    /* ------------------- fancybox ------------------- */
-
-    $("[data-fancybox]").fancybox({
-        // padding: 0,
-        // helpers: {
-        //     overlay: {
-        //         showEarly : false
-        //     }
-        // }
-    });
 
 
 });
 
-$("[data-it-info='time']").on("click",  function () {
-    $("[data-switch='modal-info2']").click();
-});
+
 

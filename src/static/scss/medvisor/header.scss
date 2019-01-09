@@ -85,3 +85,12 @@
   align-items: center;
 
 }
+
+.it-header__logo {
+  @include tablets {
+    max-width: 120px;
+  }
+  @include phones {
+    max-width: 100px;
+  }
+}

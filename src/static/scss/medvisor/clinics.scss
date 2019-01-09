@@ -21,6 +21,9 @@
 .it-clinics__outer-wrap {
   padding-bottom: 50px;
   position: relative;
+  @include tablets {
+    padding-bottom: 25px;
+  }
 }
 
 .it-clinics__outer-wrap:before {

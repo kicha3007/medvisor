@@ -75,6 +75,9 @@
 
 .it-all-indent {
   margin-bottom: 50px;
+  @include tablets {
+    margin-bottom: 25px;
+  }
 }
 
 .it-all-link {
@@ -98,6 +101,18 @@
   font-size: 20px;
   margin-right: 12px;
   font-weight: 700;
+  text-decoration: none;
+}
+
+.it-all-link__text:active,
+.it-all-link__text:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.it-all-link__text:hover {
+	color: #ffffff;
+	text-decoration: none;
 }
 
 .it-all-link__img-box {

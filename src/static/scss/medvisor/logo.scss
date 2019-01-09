@@ -7,11 +7,9 @@
   display: block;
   @include tablets {
     padding: 12px 0;
-    max-width: 120px;
   }
   @include phones {
     padding: 8px 0;
-    max-width: 100px;
   }
 
 }

@@ -11,6 +11,9 @@
 .it-news__outer-wrap {
   padding-bottom: 50px;
   position: relative;
+  @include tablets {
+    padding-bottom: 25px;
+  }
 }
 
 .it-news__outer-wrap:before {
@@ -26,7 +29,7 @@
 
 .it-news__wrap {
   margin: 0;
-  padding: 0 0 50px;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
@@ -62,6 +65,8 @@
 	text-decoration: none;
 }
 
+
+
 .it-news__item:nth-child(1)  {
   grid-column-start: 1;
   grid-column-end: -1;
@@ -70,7 +75,6 @@
   }
 }
 
-
   .it-news__item-link {
     padding: 40px 40px 30px;
     overflow: hidden;
@@ -78,23 +82,21 @@
     text-decoration: none;
     align-items: start;
     align-content: start;
-    grid-template-rows: minmax(100px, 220px) 1fr;
+    grid-template-rows: auto 1fr;
     height: 100%;
     grid-gap: 20px;
 
   }
 
 
-
-
   .it-news__item:nth-child(1) .it-news__item-link {
   grid-template-columns: minmax(100px, 400px) 1fr;
-  grid-gap: 40px;
+    grid-gap: 40px;
     grid-template-rows: auto;
   @include laptop {
-    grid-template-rows: minmax(100px, 220px) 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-columns: auto;
-    grid-gap: 0;
+    grid-gap: 20px;
   }
 }
 
@@ -200,5 +202,9 @@
 }
 
 
-
-
+.it-news__item:hover .it-news__title,
+.it-news__item:hover .it-news__desc,
+.it-news__item:hover .it-news__desc p {
+  transition: 0.1s;
+  color: $hov-text;
+}

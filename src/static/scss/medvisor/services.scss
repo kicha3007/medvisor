@@ -11,6 +11,9 @@
 .it-services__outer-wrap {
   padding-bottom: 50px;
   position: relative;
+  @include tablets {
+    padding-bottom: 25px;
+  }
 }
 
 .it-services__outer-wrap:before {
@@ -26,7 +29,7 @@
 
 .it-services__wrap {
   margin: 0;
-  padding: 0 0 50px;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
@@ -54,6 +57,23 @@
   }
 }
 
+.it-services__link {
+  text-decoration: none;
+}
+
+.it-services__link:active,
+.it-services__link:visited {
+	text-decoration: none;
+}
+
+.it-services__link:hover {
+	text-decoration: none;
+}
+
+.it-services__link:hover .it-services__title,
+.it-services__link:hover .it-services__desc {
+  color: $hov-text;
+}
 
 .it-services__img-box {
   max-width: 100%;
@@ -77,11 +97,13 @@
   font-size: 18px;
   margin-bottom: 5px;
   color: #000000;
+  transition: 0.1s;
 }
 
 .it-services__desc {
   font-size: 12px;
   color: #000000;
+  transition: 0.1s;
 }
 
 

@@ -231,6 +231,12 @@
   color: #666666;
 }
 
+.it-article__item-link:hover .it-article__title,
+.it-article__item-link:hover .it-article__desc,
+.it-article__item-link:hover .it-article__desc p {
+  transition: 0.1s;
+  color: $hov-text;
+}
 
 
 
