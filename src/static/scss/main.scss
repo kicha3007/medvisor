@@ -20,6 +20,7 @@
 @import 'medvisor/themes';
 @import 'medvisor/user';
 @import 'medvisor/stars';
+@import 'medvisor/modal-info';
 
 
 
@@ -162,7 +163,7 @@
 }
 
 .it-btn:hover {
-  background: $main-color-hover;
+  background: $hov;
 }
 
 .it-btn:hover,

@@ -12,7 +12,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
   
-  @include tablets {
+  @include phones {
     grid-template-columns:  1fr ;
   }
 }
@@ -39,6 +39,9 @@
   flex-grow: 1;
   flex-basis: 50px;
   margin: 0 8px 20px;
+  @include tablets {
+    flex-basis: 100%;
+  }
 }
 
 .it-doctors__img-box {
@@ -62,6 +65,9 @@
 
 .it-doctors__content {
   padding-top: 25px;
+  @include tablets {
+    padding-top: 0;
+  }
 }
 
 .it-doctors__title {
@@ -70,6 +76,19 @@
   margin-bottom: 8px;
   color: #000000;
   line-height: 1.2;
+  display: block;
+  text-decoration: none;
+}
+
+.it-doctors__title:active,
+.it-doctors__title:visited {
+  color: #000000;
+	text-decoration: none;
+}
+
+.it-doctors__title:hover {
+	color: $hov-text;
+	text-decoration: none;
 }
 
 .it-doctors__subtitle {
@@ -156,6 +175,18 @@
   font-size: 12px;
   color: #000000;
   position: relative;
+  text-decoration: none;
+}
+
+.it-doctors__reviews-text:active,
+.it-doctors__reviews-text:visited {
+    color: #000000;
+	text-decoration: none;
+}
+
+.it-doctors__reviews-text:hover {
+	color: $hov-text;
+	text-decoration: none;
 }
 
 .it-doctors__reviews-number {
