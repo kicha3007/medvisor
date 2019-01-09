@@ -1,15 +1,21 @@
 header.it-header
-		.it-container
-			.it-header__wrap
-				.it-header__top
-					.it-header__half.it-header__half--left
+	.it-header__wrap
+		.it-header__top
+			.it-container
+				.it-header__top-wrap
+					.it-header__top-half.it-header__top-half--left(data-header-top-half-left)
 						include nav
-					.it-header__half.it-header__half--right
+					.it-header__top-half.it-header__top-half--right
 						.it-header__inner-wrap
-							include city
-							include user
-				.it-header__bottom
-					.it-header__bottom-half.it-header__bottom-half--size-1
+							.it-header__top-inner-wrap
+								.it-header__top-inner-half
+									include city
+								.it-header__top-inner-half
+									include user
+		.it-header__bottom
+			.it-container
+				.it-header__bottom-wrap
+					.it-header__bottom-half.it-header__bottom-half--size-1(data-header-bottom-size-1)
 						include logo
 					.it-header__bottom-half.it-header__bottom-half--size-2
 						include nav-main

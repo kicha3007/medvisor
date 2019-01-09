@@ -54,7 +54,7 @@
 }
 
 .it-nav__link:hover {
-	color: $main-color-text-hover;
+	color: $hov;
 	text-decoration: none;
 }
 
@@ -97,7 +97,7 @@
   position: absolute;
   height: 5px;
   width: 100%;
-  background: $main-color;
+  background: $main-color-text;
   border-radius: 9px;
   opacity: 1;
   left: 0;

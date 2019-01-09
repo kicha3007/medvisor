@@ -1,14 +1,20 @@
 section.it-nav
-	ul.it-nav__list
-		li.it-nav__item
-			a(href="#").it-nav__link
-				|	Проверьте свои симптомы
-		li.it-nav__item
-			a(href="#").it-nav__link
-				|	Найти врача
-		li.it-nav__item
-			a(href="#").it-nav__link
-				|	Найти лекарства
-		li.it-nav__item
-			a(href="#").it-nav__link
-				|	Пресс-центр
+	.it-nav__trigger(data-trigger="nav")
+		span.it-nav__trigger-line.it-nav__trigger-line--top
+		span.it-nav__trigger-line.it-nav__trigger-line--middle-1
+		span.it-nav__trigger-line.it-nav__trigger-line--middle-2
+		span.it-nav__trigger-line.it-nav__trigger-line--bottom
+	.it-nav__wrap(data-it-nav="nav")
+		ul.it-nav__list
+			li.it-nav__item
+				a(href="#").it-nav__link
+					|	Проверьте свои симптомы
+			li.it-nav__item
+				a(href="#").it-nav__link
+					|	Найти врача
+			li.it-nav__item
+				a(href="#").it-nav__link
+					|	Найти лекарства
+			li.it-nav__item
+				a(href="#").it-nav__link
+					|	Пресс-центр

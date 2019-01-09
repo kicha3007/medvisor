@@ -22,7 +22,7 @@
 .it-nav-main__link {
   display: block;
   padding: 15px 8px;
-  color: $brand-color;
+  color: $main-color-text;
   font-size: 18px;
   text-decoration: none;
   font-weight: 700;
@@ -35,11 +35,11 @@
 
 .it-nav-main__link:active,
 .it-nav-main__link:visited {
-  color: $brand-color;
+  color: $main-color-text;
   text-decoration: none;
 }
 
 .it-nav-main__link:hover {
-  color: $brand-color-hover;
+  color: $hov;
   text-decoration: none;
 }

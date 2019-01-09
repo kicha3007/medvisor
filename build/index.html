@@ -14,33 +14,76 @@
     <div class="it-main-page__wrapper">
       <div class="it-main-page__content">
         <header class="it-header">
-          <div class="it-container">
-            <div class="it-header__wrap">
-              <div class="it-header__top">
-                <div class="it-header__half it-header__half--left">
-                  <section class="it-nav">
-                    <ul class="it-nav__list">
-                      <li class="it-nav__item"><a class="it-nav__link" href="#">	Проверьте свои симптомы</a></li>
-                      <li class="it-nav__item"><a class="it-nav__link" href="#">	Найти врача</a></li>
-                      <li class="it-nav__item"><a class="it-nav__link" href="#">	Найти лекарства</a></li>
-                      <li class="it-nav__item"><a class="it-nav__link" href="#">	Пресс-центр</a></li>
-                    </ul>
-                  </section>
-                </div>
-                <div class="it-header__half it-header__half--right">
-                  <div class="it-header__inner-wrap">
-                    <div class="it-city"></div>
-                    <div class="it-user">
-                      <div class="it-user__img-box"><img class="it-user__img" src="" alt=""></div>
-                      <div class="it-user__text">	Войти</div>
+          <div class="it-header__wrap">
+            <div class="it-header__top">
+              <div class="it-container">
+                <div class="it-header__top-wrap">
+                  <div class="it-header__top-half it-header__top-half--left" data-header-top-half-left>
+                    <section class="it-nav">
+                      <div class="it-nav__trigger" data-trigger="nav"><span class="it-nav__trigger-line it-nav__trigger-line--top"></span><span class="it-nav__trigger-line it-nav__trigger-line--middle-1"></span><span class="it-nav__trigger-line it-nav__trigger-line--middle-2"></span><span class="it-nav__trigger-line it-nav__trigger-line--bottom"></span></div>
+                      <div class="it-nav__wrap" data-it-nav="nav">
+                        <ul class="it-nav__list">
+                          <li class="it-nav__item"><a class="it-nav__link" href="#">	Проверьте свои симптомы</a></li>
+                          <li class="it-nav__item"><a class="it-nav__link" href="#">	Найти врача</a></li>
+                          <li class="it-nav__item"><a class="it-nav__link" href="#">	Найти лекарства</a></li>
+                          <li class="it-nav__item"><a class="it-nav__link" href="#">	Пресс-центр</a></li>
+                        </ul>
+                      </div>
+                    </section>
+                  </div>
+                  <div class="it-header__top-half it-header__top-half--right">
+                    <div class="it-header__inner-wrap">
+                      <div class="it-header__top-inner-wrap">
+                        <div class="it-header__top-inner-half">
+                          <div class="it-city">
+                            <div class="it-city__wrap">
+                              <div class="it-city__img-box it-city__img-box--left"><img src="static/img/medvisor/city/location.svg" alt=""></div>
+                              <input class="it-city__input" value="Тюмень">
+                              <div class="it-city__img-box it-city__img-box--right"><img src="static/img/medvisor/city/arrow.svg" alt=""></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="it-header__top-inner-half">
+                          <div class="it-user">
+                            <div class="it-user__wrap">
+                              <div class="it-user__img-box"><img class="it-user__img" src="static/img/medvisor/user/icon.svg" alt=""></div>
+                              <div class="it-user__text">	Войти</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="it-header__bottom">
-                <div class="it-header__bottom-half it-header__bottom-half--size-1"></div>
-                <div class="it-header__bottom-half it-header__bottom-half--size-2"></div>
-                <div class="it-header__bottom-half it-header__bottom-half--size-3"></div>
+            </div>
+            <div class="it-header__bottom">
+              <div class="it-container">
+                <div class="it-header__bottom-wrap">
+                  <div class="it-header__bottom-half it-header__bottom-half--size-1" data-header-bottom-size-1><a class="it-logo" href="#" data-logo>
+                      <div class="it-logo__wrap">
+                        <div class="it-logo__img-box"><img class="it-logo__img" src="static/img/medvisor/logo/logo.png" alt=""></div>
+                        <div class="it-logo__text">	Все о медицине</div>
+                      </div></a></div>
+                  <div class="it-header__bottom-half it-header__bottom-half--size-2">
+                    <nav-main class="it-nav-main">
+                      <ul class="it-nav-main__list">
+                        <li class="it-nav-main__item"><a class="it-nav-main__link" href="#">	Медучреждения</a></li>
+                        <li class="it-nav-main__item"><a class="it-nav-main__link" href="#">	Врачи</a></li>
+                        <li class="it-nav-main__item"><a class="it-nav-main__link" href="#">	Услуги</a></li>
+                        <li class="it-nav-main__item"><a class="it-nav-main__link" href="#">	Препараты</a></li>
+                      </ul>
+                    </nav-main>
+                  </div>
+                  <div class="it-header__bottom-half it-header__bottom-half--size-3">
+                    <section class="it-search">
+                      <div class="it-search__wrap">
+                        <button class="it-search__button"><img class="it-search__img" src="static/img/medvisor/search/loup.svg" alt=""></button>
+                        <input class="it-search__input" placeholder="Например, “Стоматология”">
+                      </div>
+                    </section>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -1,3 +1,62 @@
 @import "../__vars";
 @import "../__mixins";
 @import "../smart-grid";
+
+
+.it-city__wrap {
+  position: relative;
+  max-width: 74px;
+  width: 100%;
+}
+
+.it-city__img-box {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 7px;
+  height: 9px;
+  overflow: hidden;
+  margin-top: -4.5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.it-city__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.it-city__img-box--right {
+  left: auto;
+  right: 0;
+}
+
+.it-city__input {
+  font-size: 13px;
+  padding: 16px 12px;
+  color: #2C555D;
+  background-color: #FAFAFA;
+  width: 100%;
+  line-height: 1.42;
+  border: none;
+  outline: none;
+}
+
+.it-city__input::-webkit-input-placeholder {
+  color: #A0B0B9;
+}
+
+.it-city__input::-moz-placeholder {
+  color: #A0B0B9;
+}
+
+.it-city__input:-ms-input-placeholder {
+  color: #A0B0B9;
+}
+
+.it-city__input:-moz-placeholder {
+  color: #A0B0B9;
+}
+
