@@ -1,3 +1,58 @@
 @import "../__vars";
 @import "../__mixins";
 @import "../smart-grid";
+
+.it-search {
+
+}
+
+.it-search__wrap {
+  position: relative;
+}
+
+.it-search__button {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.it-search__input {
+  border: none;
+  background-color: #F5F5F5;
+  padding: 5px 20px 5px 40px;
+  color: #868686;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+  height: 32px;
+  @include phones {
+    height: 22px;
+  }
+}
+
+.it-search__input::-webkit-input-placeholder {
+  color: #868686;
+}
+
+.it-search__input::-moz-placeholder {
+  color: #868686;
+}
+
+.it-search__input:-ms-input-placeholder {
+  color: #868686;
+}
+
+.it-search__input:-moz-placeholder {
+  color: #868686;
+}
+

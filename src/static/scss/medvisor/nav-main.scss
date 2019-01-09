@@ -1,3 +1,45 @@
 @import "../__vars";
 @import "../__mixins";
 @import "../smart-grid";
+
+@import "../__vars";
+@import "../__mixins";
+@import "../smart-grid";
+
+.it-nav-main__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin:  0 -5px;
+  padding: 0;
+}
+
+.it-nav-main__item {
+  margin:  0 5px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.it-nav-main__link {
+  display: block;
+  padding: 15px 8px;
+  color: $brand-color;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 700;
+  @include laptop {
+    font-size: 16px;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+}
+
+.it-nav-main__link:active,
+.it-nav-main__link:visited {
+  color: $brand-color;
+  text-decoration: none;
+}
+
+.it-nav-main__link:hover {
+  color: $brand-color-hover;
+  text-decoration: none;
+}
