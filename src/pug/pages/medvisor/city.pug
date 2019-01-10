@@ -2,6 +2,9 @@
 	.it-city__wrap
 		.it-city__img-box.it-city__img-box--left
 			img(src="static/img/medvisor/city/location.svg", alt='')
-		input.it-city__input(value="Тюмень")
+		.it-city__inner-wrap
+			input.it-city__input(value="Тюмень" data-city-input)
+			.it-city__array(data-city-array)
+		.it-city__list(data-city-list)
 		.it-city__img-box.it-city__img-box--right
 			img(src="static/img/medvisor/city/arrow.svg", alt='')

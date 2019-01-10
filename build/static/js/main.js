@@ -251,51 +251,51 @@ $(function () {
 
     (function() {
 
-        var a = ['плоские', 'Маленькие', 'срЕДние', 'большие', 'подтянутые', 'обвисшие', 'с маленькими сосками', 'с болЬшими сосками', 'гладкие', 'с пупырышками', 'чувствительные', 'нечувствительные'];
+        var data = ['плоские', 'Маленькие', 'срЕДние', 'большие', 'подтянутые', 'обвисшие', 'с маленькими сосками', 'с болЬшими сосками', 'гладкие', 'с пупырышками', 'чувствительные', 'нечувствительные'];
         var b = [];
         var c = [];
         var i = 0; // i для turn
-        $('#list').hide(); // скрываем список
+        $('#search-list').hide(); // скрываем список
 
-        $.each(a, function (i) {	// формируем список в div
-            var lwrList = a[i].toLowerCase(); // массив в нижний регистр
+        $.each(data, function (i) {	// формируем список в div
+            var lwrList = data[i].toLowerCase(); // массив в нижний регистр
             b[i] = '<div class="list" id="' + lwrList + '">' + lwrList + '</div>';
             /* id делает уникальным каждый блок при клике
              и будет использоваться в поиске совпадений */
         });
-        $('#list').html(b); // помещаем весь массив в родительский div
+        $('#city-list').html(b); // помещаем весь массив в родительский div
 
-        $('input').focus(function () {
+        $('[data-city-input]').focus(function () {
             reset();
             checking();
         }); // очищаем input для новых значений при каждом клике
 
         function checking() {
-            $('.list').click(function () {
-                $('input').val($(this).html());
+            $('#city-list').click(function () {
+                $('[data-city-input]').val($(this).html());
                 turnUp();
             });
         };
         checking();
 
         function reset() {
-            $('input').val('');
-            $('#list').html(b);
+            $('[data-city-input]').val('');
+            $('#city-list').html(b);
         };
 
-// сворачивание
+    // сворачивание
         function turnUp() {
-            $('.array').html('&#9660;');
-            $('#list').slideUp(200);
+            $('[data-city-array]').html('&#9660;');
+            $('#city-list').slideUp(200);
             i = 0;
         };
         function turnDown() {
-            $('.array').html('&#9650;');
-            $('#list').slideDown(200);
+            $('[data-city-array]').html('&#9650;');
+            $('#city-list').slideDown(200);
             i = 1;
         };
 
-        $('.array').click(function () {
+        $('[data-city-array]').click(function () {
             if (i == 0) {
                 turnDown();
             } else {
@@ -304,24 +304,24 @@ $(function () {
             ;
         });
 
-// поиск совпадений
+    // поиск совпадений
         function search() {
             turnDown();
             setTimeout(function () {
                 // для регистра
-                var lwrSrch = $('input').val().toLowerCase();
+                var lwrSrch = $('[data-city-input]').val().toLowerCase();
                 if ($('[id*="' + lwrSrch + '"]')[0] != null) {
                     $('[id*="' + lwrSrch + '"]').each(function (i) {
                         c[i] = '<div class="list" id="' + $(this).attr('id') +
                             '">' + $(this).attr('id') + '</div>';
                         i++;
                     });
-                    $('#list').html(c);
+                    $('#city-list').html(c);
                     c = [];
                     checking();
                 } else {
                     if ($('input').val() != '') {
-                        $('#list').html('');
+                        $('#city-list').html('');
                         checking();
                     } else {
                         reset();
@@ -333,7 +333,7 @@ $(function () {
             }, 50); // ожидание во избежание ошибок
         };
 
-        $('input').keyup(function (eventObject) {
+        $('[data-city-input]').keyup(function (eventObject) {
             if (eventObject.key == 'Shift' ||
                 eventObject.key == 'Control') {
                 return false
