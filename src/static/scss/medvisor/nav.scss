@@ -2,6 +2,7 @@
 @import "../__mixins";
 @import "../smart-grid";
 
+
 .it-nav__list {
   display: flex;
   flex-wrap: wrap;
@@ -18,6 +19,7 @@
   position: relative;
   list-style-type: none;
   padding-left: 0;
+  width: auto;
   @include tablets {
     margin: 0;
   }
@@ -33,6 +35,9 @@
   height: 14px;
   margin-top: -7px;
   background-color: $main-color-text;
+  @include tablets {
+    display: none;
+  }
 }
 
 .it-nav__link {
@@ -43,7 +48,6 @@
   text-decoration: none;
   @include tablets {
     padding: 10px 15px 10px 30px;
-
   }
 }
 
@@ -54,27 +58,30 @@
 }
 
 .it-nav__link:hover {
-	color: $hov;
+	color: $hov-text;
 	text-decoration: none;
 }
 
 .it-nav__wrap {
   @include tablets {
-    display: none;
     position: absolute;
     top: 100%;
-    right: -1000px;
+    right: calc(-100% - 48px);
     z-index: 6;
-    background-color: $main-color;
+    background-color: #ffffff;
     box-shadow: 0 3px 4px rgba(0,0,0,.25);
     width: 80%;
     padding: 20px 0 80px ;
+    transition: .2s all;
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
 .it-nav__wrap.active {
-  display: block;
-  right: -15px;
+  opacity: 1;
+  visibility: visible;
+  right: 0;
 }
 
 .it-nav__trigger {
@@ -137,4 +144,8 @@
   top: 18px;
   width: 0%;
   left: 50%;
+}
+
+body.nav-open {
+  overflow: hidden;
 }

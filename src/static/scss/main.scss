@@ -92,27 +92,21 @@
 }
 
 .it-all-link:hover {
-	color: #2C555D;
+  color: $hov-text;
+  text-decoration: none;
 
 }
 
+
 .it-all-link__text {
-  color: #2C555D;
   font-size: 20px;
   margin-right: 12px;
   font-weight: 700;
-  text-decoration: none;
 }
 
-.it-all-link__text:active,
-.it-all-link__text:visited {
-	color: #ffffff;
-	text-decoration: none;
-}
-
-.it-all-link__text:hover {
-	color: #ffffff;
-	text-decoration: none;
+.it-all-link:hover .it-all-link__text {
+  color: $hov-text;
+  transition: 0.1s;
 }
 
 .it-all-link__img-box {
