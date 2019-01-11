@@ -251,27 +251,46 @@ $(function () {
 
     (function() {
 
-        var data = ['плоские', 'Маленькие', 'срЕДние', 'большие', 'подтянутые', 'обвисшие', 'с маленькими сосками', 'с болЬшими сосками', 'гладкие', 'с пупырышками', 'чувствительные', 'нечувствительные'];
+        var data = ['екатеринбург', 'Саратов', 'МосКва', 'Нижний новгород', 'свердловск', 'Сочи', 'крым', 'оРенБург', 'ЧеляБинск'];
         var b = [];
         var c = [];
-        var i = 0; // i для turn
-        $('#search-list').hide(); // скрываем список
+        var iToggle = 0; // i для turn
+        $('[data-city-list]').hide(); // скрываем список
 
         $.each(data, function (i) {	// формируем список в div
             var lwrList = data[i].toLowerCase(); // массив в нижний регистр
-            b[i] = '<div class="list" id="' + lwrList + '">' + lwrList + '</div>';
+            b[i] = '<li class="it-city__item" id="' + lwrList + '">' + lwrList + '</li>';
             /* id делает уникальным каждый блок при клике
              и будет использоваться в поиске совпадений */
         });
-        $('#city-list').html(b); // помещаем весь массив в родительский div
+        $('[data-city-list]').html(b); // помещаем весь массив в родительский div
+
 
         $('[data-city-input]').focus(function () {
             reset();
             checking();
+
         }); // очищаем input для новых значений при каждом клике
 
+        $('[data-city-input]').mousedown( function () {
+            if (iToggle == 0) {
+                turnDown();
+            } else {
+                turnUp();
+            }
+
+        });
+
+
+        $('[data-city-input]').on("blur",  function () {
+            setTimeout(function () {
+                turnUp();
+            }, 50)
+
+        });
+
         function checking() {
-            $('#city-list').click(function () {
+            $('.it-city__item').on("click", function () {
                 $('[data-city-input]').val($(this).html());
                 turnUp();
             });
@@ -280,29 +299,20 @@ $(function () {
 
         function reset() {
             $('[data-city-input]').val('');
-            $('#city-list').html(b);
+            $('[data-city-list]').html(b);
         };
 
     // сворачивание
         function turnUp() {
-            $('[data-city-array]').html('&#9660;');
-            $('#city-list').slideUp(200);
-            i = 0;
+            $('[data-city-array]').removeClass("active");
+            $('[data-city-list]').slideUp(200);
+            iToggle = 0;
         };
         function turnDown() {
-            $('[data-city-array]').html('&#9650;');
-            $('#city-list').slideDown(200);
-            i = 1;
+            $('[data-city-array]').addClass("active");
+            $('[data-city-list]').slideDown(200);
+            iToggle = 1;
         };
-
-        $('[data-city-array]').click(function () {
-            if (i == 0) {
-                turnDown();
-            } else {
-                turnUp();
-            }
-            ;
-        });
 
     // поиск совпадений
         function search() {
@@ -310,18 +320,18 @@ $(function () {
             setTimeout(function () {
                 // для регистра
                 var lwrSrch = $('[data-city-input]').val().toLowerCase();
-                if ($('[id*="' + lwrSrch + '"]')[0] != null) {
-                    $('[id*="' + lwrSrch + '"]').each(function (i) {
-                        c[i] = '<div class="list" id="' + $(this).attr('id') +
-                            '">' + $(this).attr('id') + '</div>';
-                        i++;
+                if ($('.it-city__item[id*="' + lwrSrch + '"]')[0] != null) {
+                    $('.it-city__item[id*="' + lwrSrch + '"]').each(function (i) {
+                        c[i] = '<li class="it-city__item" id="' + $(this).attr('id') +
+                            '">' + $(this).attr('id') + '</li>';
+
                     });
-                    $('#city-list').html(c);
+                    $('[data-city-list]').html(c);
                     c = [];
                     checking();
                 } else {
-                    if ($('input').val() != '') {
-                        $('#city-list').html('');
+                    if ($('[data-city-input]').val() != '') {
+                        $('[data-city-list]').html('');
                         checking();
                     } else {
                         reset();
@@ -343,8 +353,6 @@ $(function () {
             ;
             // keypress не определяется смартфонами, потому keyup
         });
-
-
 
     })();
 

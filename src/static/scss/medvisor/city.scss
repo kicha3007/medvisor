@@ -2,18 +2,18 @@
 @import "../__mixins";
 @import "../smart-grid";
 
-
 .it-city__wrap {
   position: relative;
   max-width: 74px;
   width: 100%;
+  min-width: 200px;
 }
 
 .it-city__img-box {
   position: absolute;
   left: 0;
   top: 50%;
-  width: 7px;
+  width: 8px;
   height: 9px;
   overflow: hidden;
   margin-top: -4.5px;
@@ -22,6 +22,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .it-city__img {
   display: block;
   max-width: 100%;
@@ -31,6 +32,11 @@
 .it-city__img-box--right {
   left: auto;
   right: 0;
+  cursor: pointer;
+}
+
+.it-city__img-box--right.active {
+  transform: rotate(180deg);
 }
 
 .it-city__input {
@@ -60,37 +66,33 @@
   color: #A0B0B9;
 }
 
-
-
-.it-city__array{
-  width: 48px; height: 48px; float: right;
-  text-align: center; line-height: 48px;
-  background: rgba(255, 255, 255, 0.9); color: rgba(0, 0, 0, 0.5);
-  box-shadow: 1px 0 rgba(0, 0, 0, 0.1) inset;
-  cursor: pointer;
-}
-.it-city__array:hover{
-  background: rgba(255, 255, 255, 0.5);
-  color: inherit;
-}
-
-
 .it-city__list {
-  width: 256px; height: auto; max-height: 240px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 400px;
+  height: auto;
+  max-height: 240px;
   margin: 2px 0 0 1px;
-  background: white;
+  background: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  overflow-x: hidden; overflow-y: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0;
 }
 
-.it-city__list {
-  width: 100%; height: 48px;
-  padding: 0 8px 0 16px;
+.it-city__item {
+  width: 100%;
+  height: 40px;
+  padding: 0 4px 0 16px;
   box-shadow: 0 -1px rgba(0, 0, 0, 0.1) inset;
-  line-height: 48px;
-  overflow: hidden; cursor: pointer;
+  line-height: 40px;
+  overflow: hidden;
+  cursor: pointer;
+  list-style-type: none;
 }
-.it-city__list:hover{
+
+.it-city__item:hover {
   background: rgba(0, 0, 0, 0.05);
   box-shadow: 0 -1px rgba(0, 0, 0, 0.15) inset;
 }

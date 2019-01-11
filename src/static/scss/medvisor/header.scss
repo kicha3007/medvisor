@@ -26,7 +26,6 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 -13px;
-  overflow: hidden;
   @include phones {
     display: block;
   }
