@@ -9,12 +9,8 @@
 }
 
 .it-nav-main__list {
-  display: flex;
   margin:  0 -5px;
   padding: 0;
-  flex-shrink: 1;
-  flex-basis: 400px;
-  flex-grow: 1;
 
 }
 
@@ -28,7 +24,7 @@
 }
 
 .it-nav-main__link {
-  display: inline-block;
+  display: block;
   padding: 15px 8px;
   color: $main-color-text;
   font-size: 18px;
