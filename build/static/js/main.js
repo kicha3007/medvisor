@@ -255,24 +255,30 @@ $(function () {
         var b = [];
         var c = [];
         var iToggle = 0; // i для turn
-        $('[data-city-list]').hide(); // скрываем список
+
+        var cityList = $('[data-city-list]');
+        var cityInput = $('[data-city-input]');
+        var cityLabel = $('[data-city-label]');
+        var cityInnerWrap = $("[data-city-inner-wrap]");
+
+        cityInnerWrap.hide(); // скрываем список
 
         $.each(data, function (i) {	// формируем список в div
             var lwrList = data[i].toLowerCase(); // массив в нижний регистр
-            b[i] = '<li class="it-city__item" id="' + lwrList + '">' + lwrList + '</li>';
+            b[i] = '<li class="it-city__item" data-city-item id="' + lwrList + '">' + lwrList + '</li>';
             /* id делает уникальным каждый блок при клике
              и будет использоваться в поиске совпадений */
         });
-        $('[data-city-list]').html(b); // помещаем весь массив в родительский div
+        cityList.html(b); // помещаем весь массив в родительский div
 
 
-        $('[data-city-input]').focus(function () {
+        cityInput.focus(function () {
             reset();
             checking();
 
         }); // очищаем input для новых значений при каждом клике
 
-        $('[data-city-input]').mousedown( function () {
+        cityLabel.mousedown( function () {
             if (iToggle == 0) {
                 turnDown();
             } else {
@@ -282,56 +288,83 @@ $(function () {
         });
 
 
-        $('[data-city-input]').on("blur",  function () {
-            setTimeout(function () {
-                turnUp();
-            }, 50)
+            var overlay = $("<div/>", {
+                css: {
+                    display: "block",
+                    position: "absolute",
+                    top: "0",
+                    left: "0",
+                    right: "0",
+                    bottom: "0",
+                    width: "100%",
+                    height: "100%",
+                    "background-color": "rgba(0, 0, 0, 0.5)",
+                    "background-size": "cover",
+                    "z-index": "2",
+                    "max-height": "100%"
+                },
+                class: "it-overlay-transparent"
+            });
 
-        });
+
+
+        // cityInput.on("blur",  function () {
+        //     setTimeout(function () {
+        //         turnUp();
+        //     }, 50)
+        //
+        // });
 
         function checking() {
-            $('.it-city__item').on("click", function () {
-                $('[data-city-input]').val($(this).html());
+            $('[data-city-item]').on("click", function () {
+                cityInput.val($(this).html());
+                cityLabel.text($(this).html());
                 turnUp();
             });
         };
         checking();
 
         function reset() {
-            $('[data-city-input]').val('');
-            $('[data-city-list]').html(b);
+            cityInput.val('');
+            cityList.html(b);
         };
 
     // сворачивание
         function turnUp() {
             $('[data-city-array]').removeClass("active");
-            $('[data-city-list]').slideUp(200);
+            cityInnerWrap.slideUp(200);
+            $(".it-overlay-transparent").remove();
             iToggle = 0;
         };
         function turnDown() {
             $('[data-city-array]').addClass("active");
-            $('[data-city-list]').slideDown(200);
+            cityInnerWrap.slideDown(200);
+            $("body").append(overlay);
             iToggle = 1;
         };
+        $("body").on("click", ".it-overlay-transparent", function () {
+            $(".it-overlay-transparent").remove();
+            turnUp()
+        })
 
     // поиск совпадений
         function search() {
             turnDown();
             setTimeout(function () {
                 // для регистра
-                var lwrSrch = $('[data-city-input]').val().toLowerCase();
-                if ($('.it-city__item[id*="' + lwrSrch + '"]')[0] != null) {
-                    $('.it-city__item[id*="' + lwrSrch + '"]').each(function (i) {
-                        c[i] = '<li class="it-city__item" id="' + $(this).attr('id') +
+                var lwrSrch = cityInput.val().toLowerCase();
+                if ($('[data-city-item][id*="' + lwrSrch + '"]')[0] != null) {
+                    $('[data-city-item][id*="' + lwrSrch + '"]').each(function (i) {
+                        c[i] = '<li class="it-city__item" data-city-item id="' + $(this).attr('id') +
                             '">' + $(this).attr('id') + '</li>';
 
                     });
-                    $('[data-city-list]').html(c);
+                    cityList.html(c);
                     c = [];
                     checking();
                 } else {
-                    if ($('[data-city-input]').val() != '') {
-                        $('[data-city-list]').html('');
+                    if (cityInput.val() != '') {
+                        cityList.html('');
                         checking();
                     } else {
                         reset();
@@ -343,7 +376,7 @@ $(function () {
             }, 50); // ожидание во избежание ошибок
         };
 
-        $('[data-city-input]').keyup(function (eventObject) {
+        cityInput.keyup(function (eventObject) {
             if (eventObject.key == 'Shift' ||
                 eventObject.key == 'Control') {
                 return false

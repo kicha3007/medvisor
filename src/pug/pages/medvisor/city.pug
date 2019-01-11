@@ -2,8 +2,12 @@
 	.it-city__wrap
 		.it-city__img-box.it-city__img-box--left
 			img(src="static/img/medvisor/city/location.svg", alt='')
-		.it-city__inner-wrap
-			input.it-city__input(value="Тюмень" data-city-input)
-			.it-city__img-box.it-city__img-box--right(data-city-array)
-				img(src="static/img/medvisor/city/arrow.svg", alt='')
-		ul.it-city__list(data-city-list)
+		label.it-city__label(for="city-input" data-city-label)
+			| Тюмень
+		.it-city__img-box.it-city__img-box--right(data-city-array)
+			img(src="static/img/medvisor/city/arrow.svg", alt='')
+		.it-city__list-wrap(data-city-inner-wrap)
+			input.it-city__item#city-input(value="Найти свой город" data-city-input)
+			ul.it-city__list(data-city-list)
+
+
