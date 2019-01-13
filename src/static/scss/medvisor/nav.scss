@@ -72,7 +72,7 @@
     box-shadow: 0 3px 4px rgba(0,0,0,.25);
     width: 80%;
     padding: 20px 0 80px ;
-    transition: .2s all;
+    display: none;
     opacity: 0;
     visibility: hidden;
   }
@@ -82,6 +82,7 @@
   opacity: 1;
   visibility: visible;
   right: 0;
+  display: block;
 }
 
 .it-nav__trigger {

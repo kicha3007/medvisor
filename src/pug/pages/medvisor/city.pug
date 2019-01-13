@@ -1,13 +1,15 @@
 .it-city
 	.it-city__wrap
-		.it-city__img-box.it-city__img-box--left
-			img(src="static/img/medvisor/city/location.svg", alt='')
-		label.it-city__label(for="city-input" data-city-label)
-			| Тюмень
-		.it-city__img-box.it-city__img-box--right(data-city-array)
-			img(src="static/img/medvisor/city/arrow.svg", alt='')
-		.it-city__list-wrap(data-city-inner-wrap)
-			input.it-city__item#city-input(value="Найти свой город" data-city-input)
-			ul.it-city__list(data-city-list)
+		.it-city__inner-wrap(data-city-inner-wrap)
+			.it-city__img-box.it-city__img-box--left
+				img(src="static/img/medvisor/city/location.svg", alt='')
+			label.it-city__label(for="city-input" data-city-label)
+				| Тюмень
+			.it-city__img-box.it-city__img-box--right(data-city-array)
+				img(src="static/img/medvisor/city/arrow.svg", alt='')
+		.it-city__list-wrap(data-city-list-wrap)
+			.it-city__list-inner-wrap
+				input.it-city__item.it-city__item--shadow-none#city-input(value="Найти свой город" data-city-input)
+				ul.it-city__list(data-city-list)
 
 

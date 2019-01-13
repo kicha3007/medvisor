@@ -2,7 +2,8 @@
 @import "../__mixins";
 @import "../smart-grid";
 
-.it-city__wrap {
+
+.it-city__inner-wrap {
   position: relative;
   width: 100%;
   max-width: 200px;
@@ -20,6 +21,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
 }
 
 .it-city__img {
@@ -42,6 +44,8 @@
   font-size: 13px;
   padding: 16px 12px;
   display: block;
+  cursor: pointer;
+  user-select: none;
 }
 
 
@@ -72,19 +76,22 @@
   color: #A0B0B9;
 }
 
-.it-city__list-wrap {
+.it-city__list-inner-wrap {
   position: absolute;
   top: 100%;
   right: 0;
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   height: auto;
   max-height: 240px;
-  margin: 2px 0 0 1px;
+  margin: 0;
   background: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow-x: hidden;
   overflow-y: auto;
-  padding: 0;
+  padding: 20px;
+  border: 1px solid #c3c3c3;
+  border-radius: 3px;
 }
 
 .it-city__list {
@@ -108,7 +115,15 @@
   box-shadow: 0 -1px rgba(0, 0, 0, 0.15) inset;
 }
 
+.it-city__item:last-child {
+  box-shadow: none;
+}
+
 /* скроем стандартную стрелку */
 .it-city__input::-webkit-calendar-picker-indicator {
   display: none;
+}
+
+.it-city__item--shadow-none {
+  box-shadow: none;
 }

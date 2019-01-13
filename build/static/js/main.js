@@ -259,9 +259,10 @@ $(function () {
         var cityList = $('[data-city-list]');
         var cityInput = $('[data-city-input]');
         var cityLabel = $('[data-city-label]');
+        var cityListWrap = $("[data-city-list-wrap]");
         var cityInnerWrap = $("[data-city-inner-wrap]");
 
-        cityInnerWrap.hide(); // скрываем список
+        cityListWrap.hide(); // скрываем список
 
         $.each(data, function (i) {	// формируем список в div
             var lwrList = data[i].toLowerCase(); // массив в нижний регистр
@@ -278,7 +279,7 @@ $(function () {
 
         }); // очищаем input для новых значений при каждом клике
 
-        cityLabel.mousedown( function () {
+        cityInnerWrap.mousedown( function () {
             if (iToggle == 0) {
                 turnDown();
             } else {
@@ -291,14 +292,14 @@ $(function () {
             var overlay = $("<div/>", {
                 css: {
                     display: "block",
-                    position: "absolute",
+                    position: "fixed",
                     top: "0",
                     left: "0",
                     right: "0",
                     bottom: "0",
                     width: "100%",
                     height: "100%",
-                    "background-color": "rgba(0, 0, 0, 0.5)",
+                    "background-color": "transparent",
                     "background-size": "cover",
                     "z-index": "2",
                     "max-height": "100%"
@@ -332,13 +333,13 @@ $(function () {
     // сворачивание
         function turnUp() {
             $('[data-city-array]').removeClass("active");
-            cityInnerWrap.slideUp(200);
+            cityListWrap.slideUp(200);
             $(".it-overlay-transparent").remove();
             iToggle = 0;
         };
         function turnDown() {
             $('[data-city-array]').addClass("active");
-            cityInnerWrap.slideDown(200);
+            cityListWrap.slideDown(200);
             $("body").append(overlay);
             iToggle = 1;
         };
