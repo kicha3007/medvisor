@@ -223,7 +223,7 @@ $(function () {
         var cityListWrap = $("[data-city-list-wrap]");
         var cityInnerWrap = $("[data-city-inner-wrap]");
 
-        // cityListWrap.hide(); // скрываем список
+      cityListWrap.hide(); // скрываем список
 
         $.each(data, function (i) {	// формируем список в div
             var lwrList = data[i].toLowerCase(); // массив в нижний регистр
