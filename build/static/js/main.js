@@ -98,47 +98,7 @@ $(function () {
 
 
 
-    /* ****************************** change-city ****************************** */
 
-
-    var cityChange = $("[data-it-change-city]");
-    var cityFrom = $("[data-it-city-from]");
-    var cityTo = $("[data-it-city-to]");
-
-    cityChange.on("click", function(){
-        var cityFromVal = cityFrom.val();
-        cityFrom.data("it-city-from", cityFromVal);
-        var cityFromData = cityFrom.data("it-city-from");
-
-
-        var cityToVal = cityTo.val();
-        cityTo.data("it-city-to", cityToVal);
-        var cityToData = cityTo.data("it-city-to");
-
-        cityFrom.val(cityToData);
-        cityTo.val(cityFromData);
-    });
-
-
-    /* ****************************** city-width-input ****************************** */
-
-
-    var $input = $('[data-it-city]'),
-        $buffer = $('[data-it-city-buffer]'),
-        cityInputChangeButton = $("[data-it-city-input-change]");
-
-    $input.on('input', function() {
-        $buffer.text($input.val());
-        $input.width($buffer.width());
-        cityInputChangeButton.css("position", "absolute");
-    });
-
-    $input.focusout(function () {
-        if ($buffer.text() === "" ) {
-            $input.css("width", "110px");
-            cityInputChangeButton.css("position", "static");
-        }
-    });
 
     /* ****************************** dropdown-menu ****************************** */
     (function(){
@@ -235,6 +195,7 @@ $(function () {
                         },
                         freeMode: true,
                         slidesPerView: 'auto',
+                        // width: 60
                     });
 
                 } else if ($this.hasClass("swiper-container-horizontal") && !swiperContainersXwidth) {
@@ -262,7 +223,7 @@ $(function () {
         var cityListWrap = $("[data-city-list-wrap]");
         var cityInnerWrap = $("[data-city-inner-wrap]");
 
-        cityListWrap.hide(); // скрываем список
+        // cityListWrap.hide(); // скрываем список
 
         $.each(data, function (i) {	// формируем список в div
             var lwrList = data[i].toLowerCase(); // массив в нижний регистр
@@ -308,13 +269,6 @@ $(function () {
             });
 
 
-
-        // cityInput.on("blur",  function () {
-        //     setTimeout(function () {
-        //         turnUp();
-        //     }, 50)
-        //
-        // });
 
         function checking() {
             $('[data-city-item]').on("click", function () {
@@ -377,18 +331,56 @@ $(function () {
             }, 50); // ожидание во избежание ошибок
         };
 
-        cityInput.keyup(function (eventObject) {
-            if (eventObject.key == 'Shift' ||
-                eventObject.key == 'Control') {
-                return false
-            } else {
-                search();
-            }
-            ;
-            // keypress не определяется смартфонами, потому keyup
+
+            cityInput.keyup(function (eventObject) {
+                if (eventObject.key == 'Shift' ||
+                    eventObject.key == 'Control') {
+                    return false
+                } else {
+                    search();
+                }
+                ;
+                // keypress не определяется смартфонами, потому keyup
+            });
+
+
+
+/*
+    setTimeout(function () {
+        cityListWrap.
+            swiper1 = new Swiper('.swiper-container-vertical', {
+            scrollbar: {
+                el: '.swiper-scrollbar2'
+            },
+            direction: "vertical",
+            freeMode: true,
+            slidesPerView: 'auto',
+            mousewheel: true,
+            height: 200
         });
+    }, 50);*/
 
     })();
+
+
+    var buttonTimeWork = $("[data-it-info]");
+
+    buttonTimeWork.on("click", function () {
+        var $this = $(this);
+
+        var thisData = $this.data("it-info");
+        $("[data-switch='" +  thisData +  "']").click();
+    });
+
+
+    $("[data-fancybox]").fancybox({
+        padding: 0,
+        helpers: {
+            overlay: {
+                locked: false
+            }
+        }
+    });
 
 
 });

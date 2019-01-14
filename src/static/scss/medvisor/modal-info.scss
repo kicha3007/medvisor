@@ -12,6 +12,24 @@
   background-color: #ffffff;
   min-height: 480px;
   display: none;
+  @include phones {
+    padding: 25px 15px;
+  }
+}
+
+.it-modal-info__nav-img-box {
+  max-width: 15px;
+  max-height: 15px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  @include phones {
+    margin-right: 4px;
+  }
 }
 
 .modal-info__title {
@@ -21,6 +39,9 @@
   color: #000;
   line-height: 1.2;
   text-align: center;
+  @include phones {
+    font-size: 16px;
+  }
 }
 
 .modal-info__subtitle {
@@ -51,7 +72,7 @@
   margin: 0 0 10px;
   list-style-type: none;
   padding-left: 0;
-  max-width: 150px;
+  max-width: 180px;
   width: 100%;
   flex-grow: 1;
   flex-basis: 100px;
@@ -75,6 +96,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  @include phones {
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 
 
 }
@@ -83,6 +110,14 @@
 .it-modal-info__nav-btn:visited {
     color: #000;
 	text-decoration: none;
+}
+
+.it-modal-info__nav-item.active #phone {
+  fill: #ffffff;
+}
+
+.it-modal-info__nav-item.active #clock {
+  fill: #ffffff;
 }
 
 .it-modal-info__nav-btn:hover {
@@ -147,6 +182,10 @@
   color: #000000;
   font-size: 18px;
   display: block;
+  text-decoration: none;
+  @include phones {
+    font-size: 16px;
+  }
 }
 
 .it-modal-info__phone-link:active,
@@ -180,7 +219,7 @@
 .it-modal-info__time-item {
   list-style-type: none;
   display: grid;
-  grid-template-columns: 85px 65px 130px;
+  grid-template-columns: minmax(55px, 85px) minmax(40px, 65px)  130px;
   font-size: 14px;
   color: #000000;
   grid-gap: 10px;
