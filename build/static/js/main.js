@@ -382,6 +382,17 @@ $(function () {
         }
     });
 
+    $("[data-it-filter-btn-title]").on("click", function () {
+        var $this = $(this);
+        $this.closest("[data-it-filter-item]").find("[data-it-filter-checkboxes]").toggle(200 );
+    });
+
+    $("[data-select]").on("click", ".it-select__input-wrap", function () {
+        var $this = $(this);
+        console.log(this);
+        $this.addClass("active");
+});
+
 
 });
 

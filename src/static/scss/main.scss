@@ -21,6 +21,9 @@
 @import 'medvisor/user';
 @import 'medvisor/stars';
 @import 'medvisor/modal-info';
+@import 'medvisor/med-institute';
+@import 'medvisor/breadcrumbs';
+@import 'medvisor/sidebar';
 
 
 
@@ -78,6 +81,10 @@
   @include tablets {
     margin-bottom: 25px;
   }
+}
+
+.it-all-min-indent {
+  margin-bottom: 40px;
 }
 
 .it-all-link {
@@ -206,6 +213,15 @@
 
 .it-form--hide.success .it-form__success {
   display: block;
+}
+
+.it-main-page__center {
+  display: grid;
+  grid-template-columns: minmax(120px, 375px) minmax(650px, 1fr);
+  grid-gap: 40px;
+  @include laptop {
+    grid-template-columns: 1fr;
+  }
 }
 
 /******************* media *******************/

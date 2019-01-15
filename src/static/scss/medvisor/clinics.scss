@@ -7,6 +7,11 @@
   border-bottom: 5px solid #179CA7;
 }
 
+.it-clinics--color {
+  background-color: transparent;
+  border-bottom: none;
+}
+
 .it-clinics__wrap {
   grid-template-columns: repeat(2, 1fr) ;
   grid-gap: 20px;
@@ -16,6 +21,10 @@
   @include phones {
     grid-template-columns: auto;
   }
+}
+
+.it-clinics__wrap--size {
+  grid-template-columns:  1fr ;
 }
 
 .it-clinics__outer-wrap {
@@ -261,5 +270,31 @@
   margin-bottom: 5px;
 }
 
+.it-clinics__more {
+  border: 1px solid #C3C3C3;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 40px;
+}
+
+.it-clinics__more:active,
+.it-clinics__more:visited {
+    color: #000000;
+	text-decoration: none;
+}
+
+.it-clinics__more:hover {
+    color: $hov-text;
+	text-decoration: none;
+
+}
+
+.it-clinics__more-text {
+  color: #000000;
+  font-size: 13px;
+  padding: 10px;
+  display: inline-block;
+}
 
 

@@ -19,12 +19,15 @@ html(lang="ru-RU")
                 //include medvisor/thems
                 //include medvisor/news
                 //include medvisor/articles
-                .it-med-page__top
-                    include medvisor/thems
-                .it-med-page__half.it-med-page__half--left
-
-                .it-med-page__half.it-med-page__half--right
-                    include medvisor/clinics
+                include medvisor/breadcrumbs
+                .it-main-page__top
+                    include medvisor/med-institute
+                .it-container
+                    .it-main-page__center
+                        .it-main-page__half.it-main-page__half--left
+                            include medvisor/sidebar
+                        .it-main-page__half.it-main-page__half--right
+                            include medvisor/clinics2
             include medvisor/footer
             include medvisor/modal-info
 

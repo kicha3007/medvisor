@@ -1,0 +1,105 @@
+section.it-filter
+		form.it-filter__form(action='', method='')
+			ul.it-filter__wrap
+				li.it-filter__item.it-filter__item--dropdown(data-select)
+					.it-filter__dropdown
+						section.it-select
+							.it-select__outer-wrap()
+								.it-select__wrap(data-select-wrap='' )
+									img(src="static/img/medvisor/clinics/arrow.svg", alt='').it-select__arrow
+									.it-select__input-wrap(tabindex='1', data-select-inner-wrap='')
+										input#opt1.it-select__selectopt(name='district', type='radio', checked='')
+										label.it-select__label(for='opt1', )
+											span.it-select__text Выбрать район
+										input#opt2.it-select__selectopt(name='district', type='radio')
+										label.it-select__label(for='opt2', )
+											span.it-select__text Адмиралтейский район
+										input#opt3.it-select__selectopt(name='district', type='radio')
+										label.it-select__label(for='opt3', )
+											span.it-select__text Арбат
+										input#opt4.it-select__selectopt(name='district', type='radio')
+										label.it-select__label(for='opt4', )
+											span.it-select__text Аэропорт
+										input#opt5.it-select__selectopt(name='district', type='radio')
+										label.it-select__label(for='opt5', )
+											span.it-select__text Арбат
+										input#opt6.it-select__selectopt(name='district', type='radio')
+										label.it-select__label(for='opt6', )
+											span.it-select__text Аэропорт
+										input#opt7.it-select__selectopt(name='district', type='radio')
+										label.it-select__label(for='opt7', )
+											span.it-select__text Аэропорт
+										input#opt8.it-select__selectopt(name='district', type='radio')
+										label.it-select__label(for='opt8', )
+											span.it-select__text Арбат
+										input#opt9.it-select__selectopt(name='district', type='radio')
+										label.it-select__label(for='opt9', )
+											span.it-select__text Аэропорт
+				li.it-filter__item.it-filter__item--dropdown
+					.it-filter__dropdown
+						section.it-select
+							.it-select__outer-wrap(data-select)
+								.it-select__wrap(data-select-wrap='')
+									img(src="static/img/medvisor/clinics/arrow.svg", alt='').it-select__arrow
+									.it-select__input-wrap(tabindex='1', data-select-inner-wrap='')
+										input#metro1.it-select__selectopt(name='district', type='radio', checked='' data-selectopt)
+										label.it-select__label(for='metro1',data-select-label )
+											span.it-select__text Выбрать район
+										input#metro2.it-select__selectopt(name='district', type='radio')
+										label.it-select__label(for='metro2', data-select-label )
+											span.it-select__text Адмиралтейский район
+										input#metro3.it-select__selectopt(name='district', type='radio')
+										label.it-select__label(for='metro3', data-select-label )
+											span.it-select__text Арбат
+										input#metro4.it-select__selectopt(name='district', type='radio')
+										label.it-select__label(for='metro4', data-select-label )
+											span.it-select__text Аэропорт
+										input#metro5.it-select__selectopt(name='district', type='radio')
+										label.it-select__label(for='metro5',  data-select-label)
+											span.it-select__text Арбат
+										input#metro6.it-select__selectopt(name='district', type='radio')
+										label.it-select__label(for='metro6', data-select-label )
+											span.it-select__text Аэропорт
+										input#metro7.it-select__selectopt(name='district', type='radio')
+										label.it-select__label(for='metro7', data-select-label )
+											span.it-select__text Аэропорт
+										input#metro8.it-select__selectopt(name='district', type='radio')
+										label.it-select__label(for='metro8', data-select-label )
+											span.it-select__text Арбат
+										input#metro9.it-select__selectopt(name='district', type='radio')
+										label.it-select__label(for='metro9', data-select-label )
+											span.it-select__text Аэропорт
+				li.it-filter__item(data-it-filter-item)
+					.it-filter__btn-title(data-it-filter-btn-title)
+						| Государственное учреждение
+						img(src="static/img/medvisor/clinics/arrow.svg", alt='').it-filter__btn-title-arrow
+					ul.it-filter__checkbox-wrap(data-it-filter-checkboxes)
+						li.it-filter__checkbox-item
+							label.it-checkbox
+								input.it-checkbox__default(type='checkbox', name='AGREE')
+								span.it-checkbox__pseudo
+								span.it-checkbox__text
+									| Да
+						li.it-filter__checkbox-item
+							label.it-checkbox
+								input.it-checkbox__default(type='checkbox', name='AGREE')
+								span.it-checkbox__pseudo
+								span.it-checkbox__text
+									| Нет
+				li.it-filter__item(data-it-filter-item)
+					.it-filter__btn-title(data-it-filter-btn-title)
+						| Государственное учреждение
+						img(src="static/img/medvisor/clinics/arrow.svg", alt='').it-filter__btn-title-arrow
+					ul.it-filter__checkbox-wrap(data-it-filter-checkboxes)
+						li.it-filter__checkbox-item
+							label.it-checkbox
+								input.it-checkbox__default(type='checkbox', name='AGREE')
+								span.it-checkbox__pseudo
+								span.it-checkbox__text
+									| Да
+						li.it-filter__checkbox-item
+							label.it-checkbox
+								input.it-checkbox__default(type='checkbox', name='AGREE')
+								span.it-checkbox__pseudo
+								span.it-checkbox__text
+									| Нет
