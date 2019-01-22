@@ -1,0 +1,58 @@
+@mixin a() {
+	text-decoration: none;
+	font-weight: 400;
+	color: $text-link-color;
+}
+
+@mixin link-hover() {
+	-webkit-transition: opacity 0.0s ease-in-out;
+	-moz-transition: opacity 0.0s ease-in-out;
+	-ms-transition: opacity 0.0s ease-in-out;
+	-o-transition: opacity 0.0s ease-in-out;
+	transition: opacity 0.0s ease-in-out;
+	
+	&:hover,
+	&:focus {
+		-webkit-transition: opacity .1s ease-in-out;
+		-moz-transition: opacity .1s ease-in-out;
+		-ms-transition: opacity .1s ease-in-out;
+		-o-transition: opacity .1s ease-in-out;
+		transition: opacity .1s ease-in-out;
+		
+		opacity: .65;
+	}
+}
+
+a {
+	@include a();
+}
+
+.link-primary {
+	@include link-hover();
+	
+	color: $link;
+}
+
+.link-head {
+	@include link-hover();
+
+	color: $link-head;
+	font-size: 15px;
+}
+
+.copyright-link {
+	@include link-hover();
+	
+	font-size: 11px;
+	color: $text-statistic-color;
+	text-decoration: underline;
+}
+
+.default-link {
+	@include a();
+	@include link-hover();
+	
+	font-size: 12px;
+	color: $link;
+	text-decoration: underline;
+}

@@ -1,0 +1,85 @@
+#support {
+    margin: 45px 0;
+}
+
+.support {
+    nav
+    {
+       ul {
+           display: flex;
+           flex-direction: column;
+           margin: 0;
+           
+           li {
+               display: flex;
+               margin-bottom: 15px;
+               
+               a {
+                   width: 100%;
+                   
+                   padding: 12px;
+                   border: 1px solid darken($bg-content-block, 10%);
+                   border-radius: $base-border-radius;
+            
+                   &:hover
+                   {
+                       background-color: $bg-content-block;
+                   }
+            
+                   .badge
+                   {
+                       color: rgba(0,0,0,.35);
+                       background: none;
+                       float: right;
+                   }
+               }
+               
+               &.active
+               {
+                   a
+                   {
+                       background-color: $brand-color;
+                       border-radius: 1px solid $brand-color !important;
+                       
+                       &:hover
+                       {
+                           opacity: 0.8;
+                       }
+                   }
+                   
+                   .badge
+                   {
+                       color: rgba(0,0,0,.35);
+                   }
+               }
+        
+               &__category_accordion_text_problem_section
+               {
+                   a
+                   {
+                       background-color: $bg-content-block;
+                       border: 1px solid darken($bg-content-block, 10%);
+                
+                       &:hover
+                       {
+                           border-color: $brand-color;
+                       }
+                   }
+				   
+                   &.active
+                   {
+                       a
+                       {
+                           background-color: $brand-color;
+                       }
+                   }
+               }
+           }
+       }
+    }
+    
+    &__support-section-container
+    {
+    
+    }
+}

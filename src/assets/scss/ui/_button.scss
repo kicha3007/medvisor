@@ -1,0 +1,218 @@
+@mixin btn() {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border-radius: 0;
+	border: 0;
+	
+	transition: all 0.2s cubic-bezier(0, 0.11, 0.21, 0.75);
+}
+
+@mixin btn-default {
+	@include btn();
+}
+
+@mixin btn-brand($background: $brand-color, $border: $brand-color, $lighten: 10%, $padding: 14px 24px) {
+	@include btn();
+	
+	padding: $padding;
+	background: $background;
+	border: 2px solid $border;
+	border-radius: 30px;
+	
+	&:hover, &:focus {
+		border: 2px solid lighten($border, $lighten);
+		background: lighten($background, $lighten);
+	}
+	
+	i {
+		margin-right: 12px;
+	}
+}
+
+@mixin btn-light($color: $border-default-color, $hover-bg: $brand-color, $padding: 12px) {
+	@include btn();
+	
+	border: 1px solid $color;
+	padding: $padding;
+	border-radius: 25px;
+	max-height: 40px;
+	
+	&.active {
+		background-color: $hover-bg;
+		border: 2px solid $hover-bg;
+	}
+}
+
+@mixin btn-tab($border: $border-default-color, $background: transparent, $active: $brand-color) {
+	@include btn();
+	
+	font-weight: 400;
+	padding: 10px 12px;
+	border: 1px solid $border;
+	background-color: $background;
+	
+	&.active {
+		font-weight: 400;
+		
+		background: $brand-color;
+		border: 1px solid transparent;
+	}
+}
+
+// Classes
+
+.btn {
+	@include btn();
+}
+
+.btn-default {
+	@include btn-default();
+}
+
+.btn-brand {
+	@include btn-brand();
+	color: $button-card-color;
+}
+
+.btn-brand-light {
+	@include btn-brand($button-card-color, $button-card-color, 2%);
+}
+
+.btn-brand-white {
+	padding: 14px 28px;
+	background: $white;
+	border: 2px solid $white;
+	border-radius: 30px;
+	
+	&:hover, &:focus {
+		border: 2px solid $button-tab-control;
+		background: $button-tab-control;
+	}
+	
+	i {
+		margin-left: 15px;
+	}
+}
+
+.btn-light {
+	@include btn-light();
+}
+
+.btn-search {
+	@include btn-default();
+	
+	font-family: 'Oswald', 'Roboto', 'Arial', sans-serif;
+	font-size: 22px;
+	padding: 12px 22px;
+	
+	border-radius: $button-border-radius;
+	line-height: 1em;
+	color: $black;
+	background-color: $brand-color;
+	font-weight: 100;
+	
+	&:hover, &:focus {
+		background: lighten($brand-color, 10%);
+	}
+}
+
+.btn-filter-search {
+	@include btn-default();
+	
+	font-family: 'Oswald', 'Roboto', 'Arial', sans-serif;
+	font-size: 22px;
+	padding: 12px 22px;
+	
+	border-radius: $button-border-radius;
+	line-height: 1em;
+	color: $white;
+	background-color: $button-default-color;
+	font-weight: 100;
+	
+	&:hover, &:focus {
+		background: lighten($button-default-color, 10%);
+	}
+}
+
+.btn-tab {
+	@include btn-tab();
+}
+
+.btn-tab-light {
+	@include btn-tab(transparent, $brand-light-color);
+
+	color: $button-card-color;
+	font-weight: 400;
+}
+
+.btn-tab-strong {
+	@include btn-brand($button-default-color-light, $button-default-color-light, 10%, 5px 10px);
+	
+	height: 30px;
+	color: $white;
+}
+
+.btn-tab-bordered {
+	@include btn-brand(transparent, $brand-color, 10%, 11px 15px);
+}
+
+.btn-tab-slider {
+	@include btn-light();
+	padding: 12px 24px;
+	
+	background-color: $white;
+}
+
+.btn-tab-control {
+	 @include btn-light();
+	
+	 border: 0;
+	 color: $white;
+	
+	 background: $button-tab-control;
+	
+	 &:hover {
+		 background: $button-tab-control-active;
+	 }
+}
+
+.btn-more-catalog {
+	@include btn();
+	
+	padding: 10px 25px;
+	color: $button-default-color;
+	background-color: $button-card-color;
+	border-radius: $button-border-radius;
+	
+	&:hover {
+		background-color: $button-more-color;
+	}
+}
+
+.btn-more {
+	@include btn();
+	
+	padding: 10px 25px;
+	color: $button-default-color;
+	background-color: $button-card-color;
+	border-radius: $button-border-radius;
+	
+	&:hover {
+		background-color: darken($button-card-color, 3%);
+	}
+}
+
+.btn-active {
+	@include btn();
+	
+	padding: 10px 25px;
+	color: $button-card-color;
+	background-color: $brand-color;
+	border-radius: $button-border-radius;
+	
+	&:hover {
+		background-color: darken($brand-color, 3%);
+	}
+}

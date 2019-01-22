@@ -1,0 +1,39 @@
+@import "../__vars";
+@import "../__mixins";
+
+.it-logo {
+  text-decoration: none;
+  display: block;
+  @include tablets {
+    padding: 12px 0;
+  }
+  @include phones {
+    padding: 8px 0;
+  }
+
+}
+
+.it-logo:active,
+.it-logo:visited {
+	text-decoration: none;
+}
+
+.it-logo:hover {
+	text-decoration: none;
+}
+
+.it-logo__img-box {
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.it-logo__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.it-logo__text {
+  color: $main-color-text;
+  font-size: 13px;
+}

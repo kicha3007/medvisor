@@ -1,0 +1,19 @@
+.static-content {
+	header {
+		border-bottom: 1px solid $link-line-solid;
+	}
+	
+	&__container {
+		margin: 60px 0;
+		font-size: 16px;
+		
+		p, ul {
+			letter-spacing: .25px;
+			line-height: 1.75em;
+		}
+		
+		ul {
+			margin-bottom: 30px;
+		}
+	}
+}

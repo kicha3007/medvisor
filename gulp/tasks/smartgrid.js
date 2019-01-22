@@ -9,7 +9,7 @@ module.exports = function () {
     };
 
     $.gulp.task('grid', function () {
-            $.sg("./src/static/scss", settings);
+            $.sg("./src/assets/scss", settings);
     });
 
 };

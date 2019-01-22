@@ -1,0 +1,36 @@
+.medvisor-icon {
+	display: flex;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 22px;
+	height: 22px;
+	
+	&.vk {
+		background-image: url('#{$base-image-path}/ui/icon/socserv/vk.svg');
+	}
+	
+	&.ok {
+		background-image: url('#{$base-image-path}/ui/icon/socserv/ok.svg');
+	}
+	
+	&.fb {
+		background-image: url('#{$base-image-path}/ui/icon/socserv/fb.svg');
+	}
+	
+	&.in {
+		background-image: url('#{$base-image-path}/ui/icon/socserv/in.svg');
+	}
+	
+	&.tw {
+		background-image: url('#{$base-image-path}/ui/icon/socserv/tw.svg');
+	}
+	
+	&.yo {
+		background-image: url('#{$base-image-path}/ui/icon/socserv/yo.svg');
+	}
+	
+	&.wa {
+		background-image: url('#{$base-image-path}/ui/icon/socserv/wa.svg');
+	}
+}

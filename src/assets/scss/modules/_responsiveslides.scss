@@ -1,0 +1,70 @@
+/*! http://responsiveslides.com v1.55 by @viljamis */
+
+.rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.rslides li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    min-height: 250px;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.rslides li:first-child {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.rslides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+}
+
+.rslides p {
+    font-size: 14px;
+}
+
+.rslides_tabs {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    
+    li {
+        margin: 5px;
+    
+        a {
+            font-size: 0;
+            text-indent: -999px;
+            width: 10px;
+            height: 10px;
+            display: flex;
+            border: 1px solid $black;
+            border-radius: 50%;
+        }
+        
+        &.rslides_here {
+            a {
+                background: $black;
+            }
+        }
+    }
+}

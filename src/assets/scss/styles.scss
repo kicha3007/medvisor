@@ -1,0 +1,268 @@
+/*!
+ * MedVisor.ru
+ */
+
+// Bootstrap core
+@import "./bootstrap/bootstrap-grid";
+@import "./bootstrap/mixins";
+@import "./bootstrap/utilities";
+@import "./bootstrap/nav";
+@import "./bootstrap/transitions";
+@import "./bootstrap/dropdown";
+@import "./bootstrap/list-group";
+@import "./bootstrap/modal";
+@import "./bootstrap/input-group";
+@import "./bootstrap/forms";
+@import "./bootstrap/progress";
+
+@import '__vars';
+@import '__mixins';
+@import "base";
+
+/******************* medvisor *******************/
+
+@import 'medvisor/articles';
+@import 'medvisor/city';
+@import 'medvisor/clinics';
+@import 'medvisor/doctors';
+@import 'medvisor/footer';
+@import 'medvisor/header';
+@import 'medvisor/logo';
+@import 'medvisor/nav';
+@import 'medvisor/nav-main';
+@import 'medvisor/news';
+@import 'medvisor/search';
+@import 'medvisor/services';
+@import 'medvisor/themes';
+@import 'medvisor/user';
+@import 'medvisor/stars';
+@import 'medvisor/modal-info';
+@import 'medvisor/med-institute';
+@import 'medvisor/breadcrumbs';
+@import 'medvisor/filter';
+@import 'medvisor/checkbox';
+
+
+/******************* it-all-style *******************/
+
+.it-container {
+  max-width: 1270px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  @include tablets {
+    max-width: 600px;
+  }
+  @include phones {
+    max-width: 420px;
+  }
+}
+
+.it-container--big {
+  max-width: 1246px;
+  @include tablets {
+    max-width: 100%;
+  }
+  @include phones {
+    max-width: 100%;
+  }
+}
+
+.it-container * {
+  box-sizing: border-box;
+}
+
+.it-all-title {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  font-size: 26px;
+  line-height: 1.5;
+  position: relative;
+  color: #4A4A4A;
+  margin: 0;
+  overflow: hidden;
+  font-weight: 700;
+  min-height: 2px;
+
+  @include tablets {
+    font-size: 20px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+}
+
+.it-all-indent {
+  margin-bottom: 50px;
+  @include tablets {
+    margin-bottom: 25px;
+  }
+}
+
+.it-all-min-indent {
+  margin-bottom: 40px;
+}
+
+.it-all-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #2C555D;;
+}
+
+.it-all-link:active,
+.it-all-link:visited {
+  color: #2C555D;
+  text-decoration: none;
+}
+
+.it-all-link:hover {
+  color: $hov-text;
+  text-decoration: none;
+
+}
+
+
+.it-all-link__text {
+  font-size: 20px;
+  margin-right: 12px;
+  font-weight: 700;
+}
+
+.it-all-link:hover .it-all-link__text {
+  color: $hov-text;
+  transition: 0.1s;
+}
+
+.it-all-link__img-box {
+  max-width: 15px;
+  max-height: 14px;
+  overflow: hidden;
+}
+
+.it-all-link__img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+
+.it-all-subtitle {
+  font-size: rem(18px);
+  padding-bottom: 40px;
+  color: rgba(0, 0, 0, 0.54);
+  text-align: center;
+  @include phones {
+    padding-bottom: 20px;
+    font-size: 14px;
+  }
+}
+
+.it-main-page__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+
+}
+
+.it-main-page__content {
+  flex: 1 0 auto;
+
+}
+
+.it-btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  font-weight: 900;
+  line-height: 1.25;
+  text-align: center;
+  user-select: none;
+  border: none;
+  padding: 15px 10px;
+  font-size: rem(28px);
+  transition: all 0.2s ease-in-out;
+  background-color: $main-color;
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  border-radius: 4px;
+  @include phones {
+    padding: 11px 10px;
+    font-size: 24px;
+  }
+}
+
+.it-btn:hover {
+  background: $hov;
+}
+
+.it-btn:hover,
+.it-btn:active,
+.it-btn:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.it-all--hide-mobile {
+  @include phones {
+    display: none;
+  }
+}
+
+/******************* it-form__success *******************/
+
+.it-form__success {
+  font-size: 18px;
+  text-align: center;
+  display: none;
+  line-height: 1em;
+  color: #5c5c5c;
+}
+
+.it-form--hide.success *:not(.it-form__success) {
+  display: none;
+}
+
+.it-form--hide.success .it-form__success {
+  display: block;
+}
+
+.it-main-page__center {
+  display: grid;
+  grid-template-columns: minmax(120px, 375px) minmax(650px, 1fr);
+  grid-gap: 40px;
+  @include laptop {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+}
+
+/******************* media *******************/
+
+@media (max-width: 1200px) { /*desctop*/
+
+
+}
+
+@media (max-width: 992px) { /*laptop*/
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) { /* tablets*/
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) { /*phones*/
+  html {
+    font-size: 13px;
+  }
+
+}

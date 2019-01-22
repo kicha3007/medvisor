@@ -1,0 +1,153 @@
+.auth-modal {
+	&__promo-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		
+		border-radius: 3px 0 0 3px;
+		padding: 40px 60px;
+		
+		background: linear-gradient(320deg, #f3f16f, #e9ccf7, #f7b4b4);
+		background-size: 600% 600%;
+		
+		-webkit-animation: auth_dynamic_gradient 16s ease infinite;
+		-moz-animation: auth_dynamic_gradient 16s ease infinite;
+		-o-animation: auth_dynamic_gradient 16s ease infinite;
+		animation: auth_dynamic_gradient 16s ease infinite;
+		
+		@-webkit-keyframes auth_dynamic_gradient {
+			0%{background-position:0% 50%}
+			50%{background-position:100% 51%}
+			100%{background-position:0% 50%}
+		}
+		@-moz-keyframes auth_dynamic_gradient {
+			0%{background-position:0% 50%}
+			50%{background-position:100% 51%}
+			100%{background-position:0% 50%}
+		}
+		@-o-keyframes auth_dynamic_gradient {
+			0%{background-position:0% 50%}
+			50%{background-position:100% 51%}
+			100%{background-position:0% 50%}
+		}
+		@keyframes auth_dynamic_gradient {
+			0%{background-position:0% 50%}
+			50%{background-position:100% 51%}
+			100%{background-position:0% 50%}
+		}
+	}
+	
+	&__promo-auth {
+		&-icon {
+			display: block;
+			width: 70px;
+			height: 70px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			margin-bottom: 30px;
+			margin: 15px auto;
+			
+			&.books {
+				background-image: url('#{$base-image-path}/ui/icon/books.svg');
+			}
+			
+			&.offers {
+				background-image: url('#{$base-image-path}/ui/icon/offers.svg');
+			}
+			
+			&.university {
+				background-image: url('#{$base-image-path}/ui/icon/university.svg');
+			}
+			
+			&.tutor {
+				background-image: url('#{$base-image-path}/ui/icon/tutor.svg');
+			}
+		}
+	}
+	
+	&__container {
+		padding: 40px 60px;
+		background: #fff;
+		border-radius: 0 3px 3px 0;
+	}
+	
+	&__socserv {
+		text-align: center;
+		margin-top: 45px;
+		
+		span {
+			display: block;
+			margin-bottom: 10px;
+			color: $text-info-gray-color;
+		}
+		
+		&-links {
+			display: flex;
+			justify-content: space-around;
+			
+			a {
+				@include link-hover();
+				
+				background-size: contain;
+				background-repeat: no-repeat;
+				width: 24px;
+				height: 24px;
+				
+				font-size: 16px;
+				
+				&.VKontakte {
+					//color: #4e7096;
+					background-image: url('#{$base-image-path}/ui/icon/socserv/vk.svg');
+				}
+				
+				&.YandexOAuth {
+					//color: #fc1e00;
+					background-image: url('#{$base-image-path}/ui/icon/socserv/ya.svg');
+				}
+				
+				&.GoogleOAuth {
+					//color: #4285f4;
+					background-image: url('#{$base-image-path}/ui/icon/socserv/gl.svg');
+				}
+				
+				&.Odnoklassniki {
+					//color: #f68535;
+					background-image: url('#{$base-image-path}/ui/icon/socserv/ok.svg');
+				}
+				
+				&.Facebook {
+					//color: #3b5998;
+					background-image: url('#{$base-image-path}/ui/icon/socserv/fb.svg');
+				}
+			}
+		}
+	}
+	
+	&__more-actions {
+		margin-top: 45px;
+		
+		&-auth {
+		
+		}
+		
+		&-register {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			text-align: center;
+			
+			span {
+				flex-basis: 100%;
+				display: block;
+				margin-bottom: 10px;
+				color: $text-info-gray-color;
+			}
+		}
+		
+		&-forgotpassword {
+		
+		}
+	}
+}
+

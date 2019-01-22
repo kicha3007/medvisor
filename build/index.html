@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" initial-scale="1">
     <title>medvisor</title>
-    <link rel="stylesheet" type="text/css" href="static/css/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="static/css/jquery.fancybox.css">
-    <link rel="stylesheet" type="text/css" href="static/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/swiper/swiper.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
   </head>
   <body>
     <div class="it-main-page__wrapper">
@@ -38,9 +39,9 @@
                           <div class="it-city">
                             <div class="it-city__wrap">
                               <div class="it-city__inner-wrap" data-city-inner-wrap>
-                                <div class="it-city__img-box it-city__img-box--left"><img src="static/img/medvisor/city/location.svg" alt=""></div>
+                                <div class="it-city__img-box it-city__img-box--left"><img src="assets/img/medvisor/city/location.svg" alt=""></div>
                                 <label class="it-city__label" for="city-input" data-city-label>Тюмень</label>
-                                <div class="it-city__img-box it-city__img-box--right" data-city-array><img src="static/img/medvisor/city/arrow.svg" alt=""></div>
+                                <div class="it-city__img-box it-city__img-box--right" data-city-array><img src="assets/img/medvisor/city/arrow.svg" alt=""></div>
                               </div>
                               <div class="it-city__list-wrap swiper-container-vertical" data-city-list-wrap>
                                 <div class="it-city__list-inner-wrap swiper-wrapper">
@@ -57,7 +58,7 @@
                         <div class="it-header__top-inner-half">
                           <div class="it-user">
                             <div class="it-user__wrap">
-                              <div class="it-user__img-box"><img class="it-user__img" src="static/img/medvisor/user/icon.svg" alt=""></div>
+                              <div class="it-user__img-box"><img class="it-user__img" src="assets/img/medvisor/user/icon.svg" alt=""></div>
                               <div class="it-user__text">	Войти</div>
                             </div>
                           </div>
@@ -73,13 +74,13 @@
                 <div class="it-header__bottom-wrap">
                   <div class="it-header__bottom-half it-header__bottom-half--size-1" data-header-bottom-size-1><a class="it-logo" href="#" data-logo>
                       <div class="it-logo__wrap">
-                        <div class="it-logo__img-box"><img class="it-logo__img" src="static/img/medvisor/logo/logo.png" alt=""></div>
+                        <div class="it-logo__img-box"><img class="it-logo__img" src="assets/img/medvisor/logo/logo.png" alt=""></div>
                         <div class="it-logo__text">	Все о медицине</div>
                       </div></a></div>
                   <div class="it-header__bottom-half it-header__bottom-half--size-2">
                     <section class="it-search">
                       <div class="it-search__wrap">
-                        <button class="it-search__button"><img class="it-search__img" src="static/img/medvisor/search/loup.svg" alt=""></button>
+                        <button class="it-search__button"><img class="it-search__img" src="assets/img/medvisor/search/loup.svg" alt=""></button>
                         <input class="it-search__input" placeholder="Например, “Стоматология”">
                       </div>
                     </section>
@@ -109,7 +110,7 @@
         <div class="it-breadcrumbs">
           <div class="it-container">
             <div class="it-breadcrumbs__wrap">
-              <div class="it-breadcrumbs__list"><a class="it-breadcrumbs__link" href="#">	Главная</a><span class="it-breadcrumbs__separator"><img class="it-breadcrumbs__img" src="static/img/medvisor/breadcrumbs/arrow.svg" alt=""></span><span class="it-breadcrumbs__text">	Медучреждения</span></div>
+              <div class="it-breadcrumbs__list"><a class="it-breadcrumbs__link" href="#">	Главная</a><span class="it-breadcrumbs__separator"><img class="it-breadcrumbs__img" src="assets/img/medvisor/breadcrumbs/arrow.svg" alt=""></span><span class="it-breadcrumbs__text">	Медучреждения</span></div>
             </div>
           </div>
         </div>
@@ -158,108 +159,727 @@
         <div class="it-container">
           <div class="it-main-page__center">
             <div class="it-main-page__half it-main-page__half--left">
-              <section class="it-filter">
-                <form class="it-filter__form" action="" method="">
-                  <ul class="it-filter__wrap">
-                    <li class="it-filter__item it-filter__item--dropdown">
-                      <div class="it-filter__dropdown">
-                        <section class="it-select">
-                          <div class="it-select__outer-wrap">
-                            <div class="it-select__wrap" data-select-wrap>
-                              <div class="it-select__input-wrap" tabindex="1" data-select-input-wrap=""><img class="it-select__arrow" src="static/img/medvisor/clinics/arrow.svg" alt="">
-                                <input class="it-select__selectopt" id="opt1" name="district" type="radio" checked="">
-                                <label class="it-select__label" for="opt1"><span class="it-select__text">Район</span></label>
-                                <input class="it-select__selectopt" id="opt2" name="district" type="radio">
-                                <label class="it-select__label" for="opt2"><span class="it-select__text">Адмиралтейский район</span></label>
-                                <input class="it-select__selectopt" id="opt3" name="district" type="radio">
-                                <label class="it-select__label" for="opt3"><span class="it-select__text">Арбат</span></label>
-                                <input class="it-select__selectopt" id="opt4" name="district" type="radio">
-                                <label class="it-select__label" for="opt4"><span class="it-select__text">Аэропорт</span></label>
-                                <input class="it-select__selectopt" id="opt5" name="district" type="radio">
-                                <label class="it-select__label" for="opt5"><span class="it-select__text">Арбат</span></label>
-                                <input class="it-select__selectopt" id="opt6" name="district" type="radio">
-                                <label class="it-select__label" for="opt6"><span class="it-select__text">Аэропорт</span></label>
-                                <input class="it-select__selectopt" id="opt7" name="district" type="radio">
-                                <label class="it-select__label" for="opt7"><span class="it-select__text">Аэропорт</span></label>
-                                <input class="it-select__selectopt" id="opt8" name="district" type="radio">
-                                <label class="it-select__label" for="opt8"><span class="it-select__text">Арбат</span></label>
-                                <input class="it-select__selectopt" id="opt9" name="district" type="radio">
-                                <label class="it-select__label" for="opt9"><span class="it-select__text">Аэропорт</span></label>
+              <!--section.it-filter-->
+              <!--		form.it-filter__form(action='', method='')-->
+              <!--			ul.it-filter__wrap-->
+              <!--				li.it-filter__item.it-filter__item--dropdown-->
+              <!--					.it-filter__dropdown-->
+              <!--						section.it-select-->
+              <!--							.it-select__outer-wrap-->
+              <!--								.it-select__wrap(data-select-wrap)-->
+              <!--									.it-select__input-wrap(tabindex='1', data-select-input-wrap='')-->
+              <!--										img(src="assets/img/medvisor/clinics/arrow.svg", alt='').it-select__arrow-->
+              <!--										input#opt1.it-select__selectopt(name='district', type='radio', checked='' )-->
+              <!--										label.it-select__label(for='opt1', )-->
+              <!--											span.it-select__text Район-->
+              <!--										input#opt2.it-select__selectopt(name='district', type='radio')-->
+              <!--										label.it-select__label(for='opt2', )-->
+              <!--											span.it-select__text Адмиралтейский район-->
+              <!--										input#opt3.it-select__selectopt(name='district', type='radio')-->
+              <!--										label.it-select__label(for='opt3', )-->
+              <!--											span.it-select__text Арбат-->
+              <!--										input#opt4.it-select__selectopt(name='district', type='radio')-->
+              <!--										label.it-select__label(for='opt4', )-->
+              <!--											span.it-select__text Аэропорт-->
+              <!--										input#opt5.it-select__selectopt(name='district', type='radio')-->
+              <!--										label.it-select__label(for='opt5', )-->
+              <!--											span.it-select__text Арбат-->
+              <!--										input#opt6.it-select__selectopt(name='district', type='radio')-->
+              <!--										label.it-select__label(for='opt6', )-->
+              <!--											span.it-select__text Аэропорт-->
+              <!--										input#opt7.it-select__selectopt(name='district', type='radio')-->
+              <!--										label.it-select__label(for='opt7', )-->
+              <!--											span.it-select__text Аэропорт-->
+              <!--										input#opt8.it-select__selectopt(name='district', type='radio')-->
+              <!--										label.it-select__label(for='opt8', )-->
+              <!--											span.it-select__text Арбат-->
+              <!--										input#opt9.it-select__selectopt(name='district', type='radio')-->
+              <!--										label.it-select__label(for='opt9', )-->
+              <!--											span.it-select__text Аэропорт-->
+              <!--				li.it-filter__item.it-filter__item--dropdown-->
+              <!--					.it-filter__dropdown-->
+              <!--						section.it-select-->
+              <!--							.it-select__outer-wrap-->
+              <!--								.it-select__wrap(data-select-wrap)-->
+              <!--									.it-select__input-wrap(tabindex='1', data-select-input-wrap='')-->
+              <!--										img(src="assets/img/medvisor/clinics/arrow.svg", alt='').it-select__arrow-->
+              <!--										input#metro1.it-select__selectopt(name='metro', type='radio', checked='' )-->
+              <!--										label.it-select__label(for='metro1', )-->
+              <!--											span.it-select__text Метро-->
+              <!--										input#metro2.it-select__selectopt(name='metro', type='radio')-->
+              <!--										label.it-select__label(for='metro2', )-->
+              <!--											span.it-select__text Адмиралтейский район-->
+              <!--										input#metro3.it-select__selectopt(name='metro', type='radio')-->
+              <!--										label.it-select__label(for='metro3', )-->
+              <!--											span.it-select__text Арбат-->
+              <!--										input#metro4.it-select__selectopt(name='metro', type='radio')-->
+              <!--										label.it-select__label(for='metro4', )-->
+              <!--											span.it-select__text бэропорт-->
+              <!--										input#metro5.it-select__selectopt(name='metro', type='radio')-->
+              <!--										label.it-select__label(for='metro5', )-->
+              <!--											span.it-select__text Арбат-->
+              <!--										input#metro6.it-select__selectopt(name='metro', type='radio')-->
+              <!--										label.it-select__label(for='metro6', )-->
+              <!--											span.it-select__text Аэропорт-->
+              <!--										input#metro7.it-select__selectopt(name='metro', type='radio')-->
+              <!--										label.it-select__label(for='metro7', )-->
+              <!--											span.it-select__text Аэропорт-->
+              <!--										input#metro8.it-select__selectopt(name='metro', type='radio')-->
+              <!--										label.it-select__label(for='metro8', )-->
+              <!--											span.it-select__text Арбат-->
+              <!--										input#metro9.it-select__selectopt(name='metro', type='radio')-->
+              <!--										label.it-select__label(for='metro9', )-->
+              <!--											span.it-select__text Аэропорт-->
+              <!--				li.it-filter__item(data-it-filter-item)-->
+              <!--					.it-filter__btn-title(data-it-filter-btn-title)-->
+              <!--						| Государственное учреждение-->
+              <!--						img(src="assets/img/medvisor/clinics/arrow.svg", alt='' data-filter-btn-arrow).it-filter__btn-title-arrow-->
+              <!--					ul.it-filter__checkbox-wrap(data-it-filter-checkboxes)-->
+              <!--						li.it-filter__checkbox-item-->
+              <!--							label.it-checkbox-->
+              <!--								input.it-checkbox__default(type='checkbox', name='AGREE')-->
+              <!--								span.it-checkbox__pseudo-->
+              <!--								span.it-checkbox__text-->
+              <!--									| Да-->
+              <!--						li.it-filter__checkbox-item-->
+              <!--							label.it-checkbox-->
+              <!--								input.it-checkbox__default(type='checkbox', name='AGREE')-->
+              <!--								span.it-checkbox__pseudo-->
+              <!--								span.it-checkbox__text-->
+              <!--									| Нет-->
+              <!--				li.it-filter__item(data-it-filter-item)-->
+              <!--					.it-filter__btn-title(data-it-filter-btn-title)-->
+              <!--						| Государственное учреждение-->
+              <!--						img(src="assets/img/medvisor/clinics/arrow.svg", alt='' data-filter-btn-arrow).it-filter__btn-title-arrow-->
+              <!--					ul.it-filter__checkbox-wrap(data-it-filter-checkboxes)-->
+              <!--						li.it-filter__checkbox-item-->
+              <!--							label.it-checkbox-->
+              <!--								input.it-checkbox__default(type='checkbox', name='AGREE')-->
+              <!--								span.it-checkbox__pseudo-->
+              <!--								span.it-checkbox__text-->
+              <!--									| Да-->
+              <!--						li.it-filter__checkbox-item-->
+              <!--							label.it-checkbox-->
+              <!--								input.it-checkbox__default(type='checkbox', name='AGREE')-->
+              <!--								span.it-checkbox__pseudo-->
+              <!--								span.it-checkbox__text-->
+              <!--									| Нет1-->
+              <!---->
+              <!---->
+              <!---->
+              <!---->
+              <div id="comp_6d66c8cd4eaf1cae50acc29c45ecce7b">
+                <div class="bx_filter">
+                  <div class="bx_filter_section">
+                    <form class="smartfilter" name="_form" action="/moskva/school" method="get">
+                      <input id="bxajaxid_6d66c8cd4eaf1cae50acc29c45ecce7b_8BACKi" type="hidden" name="bxajaxid" value="6d66c8cd4eaf1cae50acc29c45ecce7b">
+                      <input type="hidden" name="AJAX_CALL" value="Y">
+                      <input id="citysef" type="hidden" name="citysef" value="moskva">
+                      <div class="bx_filter_parameters_box active"><span class="bx_filter_container_modef"></span>
+                        <!--.bx_filter_parameters_box_title(onclick='smartFilter.hideFilterProps(this)')//span.bx_filter_parameters_box_title-text Район
+                        -->
+                        <div class="bx_filter_block">
+                          <div class="bx_filter_parameters_box_container">
+                            <div class="bx_filter_select_container">
+                              <div class="bx_filter_select_block" onclick="smartFilter.showDropDownPopup(this, '119')">
+                                <div class="bx_filter_select_text" data-role="currentOption">Район</div>
+                                <div class="bx_filter_select_arrow"></div>
+                                <input id="all_arEduCentersFilter_119_1355685096" style="display: none" type="radio" name="arEduCentersFilter_119" value="">
+                                <input id="arEduCentersFilter_119_1355685096" style="display: none" type="radio" name="" value="1355685096">
+                                <input id="arEduCentersFilter_119_3385281874" style="display: none" type="radio" name="" value="3385281874">
+                                <input id="arEduCentersFilter_119_3200286148" style="display: none" type="radio" name="" value="3200286148">
+                                <input id="arEduCentersFilter_119_547678311" style="display: none" type="radio" name="" value="547678311">
+                                <input id="arEduCentersFilter_119_1470355697" style="display: none" type="radio" name="" value="1470355697">
+                                <input id="arEduCentersFilter_119_3467282763" style="display: none" type="radio" name="" value="3467282763">
+                                <input id="arEduCentersFilter_119_3115170269" style="display: none" type="radio" name="" value="3115170269">
+                                <input id="arEduCentersFilter_119_689087564" style="display: none" type="radio" name="" value="689087564">
+                                <input id="arEduCentersFilter_119_1578472666" style="display: none" type="radio" name="" value="1578472666">
+                                <input id="arEduCentersFilter_119_1053957439" style="display: none" type="radio" name="" value="1053957439">
+                                <input id="arEduCentersFilter_119_2816167045" style="display: none" type="radio" name="" value="2816167045">
+                                <input id="arEduCentersFilter_119_968874278" style="display: none" type="radio" name="" value="968874278">
+                                <input id="arEduCentersFilter_119_2696317084" style="display: none" type="radio" name="" value="2696317084">
+                                <input id="arEduCentersFilter_119_653065828" style="display: none" type="radio" name="" value="653065828">
+                                <input id="arEduCentersFilter_119_805934349" style="display: none" type="radio" name="" value="805934349">
+                                <input id="arEduCentersFilter_119_1192142235" style="display: none" type="radio" name="" value="1192142235">
+                                <input id="arEduCentersFilter_119_3108635120" style="display: none" type="radio" name="" value="3108635120">
+                                <input id="arEduCentersFilter_119_1238707625" style="display: none" type="radio" name="" value="1238707625">
+                                <input id="arEduCentersFilter_119_657364051" style="display: none" type="radio" name="" value="657364051">
+                                <input id="arEduCentersFilter_119_1228051844" style="display: none" type="radio" name="" value="1228051844">
+                                <input id="arEduCentersFilter_119_3461165414" style="display: none" type="radio" name="" value="3461165414">
+                                <input id="arEduCentersFilter_119_3058951157" style="display: none" type="radio" name="" value="3058951157">
+                                <input id="arEduCentersFilter_119_1464099036" style="display: none" type="radio" name="" value="1464099036">
+                                <input id="arEduCentersFilter_119_541282378" style="display: none" type="radio" name="" value="541282378">
+                                <input id="arEduCentersFilter_119_3190277609" style="display: none" type="radio" name="" value="3190277609">
+                                <input id="arEduCentersFilter_119_3374380415" style="display: none" type="radio" name="" value="3374380415">
+                                <input id="arEduCentersFilter_119_1344906437" style="display: none" type="radio" name="" value="1344906437">
+                                <input id="arEduCentersFilter_119_4033109394" style="display: none" type="radio" name="" value="4033109394">
+                                <input id="arEduCentersFilter_119_3231103316" style="display: none" type="radio" name="" value="3231103316">
+                                <input id="arEduCentersFilter_119_2689675441" style="display: none" type="radio" name="" value="2689675441">
+                                <input id="arEduCentersFilter_119_3612737575" style="display: none" type="radio" name="" value="3612737575">
+                                <input id="arEduCentersFilter_119_1314869661" style="display: none" type="radio" name="" value="1314869661">
+                                <input id="arEduCentersFilter_119_3504110611" style="display: none" type="radio" name="" value="3504110611">
+                                <input id="arEduCentersFilter_119_3079768514" style="display: none" type="radio" name="" value="3079768514">
+                                <input id="arEduCentersFilter_119_962093323" style="display: none" type="radio" name="" value="962093323">
+                                <input id="arEduCentersFilter_119_2805789864" style="display: none" type="radio" name="" value="2805789864">
+                                <input id="arEduCentersFilter_119_3493577790" style="display: none" type="radio" name="" value="3493577790">
+                                <input id="arEduCentersFilter_119_1043703058" style="display: none" type="radio" name="" value="1043703058">
+                                <input id="arEduCentersFilter_119_3206925141" style="display: none" type="radio" name="" value="3206925141">
+                                <input id="arEduCentersFilter_119_798676676" style="display: none" type="radio" name="" value="798676676">
+                                <input id="arEduCentersFilter_119_1624981507" style="display: none" type="radio" name="" value="1624981507">
+                                <input id="arEduCentersFilter_119_1884414415" style="display: none" type="radio" name="" value="1884414415">
+                                <input id="arEduCentersFilter_119_123130201" style="display: none" type="radio" name="" value="123130201">
+                                <input id="arEduCentersFilter_119_2657059043" style="display: none" type="radio" name="" value="2657059043">
+                                <input id="arEduCentersFilter_119_3914903669" style="display: none" type="radio" name="" value="3914903669">
+                                <input id="arEduCentersFilter_119_1486743122" style="display: none" type="radio" name="" value="1486743122">
+                                <input id="arEduCentersFilter_119_2000430550" style="display: none" type="radio" name="" value="2000430550">
+                                <input id="arEduCentersFilter_119_3872064" style="display: none" type="radio" name="" value="3872064">
+                                <input id="arEduCentersFilter_119_2570208506" style="display: none" type="radio" name="" value="2570208506">
+                                <input id="arEduCentersFilter_119_3996480620" style="display: none" type="radio" name="" value="3996480620">
+                                <input id="arEduCentersFilter_119_2123000317" style="display: none" type="radio" name="" value="2123000317">
+                                <input id="arEduCentersFilter_119_160258411" style="display: none" type="radio" name="" value="160258411">
+                                <input id="arEduCentersFilter_119_1766510734" style="display: none" type="radio" name="" value="1766510734">
+                                <input id="arEduCentersFilter_119_508420120" style="display: none" type="radio" name="" value="508420120">
+                                <input id="arEduCentersFilter_119_2269426082" style="display: none" type="radio" name="" value="2269426082">
+                                <input id="arEduCentersFilter_119_4030955828" style="display: none" type="radio" name="" value="4030955828">
+                                <input id="arEduCentersFilter_119_1848054935" style="display: none" type="radio" name="" value="1848054935">
+                                <input id="arEduCentersFilter_119_421536769" style="display: none" type="radio" name="" value="421536769">
+                                <input id="arEduCentersFilter_119_2150200763" style="display: none" type="radio" name="" value="2150200763">
+                                <input id="arEduCentersFilter_119_4147004717" style="display: none" type="radio" name="" value="4147004717">
+                                <input id="arEduCentersFilter_119_1737578684" style="display: none" type="radio" name="" value="1737578684">
+                                <input id="arEduCentersFilter_119_1748999006" style="display: none" type="radio" name="" value="1748999006">
+                                <input id="arEduCentersFilter_119_895529947" style="display: none" type="radio" name="" value="895529947">
+                                <input id="arEduCentersFilter_119_2892620385" style="display: none" type="radio" name="" value="2892620385">
+                                <input id="arEduCentersFilter_119_3681473271" style="display: none" type="radio" name="" value="3681473271">
+                                <input id="arEduCentersFilter_119_1158301524" style="display: none" type="radio" name="" value="1158301524">
+                                <input id="arEduCentersFilter_119_839743426" style="display: none" type="radio" name="" value="839743426">
+                                <input id="arEduCentersFilter_119_2869175928" style="display: none" type="radio" name="" value="2869175928">
+                                <input id="arEduCentersFilter_119_3691189998" style="display: none" type="radio" name="" value="3691189998">
+                                <input id="arEduCentersFilter_119_557932278" style="display: none" type="radio" name="" value="557932278">
+                                <input id="arEduCentersFilter_119_1447456352" style="display: none" type="radio" name="" value="1447456352">
+                                <input id="arEduCentersFilter_119_1287392127" style="display: none" type="radio" name="" value="1287392127">
+                                <input id="arEduCentersFilter_119_1002126313" style="display: none" type="radio" name="" value="1002126313">
+                                <input id="arEduCentersFilter_119_1534898700" style="display: none" type="radio" name="" value="1534898700">
+                                <input id="arEduCentersFilter_119_746291866" style="display: none" type="radio" name="" value="746291866">
+                                <input id="arEduCentersFilter_119_3044201248" style="display: none" type="radio" name="" value="3044201248">
+                                <input id="arEduCentersFilter_119_3262505910" style="display: none" type="radio" name="" value="3262505910">
+                                <input id="arEduCentersFilter_119_1544648213" style="display: none" type="radio" name="" value="1544648213">
+                                <input id="arEduCentersFilter_119_722880131" style="display: none" type="radio" name="" value="722880131">
+                                <input id="arEduCentersFilter_119_2988382009" style="display: none" type="radio" name="" value="2988382009">
+                                <input id="arEduCentersFilter_119_3306694575" style="display: none" type="radio" name="" value="3306694575">
+                                <input id="arEduCentersFilter_119_1437022782" style="display: none" type="radio" name="" value="1437022782">
+                                <input id="arEduCentersFilter_119_580913832" style="display: none" type="radio" name="" value="580913832">
+                                <input id="arEduCentersFilter_119_339551435" style="display: none" type="radio" name="" value="339551435">
+                                <input id="arEduCentersFilter_119_1664750685" style="display: none" type="radio" name="" value="1664750685">
+                                <input id="arEduCentersFilter_119_4197664231" style="display: none" type="radio" name="" value="4197664231">
+                                <input id="arEduCentersFilter_119_2369025393" style="display: none" type="radio" name="" value="2369025393">
+                                <input id="arEduCentersFilter_119_324067538" style="display: none" type="radio" name="" value="324067538">
+                                <input id="arEduCentersFilter_119_1683476548" style="display: none" type="radio" name="" value="1683476548">
+                                <input id="arEduCentersFilter_119_4250829310" style="display: none" type="radio" name="" value="4250829310">
+                                <input id="arEduCentersFilter_119_2321133928" style="display: none" type="radio" name="" value="2321133928">
+                                <input id="arEduCentersFilter_119_451325177" style="display: none" type="radio" name="" value="451325177">
+                                <input id="arEduCentersFilter_119_1843502191" style="display: none" type="radio" name="" value="1843502191">
+                                <input id="arEduCentersFilter_119_3478077402" style="display: none" type="radio" name="" value="3478077402">
+                                <input id="arEduCentersFilter_119_220599690" style="display: none" type="radio" name="" value="220599690">
+                                <input id="arEduCentersFilter_119_3811079334" style="display: none" type="radio" name="" value="3811079334">
+                                <input id="arEduCentersFilter_119_2486125616" style="display: none" type="radio" name="" value="2486125616">
+                                <input id="arEduCentersFilter_119_1320741296" style="display: none" type="radio" name="" value="1320741296">
+                                <input id="arEduCentersFilter_119_2928326787" style="display: none" type="radio" name="" value="2928326787">
+                                <input id="arEduCentersFilter_119_1114080077" style="display: none" type="radio" name="" value="1114080077">
+                                <input id="arEduCentersFilter_119_684772987" style="display: none" type="radio" name="" value="684772987">
+                                <input id="arEduCentersFilter_119_172741011" style="display: none" type="radio" name="" value="172741011">
+                                <input id="arEduCentersFilter_119_2102190341" style="display: none" type="radio" name="" value="2102190341">
+                                <input id="arEduCentersFilter_119_3829772479" style="display: none" type="radio" name="" value="3829772479">
+                                <input id="arEduCentersFilter_119_2470608937" style="display: none" type="radio" name="" value="2470608937">
+                                <input id="arEduCentersFilter_119_66952632" style="display: none" type="radio" name="" value="66952632">
+                                <input id="arEduCentersFilter_119_1962585390" style="display: none" type="radio" name="" value="1962585390">
+                                <input id="arEduCentersFilter_119_1359771359" style="display: none" type="radio" name="" value="1359771359">
+                                <input id="arEduCentersFilter_119_3355780965" style="display: none" type="radio" name="" value="3355780965">
+                                <input id="arEduCentersFilter_119_3204585459" style="display: none" type="radio" name="" value="3204585459">
+                                <input id="arEduCentersFilter_119_560366160" style="display: none" type="radio" name="" value="560366160">
+                                <input id="arEduCentersFilter_119_1449243334" style="display: none" type="radio" name="" value="1449243334">
+                                <input id="arEduCentersFilter_119_3479757692" style="display: none" type="radio" name="" value="3479757692">
+                                <input id="arEduCentersFilter_119_1060613038" style="display: none" type="radio" name="" value="1060613038">
+                                <input id="arEduCentersFilter_119_3094336490" style="display: none" type="radio" name="" value="3094336490">
+                                <input id="arEduCentersFilter_119_1058043656" style="display: none" type="radio" name="" value="1058043656">
+                                <input id="arEduCentersFilter_119_1209485214" style="display: none" type="radio" name="" value="1209485214">
+                                <input id="arEduCentersFilter_119_3508409892" style="display: none" type="radio" name="" value="3508409892">
+                                <input id="arEduCentersFilter_119_2786666162" style="display: none" type="radio" name="" value="2786666162">
+                                <input id="arEduCentersFilter_119_947761937" style="display: none" type="radio" name="" value="947761937">
+                                <input id="arEduCentersFilter_119_1333429127" style="display: none" type="radio" name="" value="1333429127">
+                                <input id="arEduCentersFilter_119_3597914685" style="display: none" type="radio" name="" value="3597914685">
+                                <input id="arEduCentersFilter_119_2708791979" style="display: none" type="radio" name="" value="2708791979">
+                                <input id="arEduCentersFilter_119_835452730" style="display: none" type="radio" name="" value="835452730">
+                                <input id="arEduCentersFilter_119_1187827628" style="display: none" type="radio" name="" value="1187827628">
+                                <input id="arEduCentersFilter_119_3095948231" style="display: none" type="radio" name="" value="3095948231">
+                                <input id="arEduCentersFilter_119_1361816185" style="display: none" type="radio" name="" value="1361816185">
+                                <input id="arEduCentersFilter_119_3482278737" style="display: none" type="radio" name="" value="3482278737">
+                                <input id="arEduCentersFilter_119_3618748426" style="display: none" type="radio" name="" value="3618748426">
+                                <input id="arEduCentersFilter_119_1607991021" style="display: none" type="radio" name="" value="1607991021">
+                                <input id="arEduCentersFilter_119_1451625195" style="display: none" type="radio" name="" value="1451625195">
+                                <input id="arEduCentersFilter_119_562117245" style="display: none" type="radio" name="" value="562117245">
+                                <input id="arEduCentersFilter_119_3219501022" style="display: none" type="radio" name="" value="3219501022">
+                                <input id="arEduCentersFilter_119_3370295112" style="display: none" type="radio" name="" value="3370295112">
+                                <div class="bx_filter_select_popup" data-role="dropdownContent" style="display: none;">
+                                  <ul>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="all_arEduCentersFilter_119_1355685096" data-role="label_all_arEduCentersFilter_119_1355685096" onclick="smartFilter.selectDropDownItem(this, 'all_arEduCentersFilter_119_1355685096')">Все</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1355685096" data-role="label_arEduCentersFilter_119_1355685096" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1355685096')">Академический</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3385281874" data-role="label_arEduCentersFilter_119_3385281874" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3385281874')">Алексеевский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3200286148" data-role="label_arEduCentersFilter_119_3200286148" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3200286148')">Алтуфьевский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_547678311" data-role="label_arEduCentersFilter_119_547678311" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_547678311')">Арбат</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1470355697" data-role="label_arEduCentersFilter_119_1470355697" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1470355697')">Аэропорт</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3467282763" data-role="label_arEduCentersFilter_119_3467282763" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3467282763')">Бабушкинский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3115170269" data-role="label_arEduCentersFilter_119_3115170269" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3115170269')">Басманный</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_689087564" data-role="label_arEduCentersFilter_119_689087564" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_689087564')">Беговой</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1578472666" data-role="label_arEduCentersFilter_119_1578472666" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1578472666')">Бескудниковский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1053957439" data-role="label_arEduCentersFilter_119_1053957439" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1053957439')">Бибирево</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2816167045" data-role="label_arEduCentersFilter_119_2816167045" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2816167045')">Богородское</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_968874278" data-role="label_arEduCentersFilter_119_968874278" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_968874278')">Братеево</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2696317084" data-role="label_arEduCentersFilter_119_2696317084" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2696317084')">Бутырский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_653065828" data-role="label_arEduCentersFilter_119_653065828" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_653065828')">Василеостровский район</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_805934349" data-role="label_arEduCentersFilter_119_805934349" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_805934349')">Вешняки</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1192142235" data-role="label_arEduCentersFilter_119_1192142235" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1192142235')">Внуково</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3108635120" data-role="label_arEduCentersFilter_119_3108635120" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3108635120')">Войковский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1238707625" data-role="label_arEduCentersFilter_119_1238707625" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1238707625')">Восточное Бирюлево</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_657364051" data-role="label_arEduCentersFilter_119_657364051" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_657364051')">Восточное Дегунино</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1228051844" data-role="label_arEduCentersFilter_119_1228051844" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1228051844')">Восточное Измайлово</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3461165414" data-role="label_arEduCentersFilter_119_3461165414" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3461165414')">Восточный</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3058951157" data-role="label_arEduCentersFilter_119_3058951157" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3058951157')">Выборгский район</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1464099036" data-role="label_arEduCentersFilter_119_1464099036" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1464099036')">Выхино-Жулебино</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_541282378" data-role="label_arEduCentersFilter_119_541282378" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_541282378')">Гагаринский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3190277609" data-role="label_arEduCentersFilter_119_3190277609" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3190277609')">Головинский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3374380415" data-role="label_arEduCentersFilter_119_3374380415" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3374380415')">Гольяново</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1344906437" data-role="label_arEduCentersFilter_119_1344906437" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1344906437')">Даниловский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_4033109394" data-role="label_arEduCentersFilter_119_4033109394" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_4033109394')">Десёновское</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3231103316" data-role="label_arEduCentersFilter_119_3231103316" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3231103316')">Дмитровский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2689675441" data-role="label_arEduCentersFilter_119_2689675441" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2689675441')">Донской</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3612737575" data-role="label_arEduCentersFilter_119_3612737575" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3612737575')">Дорогомилово</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1314869661" data-role="label_arEduCentersFilter_119_1314869661" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1314869661')">Замоскворечье</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3504110611" data-role="label_arEduCentersFilter_119_3504110611" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3504110611')">Западное Бирюлево</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3079768514" data-role="label_arEduCentersFilter_119_3079768514" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3079768514')">Западное Дегунино</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_962093323" data-role="label_arEduCentersFilter_119_962093323" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_962093323')">Зюзино</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2805789864" data-role="label_arEduCentersFilter_119_2805789864" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2805789864')">Зябликово</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3493577790" data-role="label_arEduCentersFilter_119_3493577790" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3493577790')">Ивановское</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1043703058" data-role="label_arEduCentersFilter_119_1043703058" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1043703058')">Измайлово</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3206925141" data-role="label_arEduCentersFilter_119_3206925141" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3206925141')">Киевский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_798676676" data-role="label_arEduCentersFilter_119_798676676" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_798676676')">Клёновское</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1624981507" data-role="label_arEduCentersFilter_119_1624981507" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1624981507')">Кокошкино</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1884414415" data-role="label_arEduCentersFilter_119_1884414415" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1884414415')">Коньково</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_123130201" data-role="label_arEduCentersFilter_119_123130201" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_123130201')">Коптево</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2657059043" data-role="label_arEduCentersFilter_119_2657059043" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2657059043')">Косино-Ухтомский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3914903669" data-role="label_arEduCentersFilter_119_3914903669" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3914903669')">Котловка</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1486743122" data-role="label_arEduCentersFilter_119_1486743122" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1486743122')">Краснопахорское</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2000430550" data-role="label_arEduCentersFilter_119_2000430550" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2000430550')">Красносельский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3872064" data-role="label_arEduCentersFilter_119_3872064" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3872064')">Крылатское</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2570208506" data-role="label_arEduCentersFilter_119_2570208506" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2570208506')">Крюково</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3996480620" data-role="label_arEduCentersFilter_119_3996480620" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3996480620')">Кузьминки</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2123000317" data-role="label_arEduCentersFilter_119_2123000317" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2123000317')">Кунцево</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_160258411" data-role="label_arEduCentersFilter_119_160258411" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_160258411')">Куркино</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1766510734" data-role="label_arEduCentersFilter_119_1766510734" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1766510734')">Левобережный</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_508420120" data-role="label_arEduCentersFilter_119_508420120" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_508420120')">Лефортово</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2269426082" data-role="label_arEduCentersFilter_119_2269426082" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2269426082')">Лианозово</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_4030955828" data-role="label_arEduCentersFilter_119_4030955828" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_4030955828')">Ломоносовский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1848054935" data-role="label_arEduCentersFilter_119_1848054935" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1848054935')">Лосиноостровский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_421536769" data-role="label_arEduCentersFilter_119_421536769" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_421536769')">Люблино</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2150200763" data-role="label_arEduCentersFilter_119_2150200763" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2150200763')">Марфино</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_4147004717" data-role="label_arEduCentersFilter_119_4147004717" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_4147004717')">Марьина роща</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1737578684" data-role="label_arEduCentersFilter_119_1737578684" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1737578684')">Марьино</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1748999006" data-role="label_arEduCentersFilter_119_1748999006" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1748999006')">Матушкино-Савелки</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_895529947" data-role="label_arEduCentersFilter_119_895529947" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_895529947')">Медведково Южное</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2892620385" data-role="label_arEduCentersFilter_119_2892620385" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2892620385')">Метрогородок</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3681473271" data-role="label_arEduCentersFilter_119_3681473271" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3681473271')">Мещанский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1158301524" data-role="label_arEduCentersFilter_119_1158301524" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1158301524')">Митино</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_839743426" data-role="label_arEduCentersFilter_119_839743426" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_839743426')">Можайский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2869175928" data-role="label_arEduCentersFilter_119_2869175928" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2869175928')">Молжаниновский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3691189998" data-role="label_arEduCentersFilter_119_3691189998" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3691189998')">Москворечье-Сабурово</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_557932278" data-role="label_arEduCentersFilter_119_557932278" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_557932278')">Московский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1447456352" data-role="label_arEduCentersFilter_119_1447456352" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1447456352')">Мосрентген</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1287392127" data-role="label_arEduCentersFilter_119_1287392127" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1287392127')">Нагатино-Садовники</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1002126313" data-role="label_arEduCentersFilter_119_1002126313" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1002126313')">Нагатинский Затон</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1534898700" data-role="label_arEduCentersFilter_119_1534898700" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1534898700')">Нагорный</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_746291866" data-role="label_arEduCentersFilter_119_746291866" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_746291866')">Некрасовка</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3044201248" data-role="label_arEduCentersFilter_119_3044201248" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3044201248')">Нижегородский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3262505910" data-role="label_arEduCentersFilter_119_3262505910" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3262505910')">Ново-Переделкино</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1544648213" data-role="label_arEduCentersFilter_119_1544648213" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1544648213')">Новогиреево</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_722880131" data-role="label_arEduCentersFilter_119_722880131" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_722880131')">Новокосино</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2988382009" data-role="label_arEduCentersFilter_119_2988382009" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2988382009')">Обручевский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3306694575" data-role="label_arEduCentersFilter_119_3306694575" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3306694575')">Орехово-Борисово Северное</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1437022782" data-role="label_arEduCentersFilter_119_1437022782" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1437022782')">Орехово-Борисово Южное</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_580913832" data-role="label_arEduCentersFilter_119_580913832" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_580913832')">Останкинский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_339551435" data-role="label_arEduCentersFilter_119_339551435" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_339551435')">Отрадное</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1664750685" data-role="label_arEduCentersFilter_119_1664750685" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1664750685')">Очаково-Матвеевское</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_4197664231" data-role="label_arEduCentersFilter_119_4197664231" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_4197664231')">Перово</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2369025393" data-role="label_arEduCentersFilter_119_2369025393" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2369025393')">Печатники</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_324067538" data-role="label_arEduCentersFilter_119_324067538" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_324067538')">Покровское-Стрешнево</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1683476548" data-role="label_arEduCentersFilter_119_1683476548" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1683476548')">Преображенское</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_4250829310" data-role="label_arEduCentersFilter_119_4250829310" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_4250829310')">Пресненский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2321133928" data-role="label_arEduCentersFilter_119_2321133928" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2321133928')">Проспект Вернадского</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_451325177" data-role="label_arEduCentersFilter_119_451325177" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_451325177')">Раменки</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1843502191" data-role="label_arEduCentersFilter_119_1843502191" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1843502191')">Ростокино</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3478077402" data-role="label_arEduCentersFilter_119_3478077402" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3478077402')">Рязановское</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_220599690" data-role="label_arEduCentersFilter_119_220599690" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_220599690')">Рязанский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3811079334" data-role="label_arEduCentersFilter_119_3811079334" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3811079334')">Савеловский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2486125616" data-role="label_arEduCentersFilter_119_2486125616" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2486125616')">Свиблово</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1320741296" data-role="label_arEduCentersFilter_119_1320741296" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1320741296')">Северное Бутово</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2928326787" data-role="label_arEduCentersFilter_119_2928326787" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2928326787')">Северное Измайлово</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1114080077" data-role="label_arEduCentersFilter_119_1114080077" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1114080077')">Северное Медведково</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_684772987" data-role="label_arEduCentersFilter_119_684772987" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_684772987')">Северное Тушино</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_172741011" data-role="label_arEduCentersFilter_119_172741011" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_172741011')">Северный</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2102190341" data-role="label_arEduCentersFilter_119_2102190341" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2102190341')">Силино</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3829772479" data-role="label_arEduCentersFilter_119_3829772479" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3829772479')">Сокол</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2470608937" data-role="label_arEduCentersFilter_119_2470608937" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2470608937')">Соколиная гора</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_66952632" data-role="label_arEduCentersFilter_119_66952632" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_66952632')">Сокольники</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1962585390" data-role="label_arEduCentersFilter_119_1962585390" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1962585390')">Солнцево</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1359771359" data-role="label_arEduCentersFilter_119_1359771359" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1359771359')">Строгино</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3355780965" data-role="label_arEduCentersFilter_119_3355780965" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3355780965')">Таганский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3204585459" data-role="label_arEduCentersFilter_119_3204585459" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3204585459')">Тверской</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_560366160" data-role="label_arEduCentersFilter_119_560366160" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_560366160')">Текстильщики</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1449243334" data-role="label_arEduCentersFilter_119_1449243334" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1449243334')">Теплый Стан</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3479757692" data-role="label_arEduCentersFilter_119_3479757692" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3479757692')">Тимирязевский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1060613038" data-role="label_arEduCentersFilter_119_1060613038" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1060613038')">Троицк</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3094336490" data-role="label_arEduCentersFilter_119_3094336490" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3094336490')">Тропарево-Никулино</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1058043656" data-role="label_arEduCentersFilter_119_1058043656" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1058043656')">Филевский парк</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1209485214" data-role="label_arEduCentersFilter_119_1209485214" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1209485214')">Фили-Давыдково</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3508409892" data-role="label_arEduCentersFilter_119_3508409892" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3508409892')">Хамовники</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2786666162" data-role="label_arEduCentersFilter_119_2786666162" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2786666162')">Ховрино</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_947761937" data-role="label_arEduCentersFilter_119_947761937" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_947761937')">Хорошево-Мневники</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1333429127" data-role="label_arEduCentersFilter_119_1333429127" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1333429127')">Хорошевский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3597914685" data-role="label_arEduCentersFilter_119_3597914685" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3597914685')">Царицыно</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_2708791979" data-role="label_arEduCentersFilter_119_2708791979" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_2708791979')">Черемушки</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_835452730" data-role="label_arEduCentersFilter_119_835452730" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_835452730')">Чертаново Северное</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1187827628" data-role="label_arEduCentersFilter_119_1187827628" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1187827628')">Чертаново Центральное</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3095948231" data-role="label_arEduCentersFilter_119_3095948231" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3095948231')">Чертаново Южное</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1361816185" data-role="label_arEduCentersFilter_119_1361816185" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1361816185')">Щербинка</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3482278737" data-role="label_arEduCentersFilter_119_3482278737" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3482278737')">Щукино</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3618748426" data-role="label_arEduCentersFilter_119_3618748426" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3618748426')">Южное Бутово</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1607991021" data-role="label_arEduCentersFilter_119_1607991021" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1607991021')">Южное Тушино</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_1451625195" data-role="label_arEduCentersFilter_119_1451625195" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_1451625195')">Южнопортовый</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_562117245" data-role="label_arEduCentersFilter_119_562117245" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_562117245')">Якиманка</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3219501022" data-role="label_arEduCentersFilter_119_3219501022" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3219501022')">Ярославский</label>
+                                    </li>
+                                    <li>
+                                      <label class="bx_filter_param_label" for="arEduCentersFilter_119_3370295112" data-role="label_arEduCentersFilter_119_3370295112" onclick="smartFilter.selectDropDownItem(this, 'arEduCentersFilter_119_3370295112')">Ясенево</label>
+                                    </li>
+                                  </ul>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </section>
+                          <div class="clb"></div>
+                        </div>
                       </div>
-                    </li>
-                    <li class="it-filter__item it-filter__item--dropdown">
-                      <div class="it-filter__dropdown">
-                        <section class="it-select">
-                          <div class="it-select__outer-wrap">
-                            <div class="it-select__wrap" data-select-wrap>
-                              <div class="it-select__input-wrap" tabindex="1" data-select-input-wrap=""><img class="it-select__arrow" src="static/img/medvisor/clinics/arrow.svg" alt="">
-                                <input class="it-select__selectopt" id="metro1" name="metro" type="radio" checked="">
-                                <label class="it-select__label" for="metro1"><span class="it-select__text">Метро</span></label>
-                                <input class="it-select__selectopt" id="metro2" name="metro" type="radio">
-                                <label class="it-select__label" for="metro2"><span class="it-select__text">Адмиралтейский район</span></label>
-                                <input class="it-select__selectopt" id="metro3" name="metro" type="radio">
-                                <label class="it-select__label" for="metro3"><span class="it-select__text">Арбат</span></label>
-                                <input class="it-select__selectopt" id="metro4" name="metro" type="radio">
-                                <label class="it-select__label" for="metro4"><span class="it-select__text">бэропорт</span></label>
-                                <input class="it-select__selectopt" id="metro5" name="metro" type="radio">
-                                <label class="it-select__label" for="metro5"><span class="it-select__text">Арбат</span></label>
-                                <input class="it-select__selectopt" id="metro6" name="metro" type="radio">
-                                <label class="it-select__label" for="metro6"><span class="it-select__text">Аэропорт</span></label>
-                                <input class="it-select__selectopt" id="metro7" name="metro" type="radio">
-                                <label class="it-select__label" for="metro7"><span class="it-select__text">Аэропорт</span></label>
-                                <input class="it-select__selectopt" id="metro8" name="metro" type="radio">
-                                <label class="it-select__label" for="metro8"><span class="it-select__text">Арбат</span></label>
-                                <input class="it-select__selectopt" id="metro9" name="metro" type="radio">
-                                <label class="it-select__label" for="metro9"><span class="it-select__text">Аэропорт</span></label>
-                              </div>
-                            </div>
+                      <div class="bx_filter_parameters_box active"><span class="bx_filter_container_modef"></span>
+                        <div class="bx_filter_parameters_box_title" onclick="smartFilter.hideFilterProps(this)"><span class="bx_filter_parameters_box_title-text">Государственное учебное заведение</span></div>
+                        <div class="bx_filter_block">
+                          <div class="bx_filter_parameters_box_container">
+                            <label class="checkbox">
+                              <input class="checkbox__default" id="arEduCentersFilter_143_2212294583" type="checkbox" name="arEduCentersFilter_143_2212294583" value="Y"><span class="checkbox__pseudo"></span><span class="checkbox__text"><span class="checkbox__key">Да<span class="checkbox__numeric" data-role="count_arEduCentersFilter_143_2212294583">539</span></span></span><span class="checkbox__value"></span>
+                            </label>
+                            <label class="checkbox">
+                              <input class="checkbox__default" id="arEduCentersFilter_143_450215437" type="checkbox" name="arEduCentersFilter_143_450215437" value="Y"><span class="checkbox__pseudo"></span><span class="checkbox__text"><span class="checkbox__key">Нет<span class="checkbox__numeric" data-role="count_arEduCentersFilter_143_450215437">10</span></span></span><span class="checkbox__value"></span>
+                            </label>
                           </div>
-                        </section>
+                          <div class="clb"></div>
+                        </div>
                       </div>
-                    </li>
-                    <li class="it-filter__item" data-it-filter-item>
-                      <div class="it-filter__btn-title" data-it-filter-btn-title>Государственное учреждение<img class="it-filter__btn-title-arrow" src="static/img/medvisor/clinics/arrow.svg" alt="" data-filter-btn-arrow></div>
-                      <ul class="it-filter__checkbox-wrap" data-it-filter-checkboxes>
-                        <li class="it-filter__checkbox-item">
-                          <label class="it-checkbox">
-                            <input class="it-checkbox__default" type="checkbox" name="AGREE"><span class="it-checkbox__pseudo"></span><span class="it-checkbox__text">Да</span>
-                          </label>
-                        </li>
-                        <li class="it-filter__checkbox-item">
-                          <label class="it-checkbox">
-                            <input class="it-checkbox__default" type="checkbox" name="AGREE"><span class="it-checkbox__pseudo"></span><span class="it-checkbox__text">Нет</span>
-                          </label>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="it-filter__item" data-it-filter-item>
-                      <div class="it-filter__btn-title" data-it-filter-btn-title>Государственное учреждение<img class="it-filter__btn-title-arrow" src="static/img/medvisor/clinics/arrow.svg" alt="" data-filter-btn-arrow></div>
-                      <ul class="it-filter__checkbox-wrap" data-it-filter-checkboxes>
-                        <li class="it-filter__checkbox-item">
-                          <label class="it-checkbox">
-                            <input class="it-checkbox__default" type="checkbox" name="AGREE"><span class="it-checkbox__pseudo"></span><span class="it-checkbox__text">Да</span>
-                          </label>
-                        </li>
-                        <li class="it-filter__checkbox-item">
-                          <label class="it-checkbox">
-                            <input class="it-checkbox__default" type="checkbox" name="AGREE"><span class="it-checkbox__pseudo"></span><span class="it-checkbox__text">Нет</span>
-                          </label>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </form>
-              </section>
+                      <div class="bx_filter_parameters_box active"><span class="bx_filter_container_modef"></span>
+                        <div class="bx_filter_parameters_box_title" onclick="smartFilter.hideFilterProps(this)"><span class="bx_filter_parameters_box_title-text">Диплом государственного образца</span></div>
+                        <div class="bx_filter_block">
+                          <div class="bx_filter_parameters_box_container">
+                            <label class="checkbox">
+                              <input class="checkbox__default" id="arEduCentersFilter_144_4088798008" type="checkbox" name="arEduCentersFilter_144_4088798008" value="Y"><span class="checkbox__pseudo"></span><span class="checkbox__text"><span class="checkbox__key">Нет<span class="checkbox__numeric" data-role="count_arEduCentersFilter_144_4088798008">106</span></span></span><span class="checkbox__value"></span>
+                            </label>
+                          </div>
+                          <div class="clb"></div>
+                        </div>
+                      </div>
+                      <div class="clb"></div>
+                      <div class="bx_filter_button_box active hidden">
+                        <div class="bx_filter_block">
+                          <div class="bx_filter_parameters_box_container">
+                            <input class="bx_filter_search_button" id="set_filter" type="submit" name="set_filter" value="Показать">
+                            <input class="bx_filter_search_reset" id="del_filter" type="submit" name="del_filter" value="Сбросить">
+                            <div class="bx_filter_popup_result right" id="modef" style="display:none">Выбрано:<span id="modef_num">0</span><span class="arrow"></span><a href="/moskva/school?set_filter=y" onclick="BX.ajax.insertToNode('/moskva/school?set_filter=y&amp;bxajaxid=6d66c8cd4eaf1cae50acc29c45ecce7b', 'comp_6d66c8cd4eaf1cae50acc29c45ecce7b'); return false;">Показать</a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <div style="clear: both;"></div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="it-main-page__half it-main-page__half--right">
               <section class="it-clinics it-clinics--color">
                 <ul class="it-clinics__wrap it-clinics__wrap--size it-all-min-indent">
                   <li class="it-clinics__item">
-                    <div class="it-clinics__half it-clinics__half--left"><a class="it-clinics__img-box" href="#"><img class="it-clinics__img" src="static/img/medvisor/clinics/content/1.png" alt=""></a></div>
+                    <div class="it-clinics__half it-clinics__half--left"><a class="it-clinics__img-box" href="#"><img class="it-clinics__img" src="assets/img/medvisor/clinics/content/1.png" alt=""></a></div>
                     <div class="it-clinics__half it-clinics__half--right">
                       <div class="it-clinics__content"><a class="it-clinics__title" href="#">	ЧУЗ "Клиническая больница "РЖД-Медицина" города Тюмень"</a>
                         <div class="it-clinics__subtitle">Поликлиника детская</div>
@@ -313,7 +933,7 @@
                     </div>
                   </li>
                   <li class="it-clinics__item">
-                    <div class="it-clinics__half it-clinics__half--left"><a class="it-clinics__img-box" href="#"><img class="it-clinics__img" src="static/img/medvisor/clinics/content/1.png" alt=""></a></div>
+                    <div class="it-clinics__half it-clinics__half--left"><a class="it-clinics__img-box" href="#"><img class="it-clinics__img" src="assets/img/medvisor/clinics/content/1.png" alt=""></a></div>
                     <div class="it-clinics__half it-clinics__half--right">
                       <div class="it-clinics__content"><a class="it-clinics__title" href="#">	ЧУЗ "Клиническая больница "РЖД-Медицина" города Тюмень"</a>
                         <div class="it-clinics__subtitle">Поликлиника детская</div>
@@ -367,7 +987,7 @@
                     </div>
                   </li>
                   <li class="it-clinics__item">
-                    <div class="it-clinics__half it-clinics__half--left"><a class="it-clinics__img-box" href="#"><img class="it-clinics__img" src="static/img/medvisor/clinics/content/1.png" alt=""></a></div>
+                    <div class="it-clinics__half it-clinics__half--left"><a class="it-clinics__img-box" href="#"><img class="it-clinics__img" src="assets/img/medvisor/clinics/content/1.png" alt=""></a></div>
                     <div class="it-clinics__half it-clinics__half--right">
                       <div class="it-clinics__content"><a class="it-clinics__title" href="#">	ЧУЗ "Клиническая больница "РЖД-Медицина" города Тюмень"</a>
                         <div class="it-clinics__subtitle">Поликлиника детская</div>
@@ -421,7 +1041,7 @@
                     </div>
                   </li>
                   <li class="it-clinics__item">
-                    <div class="it-clinics__half it-clinics__half--left"><a class="it-clinics__img-box" href="#"><img class="it-clinics__img" src="static/img/medvisor/clinics/content/1.png" alt=""></a></div>
+                    <div class="it-clinics__half it-clinics__half--left"><a class="it-clinics__img-box" href="#"><img class="it-clinics__img" src="assets/img/medvisor/clinics/content/1.png" alt=""></a></div>
                     <div class="it-clinics__half it-clinics__half--right">
                       <div class="it-clinics__content"><a class="it-clinics__title" href="#">	ЧУЗ "Клиническая больница "РЖД-Медицина" города Тюмень"</a>
                         <div class="it-clinics__subtitle">Поликлиника детская</div>
@@ -487,12 +1107,12 @@
               <div class="it-footer__half it-footer__half--left">
                 <div class="it-footer__inner-wrap">
                   <div class="it-footer__logo it-footer__logo"><a class="it-logo" href="#">
-                      <div class="it-logo__img-box it-footer__logo-img-box"><img class="it-logo__img" src="static/img/medvisor/header/logo.png" alt=""></div></a></div>
+                      <div class="it-logo__img-box it-footer__logo-img-box"><img class="it-logo__img" src="assets/img/medvisor/header/logo.png" alt=""></div></a></div>
                   <div class="it-social">
                     <ul class="it-social__wrap">
-                      <li class="it-social__item"><a class="it-social__img-box" href="#"><img class="it-social__img" src="static/img/medvisor/footer/social/tw.png" alt=""></a></li>
-                      <li class="it-social__item"><a class="it-social__img-box" href="#"><img class="it-social__img" src="static/img/medvisor/footer/social/fb.png" alt=""></a></li>
-                      <li class="it-social__item"><a class="it-social__img-box" href="#"><img class="it-social__img" src="static/img/medvisor/footer/social/vk.png" alt=""></a></li>
+                      <li class="it-social__item"><a class="it-social__img-box" href="#"><img class="it-social__img" src="assets/img/medvisor/footer/social/tw.png" alt=""></a></li>
+                      <li class="it-social__item"><a class="it-social__img-box" href="#"><img class="it-social__img" src="assets/img/medvisor/footer/social/fb.png" alt=""></a></li>
+                      <li class="it-social__item"><a class="it-social__img-box" href="#"><img class="it-social__img" src="assets/img/medvisor/footer/social/vk.png" alt=""></a></li>
                     </ul>
                   </div>
                 </div>
@@ -608,10 +1228,10 @@
         </section>
       </div>
     </div>
-    <script src="static/js/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <script src="static/js/owl.carousel.min.js" type="text/javascript"></script>
-    <script src="static/js/swiper.min.js" type="text/javascript"></script>
-    <script src="static/js/jquery.fancybox.js" type="text/javascript"></script>
-    <script src="static/js/main.js" type="text/javascript"></script>
+    <script src="assets/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="assets/js/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="assets/js/swiper/swiper.min.js" type="text/javascript"></script>
+    <script src="assets/js/fancybox/jquery.fancybox.js" type="text/javascript"></script>
+    <script src="assets/js/main.js" type="text/javascript"></script>
   </body>
 </html>

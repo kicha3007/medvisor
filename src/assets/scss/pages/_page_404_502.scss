@@ -1,0 +1,33 @@
+.page-404 {
+	background: $white;
+	padding: 70px 0;
+	text-align: center;
+	
+	&__header {
+		margin-bottom: 60px;
+		
+		h1 {
+			font-size: 36px;
+			margin-top: 0;
+		}
+		
+		a {
+			@include link-hover();
+			
+			color: $text-default-link;
+		}
+	}
+	
+	&__links {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		
+		a {
+			@include link-hover();
+			
+			margin: 10px 15px;
+			color: $text-default-link;
+		}
+	}
+}

@@ -1,0 +1,49 @@
+.city-select {
+	position: relative;
+	overflow: hidden;
+	min-height: 560px;
+	padding: 40px 60px;
+	
+	&__links {
+		height: 300px;
+		overflow-y: auto;
+		
+		display: flex;
+		flex-direction: column;
+		margin-top: 30px;
+		
+		a {
+			position: relative;
+			align-items: center;
+			line-height: 1.5em;
+			padding: 8px 25px;
+			justify-content: space-between;
+			
+			color: #000;
+			
+			&:after {
+				position: absolute;
+				display: block;
+				content: "";
+				width: 100%;
+				left: 0;
+				bottom: 0;
+				border-top: 1px solid rgba($text-color, .05);
+			}
+			
+			&:hover {
+				background-color: $brand-color;
+				color: $button-card-color;
+			
+				span {
+					display: inline-block;
+					float: right;
+				}
+			}
+		}
+	}
+	
+	&__change-menu {
+		height: 360px;
+	}
+}

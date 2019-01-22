@@ -1,0 +1,261 @@
+#mainpage-categories {
+	margin-bottom: 100px;
+}
+
+.mainpage-categories {
+	margin-top: -30px;
+	
+	&>div {
+		margin-bottom: 30px;
+	}
+	
+	&__card {
+		display: flex;
+		height: 100%;
+		background-color: $white;
+		border: 1px solid $border-light-color;
+		border-radius: $base-border-radius;
+		
+		transition: box-shadow 0.2s ease-in-out;
+		
+		&-tabs {
+			flex-basis: 25%;
+			background-color: $bg-block-background-color;
+			
+			ul {
+				display: flex;
+				height: 100%;
+				margin: 0;
+				border: 0;
+				
+				li {
+					&.active {
+						position: relative;
+						background-color: $white;
+						
+						box-shadow: -7px 7px 30px rgba(0,0,0,0.05);
+						
+						transition: box-shadow 0.1s ease-in-out;
+						
+						i:nth-of-type(1) {
+							display: none;
+						}
+						
+						i:nth-of-type(2) {
+							display: flex;
+						}
+					}
+					
+					a {
+						height: 100%;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						color: $text-statistic-color;
+						padding: 15px;
+						font-size: 10px;
+						
+						span {
+							display: block;
+							font-family: 'Oswald', 'Roboto', 'Arial', sans-serif;
+							font-weight: 300;
+							font-size: 24px;
+							margin-bottom: 3px;
+						}
+						
+						i {
+							display: none;
+							font-size: $base-font-size;
+							margin-top: 5px;
+						}
+						
+						i:nth-of-type(1) {
+							display: flex;
+						}
+					}
+				}
+			}
+		}
+		
+		&-tab-content {
+			background: $white;
+		}
+		
+		&-content {
+			flex-basis: 100%;
+			
+			z-index: 1;
+			
+			display: flex;
+			flex-direction: column;
+		}
+		
+		&-head {
+			padding: 20px 24px;;
+			display: flex;
+			align-items: center;
+			height: 70px;
+			
+			h2 {
+				margin: 0;
+				font-size: 15px;
+			}
+		}
+		
+		&-tab-selector {
+			padding: 10px 24px;
+		}
+		
+		&-selector {
+			padding: 10px 24px;
+			background-color: $bg-block-background-color;
+		}
+		
+		&-links {
+			display: flex;
+			flex-direction: column;
+			
+			a {
+				position: relative;
+				display: flex;
+				align-items: center;
+				line-height: 1.5em;
+				padding: 8px 24px;
+				position: relative;
+				justify-content: space-between;
+				
+				transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+				
+				color: #000;
+				
+				span {
+					opacity: 0;
+					
+					float: right;
+					line-height: 1em;
+					color: $white;
+					font-size: 10px;
+					background-color: $button-dark-orange;
+					box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+					border-radius: 10px;
+					padding: 4px 8px;
+					
+					transition: opacity 0.0s cubic-bezier(1, 0.01, 0.51, 1);
+				}
+				
+				&:after {
+					position: absolute;
+					display: block;
+					content: "";
+					width: 100%;
+					left: 0;
+					bottom: 0px;
+					border-top: 1px solid rgba($text-color, .05);
+				}
+				
+				&:hover {
+					background-color: $brand-color;
+				
+					span {
+						opacity: 1;
+						
+						transition: opacity 0.2s cubic-bezier(1, 0.02, 0.81, 0.67);
+					}
+				}
+			}
+		}
+		
+		&-link-follow {
+			display: flex;
+			padding: 20px 24px;
+		}
+		
+		&-content-orange {
+			background-color: $bg-orange-block;
+		}
+		
+		&-orange-selector {
+			background-color: darken($bg-orange-block, 5%);
+		}
+		
+		&-content-blue {
+			background-color: $bg-blue-block;
+		}
+		
+		&-blue-selector {
+			background-color: darken($bg-blue-block, 5%);
+		}
+		
+		&-logo {
+			padding-right: 60px;
+			
+			h4 {
+				&:before {
+					content: "";
+					display: flex;
+					background-size: contain;
+					background-repeat: no-repeat;
+					height: 50px;
+					width: 100%;
+					margin-top: 50px;
+					margin-bottom: 30px;
+					background-image: url('#{$base-image-path}/ui/mainpage/medvisor_category_card.png');
+				}
+				
+				font-weight: 300;
+				font-size: 14px;
+				margin-bottom: 15px;
+			}
+			
+			span:nth-of-type(1) {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				color: $text-statistic-color;
+				
+				i {
+					content: "";
+					height: 1px;
+					flex-grow: 1;
+					margin-right: 15px;
+					border-top: 1px solid $button-card-color;
+				}
+				
+				font-weight: 300;
+				font-size: 13px;
+			}
+			
+			label {
+				display: block;
+				font-family: 'Oswald', 'Roboto', 'Arial', sans-serif;
+				font-weight: 300;
+				font-size: 36px;
+				text-align: right;
+				margin: 7px 0;
+			}
+			
+			a {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				color: $text-statistic-color;
+				
+				i {
+					margin-right: 15px;
+				}
+				
+				i:nth-of-type(3) {
+					content: "";
+					height: 1px;
+					flex-grow: 1;
+					margin: 0;
+					border-top: 1px solid $button-card-color;
+				}
+			}
+		}
+		
+		&:hover {
+			@include box-shadow(-7px 7px 30px rgba(0,0,0,.05));
+		}
+	}
+}

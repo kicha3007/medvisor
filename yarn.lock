@@ -729,7 +729,7 @@ browser-sync@^2.23.6:
     rx "4.1.0"
     send "0.16.2"
     serve-index "1.9.1"
-    serve-static "1.13.2"
+    serve-assets "1.13.2"
     server-destroy "1.0.1"
     socket.io "2.1.1"
     ua-parser-js "0.7.17"
@@ -955,7 +955,7 @@ class-utils@^0.3.5:
     arr-union "^3.1.0"
     define-property "^0.2.5"
     isobject "^3.0.0"
-    static-extend "^0.1.1"
+    assets-extend "^0.1.1"
 
 clean-css@^4.1.11:
   version "4.2.1"
@@ -5538,9 +5538,9 @@ serve-index@1.9.1:
     mime-types "~2.1.17"
     parseurl "~1.3.2"
 
-serve-static@1.13.2:
+serve-assets@1.13.2:
   version "1.13.2"
-  resolved "https://registry.yarnpkg.com/serve-static/-/serve-static-1.13.2.tgz#095e8472fd5b46237db50ce486a43f4b86c6cec1"
+  resolved "https://registry.yarnpkg.com/serve-assets/-/serve-assets-1.13.2.tgz#095e8472fd5b46237db50ce486a43f4b86c6cec1"
   integrity sha512-p/tdJrO4U387R9oMjb1oj7qSMaMfmOyd4j9hOFoxZe2baQszgHcSWjuya/CiT5kgZZKRudHNOA0pYXOl8rQ5nw==
   dependencies:
     encodeurl "~1.0.2"
@@ -5847,9 +5847,9 @@ stat-mode@^0.2.0:
   resolved "https://registry.yarnpkg.com/stat-mode/-/stat-mode-0.2.2.tgz#e6c80b623123d7d80cf132ce538f346289072502"
   integrity sha1-5sgLYjEj19gM8TLOU480YokHJQI=
 
-static-extend@^0.1.1:
+assets-extend@^0.1.1:
   version "0.1.2"
-  resolved "https://registry.yarnpkg.com/static-extend/-/static-extend-0.1.2.tgz#60809c39cbff55337226fd5e0b520f341f1fb5c6"
+  resolved "https://registry.yarnpkg.com/assets-extend/-/assets-extend-0.1.2.tgz#60809c39cbff55337226fd5e0b520f341f1fb5c6"
   integrity sha1-YICcOcv/VTNyJv1eC1IPNB8ftcY=
   dependencies:
     define-property "^0.2.5"

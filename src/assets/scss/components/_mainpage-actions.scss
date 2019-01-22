@@ -1,0 +1,56 @@
+#mainpage_actions {
+
+}
+
+.mainpage-actions {
+	&__card {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		padding: 25px;
+		height: 100%;
+		min-height: 300px;
+			
+		background-repeat: no-repeat;
+		background-size: cover;
+		
+		label {
+			font-size: 11px;
+			font-weight: 400;
+			color: rgba(0,0,0,.5);
+		}
+		
+		h3 {
+			font-size: 22px;
+		}
+		
+		p {
+			font-size: 12px;
+			font-weight: 400;
+		}
+		
+		&-professii {
+			background-image: url('#{$base-image-path}/ui/mainpage/actions-professii.jpg');
+		}
+		
+		&-register {
+			background-color: $card-primary;
+		}
+		
+		&-login {
+			label {
+				color: rgba(255,255,255,.5);
+			}
+			
+			h3, p {
+				color: $white;
+			}
+			
+			background-color: $card-more;
+		}
+		
+		&-repetitori {
+			background-image: url('#{$base-image-path}/ui/mainpage/actions-repetitori.jpg');
+		}
+	}
+}

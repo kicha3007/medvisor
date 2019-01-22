@@ -1,0 +1,256 @@
+#press-center {
+	margin-top: 30px;
+}
+
+.press-center {
+	padding: 15px 0;
+	background: $bg-content-block;
+}
+
+.news-card {
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		
+		div {
+			display: flex;
+			align-items: center;
+			
+			color: $text-news-card;
+			
+			i {
+				margin-right: 10px;
+			}
+			
+			span {
+				font-size: 10px;
+			}
+		}
+	}
+	
+	&__name {
+		display: flex;
+		align-items: center;
+		margin: 15px 0;
+		
+		a {
+			@include link-hover();
+			
+			line-height: 1.3em;
+			font-size: 16px;
+		}
+	}
+	
+	&__content {
+		img	{
+			max-width: 100%;
+		}
+	}
+	
+	&__image {
+		margin-bottom: 15px;
+		
+		img	{
+			width: 100%;
+			border-radius: 3px;
+		}
+
+		&-full {
+			img {
+				width: auto;
+				max-width: 100%;
+			}
+		}
+	}
+	
+	&__links {
+		border-top: 1px solid $link-line-solid;
+		
+		a {
+			@include link-hover();
+			
+			margin-right: 15px;
+			margin-bottom: 10px;
+			
+			color: $link;
+		}
+	}
+}
+
+.news-items {
+	.news-item:not(:last-of-type) {
+		padding-bottom: 20px;
+		border-bottom: 1px solid $border-light-color;
+	}
+}
+
+.news-item {
+	display: flex;
+	
+	&__preview-picture {
+		margin-right: 30px;
+		
+		img {
+			max-width: 140px;
+			width: auto;
+		}
+	}
+	
+	&__description {
+		flex-grow: 1;
+		
+		&-name {
+			margin-bottom: 15px;
+			
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			
+			h3 {
+				margin: 0;
+			}
+			
+			label {
+				color: $text-statistic-color;
+				font-size: 12px;
+				
+				min-width: 70px;
+				text-align: right;
+				
+				i {
+					opacity: .5;
+					margin-right: 7px;
+				}
+			}
+		}
+		
+		&-text {
+			color: $text-news-card;
+			font-size: 12px;
+			line-height: 1.5em;
+		}
+	}
+}
+
+.news-mainpage {
+	background: $white;
+	border-radius: $base-border-radius;
+	padding: 25px;
+	
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: 45px;
+		
+		h2 {
+			margin: 0;
+		}
+	}
+	
+	&__content {
+		display: flex;
+		flex-direction: column;
+		
+		.news-card {
+			padding-bottom: 20px;
+			border-bottom: 1px solid $border-light-color;
+		}
+		
+		.news-card:last-of-type {
+			margin-top: 20px;
+			padding-bottom: 0;
+			border-bottom: 0;
+		}
+	}
+}
+
+.articles-mainpage {
+	padding-top: 25px;
+	
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: 45px;
+		
+		h2 {
+			margin: 0;
+		}
+	}
+	
+	&__content {
+		.news-card {
+			padding-bottom: 20px;
+			border-bottom: 1px solid $border-light-color;
+		}
+	}
+	
+	&__card {
+		padding-top: 15px;
+		margin-bottom: 30px;
+		border-radius: $base-border-radius;
+		
+		&:hover {
+			background: #fff;
+			box-shadow: 3px 6px 15px rgba(0, 0, 0, 0.1);
+		}
+	}
+}
+
+.interesting-mainpage {
+	margin-top: 15px;
+	
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: 15px;
+		
+		h2 {
+			margin: 0;
+		}
+	}
+	
+	&__card {
+		display: flex;
+		position: relative;
+		flex-direction: column;
+		justify-content: space-between;
+		
+		min-height: 208px;
+		padding: 15px;
+		border-radius: $base-border-radius;
+		
+		h3 {
+			position: relative;
+			color: $white;
+			text-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+			font-size: 23px;
+			margin-top: 0;
+		}
+		
+		button {
+			position: relative;
+		}
+		
+		p {
+			font-weight: 400;
+			font-size: 12px;
+		}
+		
+		&:before {
+			display: flex;
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 200px;
+			width: 100%;
+			background: -moz-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.2) 65%, transparent 100%);
+			background: -webkit-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.2) 65%, transparent 100%);
+			background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.2) 65%, transparent 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+		}
+	}
+}

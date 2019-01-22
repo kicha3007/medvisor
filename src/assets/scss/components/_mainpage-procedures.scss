@@ -1,0 +1,13 @@
+.main-procedures{
+
+  &__col{
+    margin-bottom: 20px;
+  }
+
+  &__item{
+    margin-bottom: 10px;
+    a{
+      @include link-hover();
+    }
+  }
+}

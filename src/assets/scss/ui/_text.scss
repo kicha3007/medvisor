@@ -1,0 +1,90 @@
+.price {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+	font-size: 10px;
+	color: $link-info;
+	text-align: center;
+	line-height: 1.5em;
+	
+	label {
+		margin: 0 7px;
+		font-family: 'Oswald', 'Roboto', 'Arial', sans-serif;
+		font-size: 20px;
+		color: $link-head;
+		
+		&.sale {
+			font-size: 14px;
+			color: $label-sale;
+			text-decoration: line-through;
+		}
+	}
+}
+
+.more-link-content
+{
+	@include link-hover();
+	
+	i {
+		margin-left: 7px;
+	}
+	
+	display: flex;
+	align-items: center;
+	color: $link;
+	
+	&.active {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+}
+
+.short-content {
+	overflow: hidden;
+	position: relative;
+}
+
+.short-content-s07-gray {
+	height: 7em;
+	
+	&:before {
+		content: "";
+		position: absolute;
+		display: block;
+		height: 50px;
+		bottom: 0;
+		width: 100%;
+		background: linear-gradient(to top, $bg-content-block 25%, rgba($bg-content-block,0.9) 90%, rgba($bg-content-block,0) 100%);
+	}
+}
+
+.short-content-s1 {
+	height: 10em;
+	
+	&:before {
+		content: "";
+		position: absolute;
+		display: block;
+		height: 90px;
+		bottom: 0;
+		width: 100%;
+		background: linear-gradient(to top, $white 25%, rgba($white,0.75) 75%, rgba($white,0) 100%);
+	}
+}
+
+.short-content-s2 {
+	height: 20em;
+	
+	&:before {
+		content: "";
+		position: absolute;
+		display: block;
+		height: 90px;
+		bottom: 0;
+		width: 100%;
+		background: linear-gradient(to top, $white 25%, rgba($white,0.75) 75%, rgba($white,0) 100%);
+	}
+}

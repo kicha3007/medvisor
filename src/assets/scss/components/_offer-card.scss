@@ -1,0 +1,130 @@
+.offer-items {
+    &__content {
+        padding: 20px;
+    }
+}
+
+.offer-card {
+    display: flex;
+    position: relative;
+    height: 100%;
+    border-top: 1px solid $border-light-color;
+    padding: 25px 20px;
+    background-color: $white;
+
+    -webkit-transition: background .15s ease-out;
+    transition: background .15s ease-out;
+
+    &:hover{
+        background-color: darken($white, 3%);
+        border-top: 1px solid darken($border-light-color, 5%);
+    }
+
+    &:first-child{
+        border: none;
+    }
+
+    &__logo {
+        display: flex;
+        flex-basis: 10%;
+        align-items: center;
+
+        i {
+            margin-right: 15px;
+            min-width: 64px;
+            min-height: 64px;
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: contain;
+        }
+    }
+
+    &__header {
+        flex-grow: 1;
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-title {
+            min-height: 35px;
+        }
+
+        &-description {
+            display: flex;
+            justify-content: space-between;
+
+            margin-top: 15px;
+
+            span {
+                font-size: 11px;
+
+                i {
+                    margin-right: 7px;
+                }
+            }
+
+            a {
+                font-size: $base-font-size;
+                color: $link;
+          }
+
+          span, a {
+              margin-right: 25px;
+          }
+        }
+
+        a {
+            @include link-hover();
+        }
+    }
+
+    &__price {
+        flex-basis: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-left: 15px;
+        padding-left: 15px;
+        border-left: 1px solid $border-light-color;
+
+        label{
+            white-space: nowrap;
+        }
+        label.sale {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__vuz {
+        display: flex;
+        position: relative;
+        border-left: 1px solid $border-light-color;
+
+        span {
+            display: flex;
+            align-items: center;
+            font-weight: 300;
+
+            i {
+                margin-right: 15px;
+                min-width: 32px;
+                min-height: 32px;
+                background-repeat: no-repeat;
+                background-position: left center;
+                background-size: contain;
+            }
+        }
+    }
+
+    &__more {
+        flex-basis: 20%;
+        display: flex;
+
+        a{
+            height: max-content;
+            margin: auto;
+        }
+    }
+}
