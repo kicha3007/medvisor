@@ -1,17 +1,11 @@
 .it-city
 	.it-city__wrap
-		.it-city__inner-wrap(data-city-inner-wrap)
+		.it-city__inner-wrap(data-city-inner-wrap data-target="#city_select_modal" data-toggle="modal")
 			.it-city__img-box.it-city__img-box--left
-				img(src="assets/img/medvisor/city/location.svg", alt='')
-			label.it-city__label(for="city-input" data-city-label)
+				img(src="assets/images/city/location.svg", alt='')
+			.it-city__label(for="city-input" data-city-label)
 				| Тюмень
 			.it-city__img-box.it-city__img-box--right(data-city-array)
-				img(src="assets/img/medvisor/city/arrow.svg", alt='')
-		.it-city__list-wrap.swiper-container-vertical(data-city-list-wrap)
-			.it-city__list-inner-wrap.swiper-wrapper
-				.it-city__list-item.swiper-slide
-					input.it-city__item.it-city__item--shadow-none#city-input(value="Найти свой город" data-city-input)
-					ul.it-city__list(data-city-list)
-				.swiper-scrollbar2
+				img(src="assets/images/city/arrow.svg", alt='')
 
 

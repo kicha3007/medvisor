@@ -1,26 +1,22 @@
 #city_select_modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='city_label', aria-hidden='true')
-   .modal-dialog.modal-dialog-centered(role='document')
-      .modal-content.city-select
-         .modal-header
-            span#city_label.modal-title
-               |  Определение местоположения12
-            button.close(type='button', data-dismiss='modal', aria-label='Закрыть')
-               | Закрыть
-               i.zmdi.zmdi-close-circle-o
-         #change-city-content.modal-body
-            h2
-               |  Вы из России?
-            button#change-city.btn-active
-            |  Да, все верно
-            button#cities-list.btn-more
-            |  Выбрать город
-            .city-select__links
-               a.change-city-link(data-id='1155') Москва
-               a.change-city-link(data-id='1516') Санкт-Петербург
-               a.change-city-link(data-id='1280') Новосибирск
-               a.change-city-link(data-id='1539') Екатеринбург
-               a.change-city-link(data-id='1429') Казань
-               a.change-city-link(data-id='1510') Самара
-               a.change-city-link(data-id='1632') Тюмень
-               a.change-city-link(data-id='1259') Нижний Новгород
-         #cities-list-content.modal-body(style='display: none;')
+	.modal-dialog.modal-dialog-centered(role='document')
+		.modal-content.city-select
+			.modal-header
+				span#city_label.modal-title Выбор города
+				button.close(type='button', data-dismiss='modal', aria-label='Закрыть')
+					img(src="assets/images/modal-city/cross.svg", alt='')
+			#change-city-content.modal-body
+				h2.modal-city__title Вы из Тюмени?
+				.modal__buttons-wrap
+					button#change-city.btn-active.modal__btn Да, все верно
+					button#cities-list.modal__btn  Выбрать город
+				.city-select__links
+					a.change-city-link(data-id='1155') Москва
+					a.change-city-link(data-id='1516') Санкт-Петербург
+					a.change-city-link(data-id='1280') Новосибирск
+					a.change-city-link(data-id='1539') Екатеринбург
+					a.change-city-link(data-id='1429') Казань
+					a.change-city-link(data-id='1510') Самара
+					a.change-city-link(data-id='1632') Тюмень
+					a.change-city-link(data-id='1259') Нижний Новгород
+			#cities-list-content.modal-body(style='display: none;')

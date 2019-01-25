@@ -38,19 +38,10 @@
                         <div class="it-header__top-inner-half">
                           <div class="it-city">
                             <div class="it-city__wrap">
-                              <div class="it-city__inner-wrap" data-city-inner-wrap>
-                                <div class="it-city__img-box it-city__img-box--left"><img src="assets/img/medvisor/city/location.svg" alt=""></div>
-                                <label class="it-city__label" for="city-input" data-city-label>Тюмень</label>
-                                <div class="it-city__img-box it-city__img-box--right" data-city-array><img src="assets/img/medvisor/city/arrow.svg" alt=""></div>
-                              </div>
-                              <div class="it-city__list-wrap swiper-container-vertical" data-city-list-wrap>
-                                <div class="it-city__list-inner-wrap swiper-wrapper">
-                                  <div class="it-city__list-item swiper-slide">
-                                    <input class="it-city__item it-city__item--shadow-none" id="city-input" value="Найти свой город" data-city-input>
-                                    <ul class="it-city__list" data-city-list></ul>
-                                  </div>
-                                  <div class="swiper-scrollbar2"></div>
-                                </div>
+                              <div class="it-city__inner-wrap" data-city-inner-wrap data-target="#city_select_modal" data-toggle="modal">
+                                <div class="it-city__img-box it-city__img-box--left"><img src="assets/images/city/location.svg" alt=""></div>
+                                <div class="it-city__label" for="city-input" data-city-label>Тюмень</div>
+                                <div class="it-city__img-box it-city__img-box--right" data-city-array><img src="assets/images/city/arrow.svg" alt=""></div>
                               </div>
                             </div>
                           </div>
@@ -58,7 +49,7 @@
                         <div class="it-header__top-inner-half">
                           <div class="it-user">
                             <div class="it-user__wrap">
-                              <div class="it-user__img-box"><img class="it-user__img" src="assets/img/medvisor/user/icon.svg" alt=""></div>
+                              <div class="it-user__img-box"><img class="it-user__img" src="assets/images/user/icon.svg" alt=""></div>
                               <div class="it-user__text">	Войти</div>
                             </div>
                           </div>
@@ -74,13 +65,13 @@
                 <div class="it-header__bottom-wrap">
                   <div class="it-header__bottom-half it-header__bottom-half--size-1" data-header-bottom-size-1><a class="it-logo" href="#" data-logo>
                       <div class="it-logo__wrap">
-                        <div class="it-logo__img-box"><img class="it-logo__img" src="assets/img/medvisor/logo/logo.png" alt=""></div>
+                        <div class="it-logo__img-box"><img class="it-logo__img" src="assets/images/logo/logo.png" alt=""></div>
                         <div class="it-logo__text">	Все о медицине</div>
                       </div></a></div>
                   <div class="it-header__bottom-half it-header__bottom-half--size-2">
                     <section class="it-search">
                       <div class="it-search__wrap">
-                        <button class="it-search__button"><img class="it-search__img" src="assets/img/medvisor/search/loup.svg" alt=""></button>
+                        <button class="it-search__button"><img class="it-search__img" src="assets/images/search/loup.svg" alt=""></button>
                         <input class="it-search__input" placeholder="Например, “Стоматология”">
                       </div>
                     </section>
@@ -110,7 +101,7 @@
         <div class="it-breadcrumbs">
           <div class="it-container">
             <div class="it-breadcrumbs__wrap">
-              <div class="it-breadcrumbs__list"><a class="it-breadcrumbs__link" href="#">	Главная</a><span class="it-breadcrumbs__separator"><img class="it-breadcrumbs__img" src="assets/img/medvisor/breadcrumbs/arrow.svg" alt=""></span><span class="it-breadcrumbs__text">	Медучреждения</span></div>
+              <div class="it-breadcrumbs__list"><a class="it-breadcrumbs__link" href="#">	Главная</a><span class="it-breadcrumbs__separator"><img class="it-breadcrumbs__img" src="assets/images/breadcrumbs/arrow.svg" alt=""></span><span class="it-breadcrumbs__text">	Медучреждения</span></div>
             </div>
           </div>
         </div>
@@ -168,7 +159,7 @@
               <!--							.it-select__outer-wrap-->
               <!--								.it-select__wrap(data-select-wrap)-->
               <!--									.it-select__input-wrap(tabindex='1', data-select-input-wrap='')-->
-              <!--										img(src="assets/img/medvisor/clinics/arrow.svg", alt='').it-select__arrow-->
+              <!--										img(src="assets/images/clinics/arrow.svg", alt='').it-select__arrow-->
               <!--										input#opt1.it-select__selectopt(name='district', type='radio', checked='' )-->
               <!--										label.it-select__label(for='opt1', )-->
               <!--											span.it-select__text Район-->
@@ -202,7 +193,7 @@
               <!--							.it-select__outer-wrap-->
               <!--								.it-select__wrap(data-select-wrap)-->
               <!--									.it-select__input-wrap(tabindex='1', data-select-input-wrap='')-->
-              <!--										img(src="assets/img/medvisor/clinics/arrow.svg", alt='').it-select__arrow-->
+              <!--										img(src="assets/images/clinics/arrow.svg", alt='').it-select__arrow-->
               <!--										input#metro1.it-select__selectopt(name='metro', type='radio', checked='' )-->
               <!--										label.it-select__label(for='metro1', )-->
               <!--											span.it-select__text Метро-->
@@ -233,7 +224,7 @@
               <!--				li.it-filter__item(data-it-filter-item)-->
               <!--					.it-filter__btn-title(data-it-filter-btn-title)-->
               <!--						| Государственное учреждение-->
-              <!--						img(src="assets/img/medvisor/clinics/arrow.svg", alt='' data-filter-btn-arrow).it-filter__btn-title-arrow-->
+              <!--						img(src="assets/images/clinics/arrow.svg", alt='' data-filter-btn-arrow).it-filter__btn-title-arrow-->
               <!--					ul.it-filter__checkbox-wrap(data-it-filter-checkboxes)-->
               <!--						li.it-filter__checkbox-item-->
               <!--							label.it-checkbox-->
@@ -250,7 +241,7 @@
               <!--				li.it-filter__item(data-it-filter-item)-->
               <!--					.it-filter__btn-title(data-it-filter-btn-title)-->
               <!--						| Государственное учреждение-->
-              <!--						img(src="assets/img/medvisor/clinics/arrow.svg", alt='' data-filter-btn-arrow).it-filter__btn-title-arrow-->
+              <!--						img(src="assets/images/clinics/arrow.svg", alt='' data-filter-btn-arrow).it-filter__btn-title-arrow-->
               <!--					ul.it-filter__checkbox-wrap(data-it-filter-checkboxes)-->
               <!--						li.it-filter__checkbox-item-->
               <!--							label.it-checkbox-->
@@ -876,7 +867,7 @@
               <section class="it-clinics it-clinics--color">
                 <ul class="it-clinics__wrap it-clinics__wrap--size it-all-min-indent">
                   <li class="it-clinics__item">
-                    <div class="it-clinics__half it-clinics__half--left"><a class="it-clinics__img-box" href="#"><img class="it-clinics__img" src="assets/img/medvisor/clinics/content/1.png" alt=""></a></div>
+                    <div class="it-clinics__half it-clinics__half--left"><a class="it-clinics__img-box" href="#"><img class="it-clinics__img" src="assets/images/clinics/content/1.png" alt=""></a></div>
                     <div class="it-clinics__half it-clinics__half--right">
                       <div class="it-clinics__content"><a class="it-clinics__title" href="#">	ЧУЗ "Клиническая больница "РЖД-Медицина" города Тюмень"</a>
                         <div class="it-clinics__subtitle">Поликлиника детская</div>
@@ -930,7 +921,7 @@
                     </div>
                   </li>
                   <li class="it-clinics__item">
-                    <div class="it-clinics__half it-clinics__half--left"><a class="it-clinics__img-box" href="#"><img class="it-clinics__img" src="assets/img/medvisor/clinics/content/1.png" alt=""></a></div>
+                    <div class="it-clinics__half it-clinics__half--left"><a class="it-clinics__img-box" href="#"><img class="it-clinics__img" src="assets/images/clinics/content/1.png" alt=""></a></div>
                     <div class="it-clinics__half it-clinics__half--right">
                       <div class="it-clinics__content"><a class="it-clinics__title" href="#">	ЧУЗ "Клиническая больница "РЖД-Медицина" города Тюмень"</a>
                         <div class="it-clinics__subtitle">Поликлиника детская</div>
@@ -984,7 +975,7 @@
                     </div>
                   </li>
                   <li class="it-clinics__item">
-                    <div class="it-clinics__half it-clinics__half--left"><a class="it-clinics__img-box" href="#"><img class="it-clinics__img" src="assets/img/medvisor/clinics/content/1.png" alt=""></a></div>
+                    <div class="it-clinics__half it-clinics__half--left"><a class="it-clinics__img-box" href="#"><img class="it-clinics__img" src="assets/images/clinics/content/1.png" alt=""></a></div>
                     <div class="it-clinics__half it-clinics__half--right">
                       <div class="it-clinics__content"><a class="it-clinics__title" href="#">	ЧУЗ "Клиническая больница "РЖД-Медицина" города Тюмень"</a>
                         <div class="it-clinics__subtitle">Поликлиника детская</div>
@@ -1038,7 +1029,7 @@
                     </div>
                   </li>
                   <li class="it-clinics__item">
-                    <div class="it-clinics__half it-clinics__half--left"><a class="it-clinics__img-box" href="#"><img class="it-clinics__img" src="assets/img/medvisor/clinics/content/1.png" alt=""></a></div>
+                    <div class="it-clinics__half it-clinics__half--left"><a class="it-clinics__img-box" href="#"><img class="it-clinics__img" src="assets/images/clinics/content/1.png" alt=""></a></div>
                     <div class="it-clinics__half it-clinics__half--right">
                       <div class="it-clinics__content"><a class="it-clinics__title" href="#">	ЧУЗ "Клиническая больница "РЖД-Медицина" города Тюмень"</a>
                         <div class="it-clinics__subtitle">Поликлиника детская</div>
@@ -1104,12 +1095,12 @@
               <div class="it-footer__half it-footer__half--left">
                 <div class="it-footer__inner-wrap">
                   <div class="it-footer__logo it-footer__logo"><a class="it-logo" href="#">
-                      <div class="it-logo__img-box it-footer__logo-img-box"><img class="it-logo__img" src="assets/img/medvisor/header/logo.png" alt=""></div></a></div>
+                      <div class="it-logo__img-box it-footer__logo-img-box"><img class="it-logo__img" src="assets/images/header/logo.png" alt=""></div></a></div>
                   <div class="it-social">
                     <ul class="it-social__wrap">
-                      <li class="it-social__item"><a class="it-social__img-box" href="#"><img class="it-social__img" src="assets/img/medvisor/footer/social/tw.png" alt=""></a></li>
-                      <li class="it-social__item"><a class="it-social__img-box" href="#"><img class="it-social__img" src="assets/img/medvisor/footer/social/fb.png" alt=""></a></li>
-                      <li class="it-social__item"><a class="it-social__img-box" href="#"><img class="it-social__img" src="assets/img/medvisor/footer/social/vk.png" alt=""></a></li>
+                      <li class="it-social__item"><a class="it-social__img-box" href="#"><img class="it-social__img" src="assets/images/footer/social/tw.png" alt=""></a></li>
+                      <li class="it-social__item"><a class="it-social__img-box" href="#"><img class="it-social__img" src="assets/images/footer/social/fb.png" alt=""></a></li>
+                      <li class="it-social__item"><a class="it-social__img-box" href="#"><img class="it-social__img" src="assets/images/footer/social/vk.png" alt=""></a></li>
                     </ul>
                   </div>
                 </div>
@@ -1146,6 +1137,24 @@
           </div>
         </div>
       </footer>
+      <div class="modal fade" id="city_select_modal" tabindex="-1" role="dialog" aria-labelledby="city_label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content city-select">
+            <div class="modal-header"><span class="modal-title" id="city_label">Выбор города</span>
+              <button class="close" type="button" data-dismiss="modal" aria-label="Закрыть"><img src="assets/images/modal-city/cross.svg" alt=""></button>
+            </div>
+            <div class="modal-body" id="change-city-content">
+              <h2 class="modal-city__title">Вы из Тюмени?</h2>
+              <div class="modal__buttons-wrap">
+                <button class="btn-active modal__btn" id="change-city">Да, все верно</button>
+                <button class="modal__btn" id="cities-list"> Выбрать город</button>
+              </div>
+              <div class="city-select__links"><a class="change-city-link" data-id="1155">Москва</a><a class="change-city-link" data-id="1516">Санкт-Петербург</a><a class="change-city-link" data-id="1280">Новосибирск</a><a class="change-city-link" data-id="1539">Екатеринбург</a><a class="change-city-link" data-id="1429">Казань</a><a class="change-city-link" data-id="1510">Самара</a><a class="change-city-link" data-id="1632">Тюмень</a><a class="change-city-link" data-id="1259">Нижний Новгород</a></div>
+            </div>
+            <div class="modal-body" id="cities-list-content" style="display: none;"></div>
+          </div>
+        </div>
+      </div>
       <div class="it-container">
         <section class="modal-info" id="modal-info">
           <div class="modal-info__wrap">
