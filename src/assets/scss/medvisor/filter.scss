@@ -339,6 +339,7 @@
   .bx_filter_param_label{
     display: block;
     cursor: pointer;
+    margin-top: 5px;
 
     .bx_filter_input_checkbox input[type='checkbox']{
       display: none;
@@ -590,16 +591,13 @@
   padding: 0;
   max-height: 400px;
   overflow: auto;
-  width: 100%;
 
   ul{
     list-style: none;
     margin: 0;
     padding: 0;
-    width: 100%;
 
     li{
-      width: 100%;
       label{
         width: 100%;
         clear: both;
@@ -631,7 +629,7 @@
       }
 
       &:hover{
-        background: #F5F5F5;
+        background: #ffc600;
       }
     }
   }
