@@ -1,0 +1,62 @@
+.it-clinics-detail {
+  padding-top: 50px;
+}
+
+.it-clinics-detail__item {
+  display: grid;
+  grid-template-columns: minmax(100px, 184px) 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+  border: 1px solid #C3C3C3;
+  border-radius: 3px;
+  background-color: #ffffff;
+  @include phones {
+    grid-template-columns: auto;
+  }
+}
+
+
+.it-clinics-detail__img-box {
+  max-width: 184px;
+  min-height: 164px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.it-clinics-detail__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.it-clinics-detail__title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: $black;
+  line-height: 1.2;
+  display: block;
+  text-decoration: none;
+}
+
+.it-clinics-detail__title:active,
+.it-clinics-detail__title:visited {
+  text-decoration: none;
+}
+
+.it-clinics-detail__title:hover {
+  color: $hov-text;
+  text-decoration: none;
+}
+
+.it-clinics-detail__subtitle {
+  font-size: 12px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+
