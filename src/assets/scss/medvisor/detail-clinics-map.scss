@@ -1,0 +1,255 @@
+.it-detail-clinics-map__content {
+  padding: 20px 20px;
+  background-color: $white;
+  border: 1px solid #C3C3C3;
+}
+
+.it-detail-clinics-map__title {
+  color: $black;
+  font-size: 16px;
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 2px;
+}
+
+.it-detail-clinics-map__district {
+  font-size: 12px;
+  color: $black;
+  margin-bottom: 5px;
+  padding-left: 25px;
+}
+
+.it-detail-clinics-map__title:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 17px;
+	height: 17px;
+	background: url("../images/detail-clinics-map/location.svg") no-repeat center;
+}
+
+.it-detail-clinics-map__wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.it-detail-clinics-map__half--left {
+  background-color: #F4F4F4;
+  max-width: 780px;
+  width: 100%;
+  flex-basis: 400px;
+  flex-grow: 1000;
+  order: 1;
+  @include tablets {
+      order: 2;
+  }
+}
+
+.it-detail-clinics-map__half--right {
+  flex-grow: 1;
+  order: 2;
+  @include tablets {
+    order: 1;
+  }
+}
+
+
+.it-detail-clinics-map__metro {
+  margin-bottom: 15px;
+}
+
+.it-detail-clinics-map__metro-list {
+  margin: 0;
+  padding: 0;
+  padding-left: 25px;
+  margin: 0 -5px -5px;
+  overflow: hidden;
+}
+
+.it-detail-clinics-map__metro-item {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  margin: 0 5px 5px;
+}
+
+.it-detail-clinics-map__metro-circle {
+  background-color: #0076C0;
+  margin-right: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.it-detail-clinics-map__metro-text {
+  font-size: 12px;
+  color: $black;
+}
+
+.it-detail-clinics-map__time:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  background: url("../images/detail-clinics-map/time.svg") no-repeat center;
+}
+
+.it-detail-clinics-map__time {
+  margin-bottom: 15px;
+}
+
+.it-detail-clinics-map__time-wrap {
+  margin: 0;
+  padding: 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+.it-detail-clinics-map__time-wrap:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  background: url("../images/detail-clinics-map/time.svg") no-repeat center;
+}
+
+
+.it-detail-clinics-map__time-item {
+  list-style-type: none;
+  font-size: 14px;
+  color: $black;
+  transition: 0.1s;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+}
+
+.it-detail-clinics-map__time-item:hover {
+  background-color: #f5f5f5;;
+}
+
+.it-detail-clinics-map__time-day {
+  text-transform: lowercase;
+  font-size: 14px;
+  padding-right: 5px;
+}
+
+
+.it-detail-clinics-map__phone-item {
+  list-style-type: none;
+  padding-left: 0;
+
+}
+
+.it-detail-clinics-map__phone-item:hover {
+  background-color: #f5f5f5;
+  transition: 0.1s;
+}
+
+.it-detail-clinics-map__phone {
+  color: $black;
+  font-size: 18px;
+
+}
+
+.it-detail-clinics-map__phone-link {
+  color: $black;
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 5px;
+  @include phones {
+    font-size: 16px;
+  }
+}
+
+.it-detail-clinics-map__phone-link:active,
+.it-detail-clinics-map__phone-link:visited {
+  color: $black;
+  text-decoration: none;
+}
+
+.it-detail-clinics-map__phone-link:hover {
+  color: $hov-text;
+  text-decoration: none;
+}
+
+.it-detail-clinics-map__phone-wrap {
+  margin: 0 0 15px;
+  padding: 0;
+  position: relative;
+  padding-left: 25px;
+}
+
+.it-detail-clinics-map__phone-wrap:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  background: url("../images/detail-clinics-map/phone.svg") no-repeat center;
+}
+
+.it-detail-clinics-map__link {
+  font-size: 14px;
+  color: $black;
+  margin-bottom: 20px;
+  padding-left: 25px;
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+
+.it-detail-clinics-map__link:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+}
+
+.it-detail-clinics-map__link:active,
+.it-detail-clinics-map__link:visited {
+	color: $white;
+	text-decoration: none;
+}
+
+.it-detail-clinics-map__link:hover {
+	color: $hov;
+	text-decoration: none;
+}
+
+.it-detail-clinics-map__link--link:before {
+  background: url("../images/detail-clinics-map/globe.svg") no-repeat center;
+}
+
+.it-detail-clinics-map__link--mail:before {
+  background: url("../images/detail-clinics-map/mail.svg") no-repeat center;
+}
+
+
+
+
+.it-detail-clinics-map__link {
+  font-size: 14px;
+  color: $black;
+  padding-left: 25px;
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+

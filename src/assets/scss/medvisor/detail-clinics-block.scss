@@ -1,0 +1,24 @@
+.it-detail-clinics-block {
+  background-color: $main-color-light;
+  border-bottom: 5px solid $main-color;
+}
+
+.it-detail-clinics-block__outer-wrap {
+  padding-bottom: 50px;
+  position: relative;
+  @include tablets {
+    padding-bottom: 25px;
+  }
+
+}
+
+.it-detail-clinics-block__outer-wrap:before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 230px;
+  height: 5px;
+  background-color: #B6343C;;
+}

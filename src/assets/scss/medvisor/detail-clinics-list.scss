@@ -1,0 +1,48 @@
+$link-color: $link-color;
+$link-color-hov: $hov-text;
+$item-bottom-indent: 5px;
+$item-column-indent:  20px;
+
+.detail-clinics-list {
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.detail-clinics-list__list {
+  margin: 0 0;
+  margin-bottom: - $item-bottom-indent;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: $item-column-indent;
+  @include tablets {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include phones {
+    grid-template-columns: 1fr;
+  }
+}
+
+.detail-clinics-list__item {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: $item-bottom-indent ;
+}
+
+.detail-clinics-list__link  {
+  color: $link-color;
+  text-decoration: none;
+  transition: 0.2s;
+  display: block;
+}
+
+.detail-clinics-list__link:active,
+.detail-clinics-list__link:visited {
+	color: $link-color;
+	text-decoration: none;
+}
+
+.detail-clinics-list__link:hover {
+	color: $link-color-hov;
+	text-decoration: none;
+}

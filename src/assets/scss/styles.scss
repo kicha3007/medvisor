@@ -42,6 +42,13 @@
 @import 'medvisor/filter';
 @import 'medvisor/checkbox';
 @import 'medvisor/modal-city';
+@import 'medvisor/detail-clinics';
+@import 'medvisor/detail-clinics-info';
+@import 'medvisor/detail-clinics-map';
+@import 'medvisor/detail-clinics-nav';
+@import 'medvisor/detail-clinics-license';
+@import 'medvisor/detail-clinics-list';
+@import 'medvisor/detail-clinics-block';
 
 
 /******************* it-all-style *******************/
@@ -91,6 +98,16 @@
     padding-bottom: 20px;
   }
 
+}
+
+.it-all-title--detail {
+  font-weight: 400;
+  padding-bottom: 20px;
+  line-height: 1.3;
+  font-size: 24px;
+  @include tablets {
+    padding-bottom: 10px;
+  }
 }
 
 .it-all-indent {
