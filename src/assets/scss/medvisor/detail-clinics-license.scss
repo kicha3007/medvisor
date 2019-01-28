@@ -1,0 +1,124 @@
+
+
+.detail-clinics-license {
+  padding-bottom: 30px;
+  padding-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.detail-clinics-license__title {
+  font-size: rem(32px);
+  color: #5C5C5C;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.detail-clinics-license__wrap {
+  margin: 0;
+  padding: 10px 9% 35px;
+}
+
+.detail-clinics-license__inner-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -6px -30px;
+  overflow: hidden;
+  justify-content: space-between;
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+
+.detail-clinics-license__item {
+  max-width: 150px;
+  max-height: 50px;
+  overflow: hidden;
+  margin: 0 6px 30px;
+  flex-basis: 60px;
+  flex-grow: 1;
+  @include tablets {
+    flex-basis: 120px;
+  }
+}
+
+.detail-clinics-license__img {
+  max-width: 100%;
+  width: auto !important;
+  display: block;
+}
+
+
+
+
+
+/******************* it-partners + owl *******************/
+
+.detail-clinics-license .owl-nav .owl-prev,
+.detail-clinics-license .owl-nav .owl-next {
+  position: absolute;
+  width: 18px;
+  height: 32px;
+  top: 24%;
+  font-size: 0;
+}
+
+.detail-clinics-license .owl-nav .owl-prev:hover,
+.detail-clinics-license .owl-nav .owl-next:hover {
+  opacity: 0.5;
+}
+
+.detail-clinics-license .owl-nav .owl-prev {
+  left: 0;
+  transform: scale(1);
+}
+
+.detail-clinics-license .owl-nav .owl-next {
+  right: 0;
+  transform: scale(-1);
+}
+
+.detail-clinics-license .owl-nav .owl-prev:after,
+.detail-clinics-license .owl-nav .owl-next:after {
+  content: "";
+  background: url("../img/rbk/partners/arrow.png")  center no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+}
+
+.detail-clinics-license .owl-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 10000;
+  max-width: 50px;
+  width: 100%;
+  margin-left: -23px;
+  text-align: center;
+  height: 10px;
+
+}
+
+.detail-clinics-license .owl-dot  {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transition: .2s;
+  margin: 0 3px;
+  border: 1px solid #818181;
+}
+
+.detail-clinics-license .owl-dot.active {
+  background-color: #818181;
+}
+
+
