@@ -3,12 +3,12 @@ $link-color-hov: $hov-text;
 $item-bottom-indent: 5px;
 $item-column-indent:  20px;
 
-.detail-clinics-list {
+.it-detail-clinics-list {
   overflow: hidden;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 
-.detail-clinics-list__list {
+.it-detail-clinics-list__list {
   margin: 0 0;
   margin-bottom: - $item-bottom-indent;
   padding: 0;
@@ -23,26 +23,26 @@ $item-column-indent:  20px;
   }
 }
 
-.detail-clinics-list__item {
+.it-detail-clinics-list__item {
   list-style-type: none;
   padding-left: 0;
   margin-bottom: $item-bottom-indent ;
 }
 
-.detail-clinics-list__link  {
+.it-detail-clinics-list__link  {
   color: $link-color;
   text-decoration: none;
   transition: 0.2s;
   display: block;
 }
 
-.detail-clinics-list__link:active,
-.detail-clinics-list__link:visited {
+.it-detail-clinics-list__link:active,
+.it-detail-clinics-list__link:visited {
 	color: $link-color;
 	text-decoration: none;
 }
 
-.detail-clinics-list__link:hover {
+.it-detail-clinics-list__link:hover {
 	color: $link-color-hov;
 	text-decoration: none;
 }

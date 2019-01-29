@@ -5,8 +5,15 @@
 
 .it-breadcrumbs__list {
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-start;
+  margin: 0;
+  padding: 0 0 20px;
+}
+
+.it-breadcrumbs__item {
+  list-style-type: none;
+  padding-left: 0;
+  width: auto;
 }
 
 .it-breadcrumbs__link {

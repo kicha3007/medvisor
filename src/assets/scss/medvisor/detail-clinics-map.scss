@@ -89,16 +89,6 @@
   color: $black;
 }
 
-.it-detail-clinics-map__time:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 17px;
-  height: 17px;
-  background: url("../images/detail-clinics-map/time.svg") no-repeat center;
-}
 
 .it-detail-clinics-map__time {
   margin-bottom: 15px;
@@ -151,10 +141,7 @@
 
 }
 
-.it-detail-clinics-map__phone-item:hover {
-  background-color: #f5f5f5;
-  transition: 0.1s;
-}
+
 
 .it-detail-clinics-map__phone {
   color: $black;
@@ -210,6 +197,7 @@
   position: relative;
   display: block;
   text-decoration: none;
+  word-break: break-all;
 }
 
 .it-detail-clinics-map__link:before {
@@ -229,7 +217,7 @@
 }
 
 .it-detail-clinics-map__link:hover {
-	color: $hov;
+	color: $hov-text;
 	text-decoration: none;
 }
 

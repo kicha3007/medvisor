@@ -1,10 +1,18 @@
 .it-breadcrumbs
 	.it-container
-		.it-breadcrumbs__wrap
-			.it-breadcrumbs__list
-				a.it-breadcrumbs__link(href="#")
-					|	Главная
-				span.it-breadcrumbs__separator
-					img.it-breadcrumbs__img(src="assets/images/breadcrumbs/arrow.svg", alt='')
-				span.it-breadcrumbs__text
-					|	Медучреждения
+		.it-breadcrumbs__wrap.swiper-container(data-scroll-wrap-x)
+			ul.it-breadcrumbs__list.swiper-wrapper
+				li.it-breadcrumbs__item.swiper-slide.swiper-slide
+					a.it-breadcrumbs__link(href="#")
+						|	Главная
+					span.it-breadcrumbs__separator
+						img.it-breadcrumbs__img(src="assets/images/breadcrumbs/arrow.svg", alt='')
+				li.it-breadcrumbs__item.swiper-slide
+					a.it-breadcrumbs__link(href="#").swiper-slide
+						|	Медучреждения
+					span.it-breadcrumbs__separator
+						img.it-breadcrumbs__img(src="assets/images/breadcrumbs/arrow.svg", alt='')
+				li.it-breadcrumbs__item.swiper-slide
+					span.it-breadcrumbs__text
+						|	ЧУЗ "Клиническая больница "РЖД-Медицина" города Тюмень"
+			.swiper-scrollbar.swiper-scrollbar--color

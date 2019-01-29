@@ -1,0 +1,119 @@
+.it-reviews {
+  background-color: $main-color-light;
+  border-bottom: 5px solid $red;
+}
+
+.it-reviews__wrap {
+  grid-template-columns: repeat(2, 1fr) ;
+  grid-gap: 20px;
+  display: grid;
+  margin: 0;
+  padding: 0 0 40px;
+  @include phones {
+    grid-template-columns: 1fr;
+  }
+}
+
+.it-reviews__outer-wrap {
+  padding-bottom: 40px;
+  @include tablets {
+    padding-bottom: 25px;
+  }
+}
+
+.it-reviews__item {
+  padding: 20px;
+  border: 1px solid $gray-middle;
+  border-radius: 3px;
+  background-color: $white;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.it-reviews__top {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px -10px;
+}
+
+.it-reviews__name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 10px 10px;
+}
+
+.it-reviews__name-img-box {
+  max-width: 20px;
+  max-height: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 10px;
+}
+
+.it-reviews__name-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.it-reviews__name-text {
+  color: $gray-dark;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.it-reviews__stars {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 10px 10px;
+}
+
+.it-reviews__desc {
+  font-size: 12px;
+  color: $black;
+  margin: 20px 0 20px;
+}
+
+.it-reviews__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.it-reviews__date {
+  font-weight: 700;
+  color: #666666;
+  font-size: 10px;
+}
+
+.it-reviews__doctor {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.it-reviews__doctor-post {
+  font-size: 10px;
+  color: $gray-dark;
+  margin-right: 7px;
+}
+
+.it-reviews__doctor-link {
+  text-decoration: none;
+  color: $link-color;
+  font-size: 10px;
+}
+
+.it-reviews__doctor-link:active,
+.it-reviews__doctor-link:visited {
+	color: $link-color;
+	text-decoration: none;
+}
+
+.it-reviews__doctor-link:hover {
+	color: $hov;
+	text-decoration: none;
+}

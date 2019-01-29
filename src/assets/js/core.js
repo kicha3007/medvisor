@@ -28,7 +28,7 @@ function startCarousel() {
             autoplay: (itemsAutoplay ? itemsAutoplay : false),
             autoplayTimeout: (itemsAutoplayTimeout ? itemsAutoplayTimeout : 3000),
             autoplayHoverPause: (itemsAutoplayHoverPause ? itemsAutoplayHoverPause : false),
-            dots: (itemsDots ? itemsDots : true),
+            dots: (itemsDots ? itemsDots : false),
             navSpeed: 1000,
             dotsSpeed: 1000,
             responsive: {
