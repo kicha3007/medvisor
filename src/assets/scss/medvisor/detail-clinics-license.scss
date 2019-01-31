@@ -59,16 +59,16 @@
 }
 
 .it-detail-clinics-license .owl-nav .owl-prev {
-  right: -40px;
-  transform: scale(1);
+  left: -40px;
+  transform: scale(-1);
   @include desktop {
       right: 0;
   }
 }
 
 .it-detail-clinics-license .owl-nav .owl-next {
-  left: -40px;
-  transform: scale(-1);
+  right: -40px;
+  transform: scale(1);
   @include desktop {
     left: 0;
   }
