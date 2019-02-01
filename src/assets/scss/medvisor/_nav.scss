@@ -1,0 +1,151 @@
+.it-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin:  0 -5px;
+  padding: 0;
+  @include tablets {
+    display: block;
+    margin: 0;
+  }
+}
+
+.it-nav__item {
+  margin:  0 5px;
+  position: relative;
+  list-style-type: none;
+  padding-left: 0;
+  width: auto;
+  @include tablets {
+    margin: 0;
+  }
+}
+
+.it-nav__item:last-child:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  width: 1px;
+  height: 14px;
+  margin-top: -7px;
+  background-color: $main-color-text;
+  @include tablets {
+    display: none;
+  }
+}
+
+.it-nav__link {
+  display: block;
+  padding: 15px 8px;
+  color: $main-color-text;
+  font-size: 13px;
+  text-decoration: none;
+  @include tablets {
+    padding: 10px 15px 10px 30px;
+  }
+}
+
+.it-nav__link:active,
+.it-nav__link:visited {
+	color: $main-color-text;
+	text-decoration: none;
+}
+
+.it-nav__link:hover {
+	color: $hov-text;
+	text-decoration: none;
+}
+
+.it-nav__wrap {
+  @include tablets {
+    position: absolute;
+    top: 100%;
+    right: calc(-100% - 48px);
+    z-index: 6;
+    background-color: #ffffff;
+    box-shadow: 0 3px 4px rgba(0,0,0,.25);
+    width: 80%;
+    padding: 20px 0 80px ;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.it-nav__wrap.active {
+  opacity: 1;
+  visibility: visible;
+  right: 0;
+  display: block;
+}
+
+.it-nav__trigger {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  display: none;
+  width: 45px;
+  height: 35px;
+  margin-top: -17.5px;
+  cursor: pointer;
+  z-index: 4;
+  @include tablets {
+    display: block;
+  }
+}
+
+.it-nav__trigger-line {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: $main-color-text;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ;
+}
+
+.it-nav__trigger-line--top {
+  top: 0px;
+}
+
+.it-nav__trigger-line--middle-1,
+.it-nav__trigger-line--middle-2 {
+  top: 13px;
+}
+
+.it-nav__trigger-line--bottom {
+  top: 26px;
+}
+
+.it-nav__trigger.active .it-nav__trigger-line--top {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+
+}
+
+.it-nav__trigger.active .it-nav__trigger-line--middle-1 {
+  transform: rotate(45deg);
+}
+
+.it-nav__trigger.active .it-nav__trigger-line--middle-2 {
+  transform: rotate(-45deg);
+}
+
+.it-nav__trigger.active .it-nav__trigger-line--bottom {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+.swiper-scrollbar-drag {
+  background-color: #028097;
+}

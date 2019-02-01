@@ -1,0 +1,64 @@
+.it-thems {
+  padding-bottom: 40px;
+}
+
+.it-thems__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px -20px;
+  overflow: hidden;
+  @include laptop {
+    margin: 0 -5px -10px;
+  }
+  @include phones {
+    margin: 0 -3px -8px;
+  }
+
+}
+
+.it-thems__item {
+  list-style-type: none;
+  margin: 0 10px 20px;
+  @include laptop {
+    margin: 0 5px 10px;
+    
+  }
+  @include phones {
+    margin: 0 3px 8px;
+  }
+
+}
+
+.it-thems__link {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 12px;
+  color: #ffffff;
+  display: block;
+  background: #179CA7;
+  border-radius: 3px;
+  @include laptop {
+    padding: 8px;
+    font-size: 14px;
+  }
+  @include phones {
+    padding: 5px;
+    font-size: 12px;
+  }
+  transition: 0.1s;
+}
+
+.it-thems__link:active,
+.it-thems__link:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.it-thems__link:hover {
+   background-color: $hov-text;
+	color: #ffffff;
+	text-decoration: none;
+}
+
